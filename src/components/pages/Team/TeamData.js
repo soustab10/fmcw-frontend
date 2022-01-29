@@ -18,12 +18,12 @@ const data = {
       position: 'Marketing Head',
       name: 'Mahesh Singh Tomar'
     },
-    {
-      id: 6,
-      img: 'https://drive.google.com/uc?export=view&id=1hp33WeTpZP-UuYeO_rqLfsLSqCyeRyaJ',
-      position: 'Marketing Head',
-      name: 'Vinit Kumar'
-    }
+    // {
+    //   id: 6,
+    //   img: 'https://drive.google.com/uc?export=view&id=1hp33WeTpZP-UuYeO_rqLfsLSqCyeRyaJ',
+    //   position: 'Marketing Head',
+    //   name: 'Vinit Kumar'
+    // }
   ],
   contentData: [
     {

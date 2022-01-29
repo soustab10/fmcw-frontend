@@ -17,7 +17,7 @@ const CardTitle = styled.h2`
   transform: translateZ(55px);
 `;
 
-function EventCard(props) {
+function CartCard_2(props) {
   const { isEmpty, items, totalItems, cartTotal, removeItem, emptyCart, updateItemQuantity } =
     useCart();
   const [click, setClick] = useState(false);
@@ -35,6 +35,27 @@ function EventCard(props) {
     }
   }
 
+  async function onDelete(mongooseId) {
+    const userID = sessionStorage.getItem('userID');
+    // e.preventDefault();
+    let obj = {
+      userID: userID,
+      itemId: mongooseId
+    };
+    const res = await fetch('api/cart', {
+      method: 'DELETE',
+      body: JSON.stringify(obj),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
+    console.log({ obj });
+    const data = await res.json();
+    console.log(data);
+
+    window.location.reload();
+  }
+
   const options = {
     reverse: true,
     max: 15,
@@ -48,17 +69,17 @@ function EventCard(props) {
       <div className="card-div">
         <img src={props.img} alt="unicorn" className="card-img" />
         <h3>₹ {props.price}</h3>
-        <button
-          className="cart-btn"
-          onClick={() => {
-            removeItem(props.item.id);
-            // change();
-          }}>
-          {/* {inCart(props.item.id) ? "Added" : "Add"} 
-          
-          {inCart(props.item.id) ? "" : <img src="/add-cartPURPLE_OLD_1.svg" />}  */}
-          <CloseIcon />
-        </button>
+        {!props.verified && (
+          <button
+            className="cart-btn"
+            onClick={() => {
+              // removeItem(props.item.id);
+              onDelete(props.mongooseId);
+              // change();
+            }}>
+            <CloseIcon />
+          </button>
+        )}
         <div className="separator">
           <div className="line" />
           <h2>{props.type}</h2>
@@ -76,10 +97,10 @@ function EventCard(props) {
     </Tilt>
   );
 }
-EventCard.defaultProps = {
+CartCard_2.defaultProps = {
   type: 'Contest',
   title: 'That’s How B’roll',
   ps: 'View Problem Statement',
   price: 150
 };
-export default EventCard;
+export default CartCard_2;

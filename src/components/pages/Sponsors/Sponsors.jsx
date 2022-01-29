@@ -22,13 +22,13 @@ function Sponsors(props) {
             <h2>Powered By</h2>
             <div className="line_2" />
           </div>
-          <img src="https://drive.google.com/uc?export=view&id=1ftavQQIClarxTN6gfxFKipEt9Bh_JNxy" />
+          <a href="https://www.lapcare.com/" target="_blank"><img src="https://drive.google.com/uc?export=view&id=1ftavQQIClarxTN6gfxFKipEt9Bh_JNxy" /></a>
           <div className="separator-1">
             <div className="line_1" />
             <h2>Co-Powered By</h2>
             <div className="line_2" />
           </div>
-          <img src="https://drive.google.com/uc?export=view&id=1nLK6rWZGLfCfdb7Y2FMdR7lI7W6-FT0-" />
+          <a href="https://www.tickertape.in/" target="_blank"><img src="https://drive.google.com/uc?export=view&id=1nLK6rWZGLfCfdb7Y2FMdR7lI7W6-FT0-" /></a>
           {/* <div className="separator-1">
             <div className="line_1" />
             <h2>Presents</h2>
@@ -41,24 +41,28 @@ function Sponsors(props) {
             img="https://drive.google.com/uc?export=view&id=1sW-Sn1Sf7p1b1Y7fuyzny6oBTcMYNA0i"
             name="Crypto Trading Partner"
             position="Giottus Technologies"
+            websiteLink="https://giottus.com/"
           />
           <SponsorCard
             className="sponsor-card"
             img="https://drive.google.com/uc?export=view&id=11shE6eN5q8k_a3lC-CknFSyTETHX5Q0z"
             name="Book Reading Partner"
             position="Billionbooks"
+            websiteLink="https://thebillionbooks.store/"
           />
           <SponsorCard
             className="sponsor-card"
             img="https://drive.google.com/uc?export=view&id=1u2jXRFm5Nm3sGOxJmdIj-C9yPJxSXhj5"
             name="Design partner"
             position="Huion"
+            websiteLink="https://www.huion.com/"
           />
           <SponsorCard
             className="sponsor-card"
             img="https://drive.google.com/uc?export=view&id=18_qjpzNdXMukOYIPS8jv0G96pIhAxlax"
             name="Media Partner"
             position="India Education"
+            websiteLink="https://www.indiaeducation.net/"
           />
         </div>
 

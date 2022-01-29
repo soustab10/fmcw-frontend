@@ -12,12 +12,12 @@ const AccordionSection = styled.div`
   align-items: center;
   justify-content: center;
   position: relative;
-  height: 100vh;
+  height: 70vh;
   width: 100%;
   overflow-x: hidden;
   background: #1d033e;
   @media (max-width: 768px) {
-    height: 200vh;
+    height: 80vh;
   }
 `;
 

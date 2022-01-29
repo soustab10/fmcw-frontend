@@ -55,6 +55,7 @@ function Authentication() {
         window.location.href = '/dashboard';
       }
     } catch (error) {
+      // console.log(error)
       alert('Unable to login using Google, Try again later!');
     }
   };

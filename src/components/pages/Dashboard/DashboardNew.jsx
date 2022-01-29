@@ -1,6 +1,6 @@
 /* eslint-disable react/react-in-jsx-scope */
 import Loading from '../../Loading';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import Classes from './DashboardNew.module.css';
 import EventCard from './EventCard';
 import { useCart } from 'react-use-cart';
@@ -9,6 +9,7 @@ import Footer from '../../Footer';
 // import './Events.css';
 
 function DashBoardNew() {
+  // const authCtx = useContext()
   const { items } = useCart();
   const [isLoading, setIsLoading] = useState(false);
   const [userData, setUserData] = useState({
@@ -66,6 +67,7 @@ function DashBoardNew() {
               // timesReferred: data.user.norefcode,
               cartItems: data.user.userID.userCart.cartItems
             }));
+            sessionStorage.setItem('userID', data.user.userID._id);
           } else {
             setUserData((prevState) => ({
               // ...prevState,
@@ -80,6 +82,7 @@ function DashBoardNew() {
               refCode: data.user.ref_code
               // timesReferred:
             }));
+            sessionStorage.setItem('userID', data.user.userCart._id);
           }
         }
         sessionStorage.setItem('isLoggedIn', true);
@@ -87,11 +90,14 @@ function DashBoardNew() {
       } catch (e) {
         console.log(e);
         alert('Error with authentication, login again');
+        sessionStorage.clear();
+      
       }
       await sleep(3000);
       setIsLoading(false);
     };
     isTokenValid();
+    // window.location.reload();
 
     // console.log(isTokenValid());
   }, []);
