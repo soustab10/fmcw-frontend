@@ -91,7 +91,7 @@ function Cart(props) {
     };
     // console.log(obj);
 
-    const res = await fetch('api/pay', {
+    const res = await fetch('https://fmcw-deployedp.herokuapp.com/api/pay', {
       method: 'POST',
       body: JSON.stringify(obj),
       headers: {
