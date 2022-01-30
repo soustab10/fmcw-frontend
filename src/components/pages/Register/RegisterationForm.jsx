@@ -14,7 +14,7 @@ function RegisterationForm() {
       userType: e.target[7].value //insti user usertype 0
     };
 
-    const res = await fetch('api/user', {
+    const res = await fetch('https://fmcw-deployedp.herokuapp.com/api/user', {
       method: 'PATCH',
       body: JSON.stringify(obj),
       headers: {
