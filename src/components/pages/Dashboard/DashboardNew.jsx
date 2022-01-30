@@ -35,7 +35,7 @@ function DashBoardNew() {
       setIsLoading(true);
       const token = sessionStorage.getItem('tokenID');
       try {
-        const res = await fetch('/api/user', {
+        const res = await fetch('https://fmcw-deployedp.herokuapp.com/api/user', {
           method: 'GET',
           // body: JSON.stringify({
           //   token: token
