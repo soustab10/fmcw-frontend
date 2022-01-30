@@ -29,7 +29,7 @@ function Authentication() {
 
     // send request to backend api and check if the user already exists or is a new one
     try {
-        const res = await fetch('/api/google-login', {
+        const res = await fetch('https://fmcw-deployedp.herokuapp.com/api/google-login', {
           method: 'POST',
           body: JSON.stringify({
             token: googleData.tokenId
