@@ -58,7 +58,7 @@ const data = {
       genre: 'outreach',
       type: 'Contest',
       title: 'Ad-Mad',
-      link: 'https://drive.google.com/file/d/1-j7QXOXQpBTioe3S7jrTeydKBLGPkcZe/view?usp=sharing',
+      link: 'https://drive.google.com/file/d/1YOj9LLElPbGTbFbL2DP-8QAcltoFAMY5/view?usp=sharing',
       price: 129,
       prize: '9K'
     }
