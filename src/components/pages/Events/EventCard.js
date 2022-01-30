@@ -44,7 +44,7 @@ function EventCard(props) {
       cartItem: item
     };
     
-    const res = await fetch('/api/cart', {
+    const res = await fetch('https://fmcw-deployedp.herokuapp.com/api/cart', {
       method: 'POST',
       body: JSON.stringify(obj),
       headers: {
