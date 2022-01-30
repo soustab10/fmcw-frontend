@@ -19,7 +19,7 @@ const PrivateRoute = (props) => {
       setIsLoading(true);
       const token = sessionStorage.getItem('tokenID');
       try {
-        const res = await fetch('/api/verify-token', {
+        const res = await fetch('https://fmcw-deployedp.herokuapp.com/api/verify-token', {
           method: 'POST',
           body: JSON.stringify({
             token: token
