@@ -42,7 +42,7 @@ function CartCard_2(props) {
       userID: userID,
       itemId: mongooseId
     };
-    const res = await fetch('api/cart', {
+    const res = await fetch('https://fmcw-deployedp.herokuapp.com/api/cart', {
       method: 'DELETE',
       body: JSON.stringify(obj),
       headers: {
