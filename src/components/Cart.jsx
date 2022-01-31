@@ -44,7 +44,7 @@ function Cart(props) {
       // setIsLoading(true);
       const token = sessionStorage.getItem('tokenID');
       try {
-        const res = await fetch('https://fmcw-deployedp.herokuapp.com/api/user', {
+        const res = await fetch(process.env.REACT_APP_BACKEND_URI + '/api/user', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
@@ -91,7 +91,7 @@ function Cart(props) {
     };
     // console.log(obj);
 
-    const res = await fetch('https://fmcw-deployedp.herokuapp.com/api/pay', {
+    const res = await fetch(process.env.REACT_APP_BACKEND_URI + '/api/pay', {
       method: 'POST',
       body: JSON.stringify(obj),
       headers: {

@@ -14,14 +14,14 @@ function RegisterationForm() {
       userType: e.target[7].value //insti user usertype 0
     };
 
-    const res = await fetch('https://fmcw-deployedp.herokuapp.com/api/user', {
+    const res = await fetch(process.env.REACT_APP_BACKEND_URI + '/api/user', {
       method: 'PATCH',
       body: JSON.stringify(obj),
       headers: {
         'Content-Type': 'application/json'
       }
     });
-    console.log({obj})
+    console.log({ obj });
     const data = await res.json();
     console.log(data);
     if (data.message === 'success') {

@@ -19,7 +19,7 @@ const PrivateRoute = (props) => {
       setIsLoading(true);
       const token = sessionStorage.getItem('tokenID');
       try {
-        const res = await fetch('https://fmcw-deployedp.herokuapp.com/api/verify-token', {
+        const res = await fetch(process.env.REACT_APP_BACKEND_URI + '/api/verify-token', {
           method: 'POST',
           body: JSON.stringify({
             token: token
@@ -33,7 +33,7 @@ const PrivateRoute = (props) => {
         // data has message : 'success' if valid and 'invalid' else
         // on valid, data also has user.email, user.name, user.isNewUser, user.role
         if (data.message === 'success') {
-          console.log(data)
+          console.log(data);
           setIsValid(true);
           setIsNewUser(data.isNewUser); //data.user.isNewUser
           // userRole = data.user.role;
@@ -41,13 +41,12 @@ const PrivateRoute = (props) => {
       } catch {
         console.log('Error with authentication, login again');
       }
-      
+
       // await sleep(5000);
       // let data = [true, true, true];
       // setIsValid(data[0]);
       // setIsNewUser(data[1]);
       setIsLoading(false);
-
     };
     isTokenValid();
 
@@ -56,11 +55,15 @@ const PrivateRoute = (props) => {
 
   if (props.path === '/register') {
     return (
-      <Route path={props.path} component={(isLoading ? Loading : (isNewUser && isValid ? props.component : Error))}></Route>
+      <Route
+        path={props.path}
+        component={isLoading ? Loading : isNewUser && isValid ? props.component : Error}></Route>
     );
   } else if (props.path === '/dashboard') {
     return (
-      <Route path={props.path} component={(isLoading ? Loading : (!isNewUser && isValid ? props.component : Error))}></Route>
+      <Route
+        path={props.path}
+        component={isLoading ? Loading : !isNewUser && isValid ? props.component : Error}></Route>
     );
   }
 

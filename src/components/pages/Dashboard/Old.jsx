@@ -36,7 +36,7 @@ function Dashboard() {
       setIsLoading(true);
       const token = sessionStorage.getItem('tokenID');
       try {
-        const res = await fetch('https://fmcw-deployedp.herokuapp.com/api/user', {
+        const res = await fetch(process.env.REACT_APP_BACKEND_URI + '/api/user', {
           method: 'GET',
           // body: JSON.stringify({
           //   token: token
@@ -66,7 +66,7 @@ function Dashboard() {
               refCode: data.user.ref_code,
               timesReferred: data.user.norefcode
             }));
-            sessionStorage.setItem
+            sessionStorage.setItem;
           } else {
             setUserData((prevState) => ({
               // ...prevState,

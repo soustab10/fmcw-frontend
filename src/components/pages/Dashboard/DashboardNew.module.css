@@ -5,10 +5,11 @@
   background: #1d033e;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 @media screen and (max-width: 960px) {
   .section {
-    align-items: center;
+    /* align-items: center; */
   }
   .section_title h1,
   .section_top h2 {
@@ -95,10 +96,14 @@
   .event_cards {
     justify-content: space-around;
   }
+  .logout_button {
+   margin: auto;
+  }
+  
 }
 
 .logout_button {
   padding-left: 5vw;
   padding-top: 5vh;
-
+  margin-top: 20px;
 }

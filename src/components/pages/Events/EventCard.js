@@ -43,8 +43,8 @@ function EventCard(props) {
       userID: userID,
       cartItem: item
     };
-    
-    const res = await fetch('https://fmcw-deployedp.herokuapp.com/api/cart', {
+
+    const res = await fetch(process.env.REACT_APP_BACKEND_URI + '/api/cart', {
       method: 'POST',
       body: JSON.stringify(obj),
       headers: {
@@ -56,7 +56,7 @@ function EventCard(props) {
     const data = await res.json();
     console.log(data);
 
-    if (data.status=="Success") {
+    if (data.status == 'Success') {
       addItem(item);
     } else {
       alert('Unable to add item to cart! Try again later');

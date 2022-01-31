@@ -210,8 +210,12 @@
     transition: 250ms;
   }
   .cartBtn {
-    top: 23px !important;
-    right: 60px;
+    bottom: 0 !important;
+    right: 0;
+    left: 0;
+    text-decoration: none;
+    top: 0;
+    position: relative;
   }
 }
 

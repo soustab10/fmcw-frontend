@@ -1,6 +1,9 @@
 .section {
   padding-top: clamp(220px, 26vh, 100px);
-  
+  background-color: #1b083d;
+  position: relative;
+  height: 100%;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;

@@ -35,7 +35,7 @@ function Navbar() {
 
     // send request to backend api and check if the user already exists or is a new one
     try {
-      const res = await fetch('https://fmcw-deployedp.herokuapp.com/api/google-login', {
+      const res = await fetch(process.env.REACT_APP_BACKEND_URI + '/api/google-login', {
         method: 'POST',
         body: JSON.stringify({
           token: googleData.tokenId
@@ -101,19 +101,7 @@ function Navbar() {
         <div className="menu-icon" onClick={handleClick}>
           <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
         </div>
-        <div className="navbar_cart">
-          <NavLink to="/cart">
-            {button && sessionStorage.getItem('isLoggedIn') == 'true' && (
-              <button
-                toLink="/cart"
-                className={totalItems ? 'cartBtn' : 'cartBtn empty_cart'}
-                onClick={closeMobileMenu}>
-                <span id="quantity">{totalItems} </span>
-                <i className="fas fa-shopping-cart"></i>
-              </button>
-            )}
-          </NavLink>
-        </div>
+
         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
           <li className="nav-item first_item">
             <NavLink
@@ -166,12 +154,13 @@ function Navbar() {
           </li> */}
 
           <li className="nav-item">
-            {button && sessionStorage.getItem('isLoggedIn') == 'true' ? (
+            {sessionStorage.getItem('isLoggedIn') == 'true' ? (
               <Button
                 isInternalLink
                 toLink="/dashboard"
                 buttonStyle="btn--primary"
-                className="nav-links sign">
+                className="sign"
+                onClick={closeMobileMenu}>
                 DASHBOARD
               </Button>
             ) : (
@@ -183,6 +172,18 @@ function Navbar() {
                 onClick={closeMobileMenu}>
                 SIGN IN
               </Button>
+            )}
+          </li>
+          <li className="nav-item">
+            {sessionStorage.getItem('isLoggedIn') == 'true' && (
+              <NavLink
+                to="/cart"
+                className={totalItems ? 'cartBtn' : 'cartBtn empty_cart'}
+                sign
+                onClick={closeMobileMenu}>
+                <span id="quantity">{totalItems} </span>
+                <i className="fas fa-shopping-cart"></i>
+              </NavLink>
             )}
           </li>
         </ul>

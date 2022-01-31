@@ -35,7 +35,7 @@ function DashBoardNew() {
       setIsLoading(true);
       const token = sessionStorage.getItem('tokenID');
       try {
-        const res = await fetch('https://fmcw-deployedp.herokuapp.com/api/user', {
+        const res = await fetch(process.env.REACT_APP_BACKEND_URI + '/api/user', {
           method: 'GET',
           // body: JSON.stringify({
           //   token: token
@@ -52,7 +52,7 @@ function DashBoardNew() {
         // on valid, data also has user.email, user.name, user.isNewUser, user.role
         if (data.message === 'success') {
           console.log(data);
-          console.log(data.user.userID.userCart.cartItems);
+          // console.log(data.user.userID.userCart.cartItems);
           if (data.user.userID) {
             setUserData((prevState) => ({
               // ...prevState,
@@ -91,7 +91,6 @@ function DashBoardNew() {
         console.log(e);
         alert('Error with authentication, login again');
         sessionStorage.clear();
-      
       }
       await sleep(3000);
       setIsLoading(false);
@@ -176,9 +175,7 @@ function DashBoardNew() {
           LOG OUT
         </Button>
       </div>
-      <div>
-        <Footer />
-      </div>
+      <Footer />
     </div>
   );
 }
