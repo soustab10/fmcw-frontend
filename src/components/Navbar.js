@@ -208,15 +208,14 @@ function Navbar() {
           </li>
           <li className="nav-item">
             {sessionStorage.getItem('isLoggedIn') == 'true' && (
-              <button
-                isInternalLink
-                toLink="/cart"
+              <NavLink
+                to="/cart"
                 className={cartItems.length ? 'cartBtn' : 'cartBtn empty_cart'}
                 sign
                 onClick={closeMobileMenu}>
                 <span id="quantity">{cartItems.length} </span>
                 <i className="fas fa-shopping-cart"></i>
-              </button>
+              </NavLink>
             )}
           </li>
         </ul>
