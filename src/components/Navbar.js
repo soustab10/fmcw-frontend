@@ -18,6 +18,7 @@ function Navbar() {
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
   const [IsnewUser, setIsNewUser] = useState(true);
+  const [cartItems, setCartItems] = useState([]);
 
   const handleFailure = (result) => {
     // alert('Unable to login using Google, Try again later!');
@@ -91,7 +92,38 @@ function Navbar() {
   }, []);
 
   window.addEventListener('resize', showButton);
+  useEffect(() => {
+    const getCartItems = async () => {
+      // setIsLoading(true);
+      const token = sessionStorage.getItem('tokenID');
+      try {
+        const res = await fetch(process.env.REACT_APP_BACKEND_URI + '/api/user', {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+            token: token
+          }
+        });
+        const data = await res.json();
+        // console.log(data);
 
+        if (data.message === 'success') {
+          console.log(data);
+          // console.log(data.user.userID.userCart.cartItems);
+          if (data.user.userID) {
+            setCartItems(data.user.userID.userCart.cartItems);
+          } else {
+            setCartItems(data.user.userCart.cartItems);
+          }
+        }
+      } catch (e) {
+        console.log(e);
+        alert('Error with authentication, login again');
+      }
+    };
+    getCartItems();
+    // console.log(isTokenValid());
+  }, []);
   return (
     <nav className="navbar">
       <div className="navbar-container">
@@ -176,14 +208,15 @@ function Navbar() {
           </li>
           <li className="nav-item">
             {sessionStorage.getItem('isLoggedIn') == 'true' && (
-              <NavLink
-                to="/cart"
-                className={totalItems ? 'cartBtn' : 'cartBtn empty_cart'}
+              <button
+                isInternalLink
+                toLink="/cart"
+                className={cartItems.length ? 'cartBtn' : 'cartBtn empty_cart'}
                 sign
                 onClick={closeMobileMenu}>
-                <span id="quantity">{totalItems} </span>
+                <span id="quantity">{cartItems.length} </span>
                 <i className="fas fa-shopping-cart"></i>
-              </NavLink>
+              </button>
             )}
           </li>
         </ul>

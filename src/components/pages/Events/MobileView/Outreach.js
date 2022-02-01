@@ -3,9 +3,15 @@ import EventCard from '../EventCard';
 import data from '../Data/data';
 import { Link } from 'react-router-dom';
 import Footer from '../../../Footer';
+import { ToastContainer } from 'react-toastify';
 function Outreach() {
   return (
     <div style={{ background: '#1D033E', overflow: 'hidden' }}>
+      <ToastContainer
+        draggable={true}
+        toastClassName="toast-style"
+        toastStyle={{ backgroundColor: '#FCC907', color: '#1D033E', fontWeight: 'bold' }}
+      />
       <section className="section">
         <Link to="/events" className="back-btn">
           Back

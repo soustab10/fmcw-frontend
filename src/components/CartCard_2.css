@@ -460,7 +460,7 @@ body {
       z-index: 1;
       width: 100px;
       height: 40px; 
-      left: 38%; 
+      margin-left: 0; 
       border: 2px solid #FCC907;
       color: #FCC907;
       padding: 10px;

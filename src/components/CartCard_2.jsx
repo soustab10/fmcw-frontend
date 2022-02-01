@@ -26,15 +26,6 @@ function CartCard_2(props) {
   const handleClick = () => {
     setClick(!click);
   };
-  function change() {
-    var elem = document.querySelector('.cart-btn');
-    if (elem.value == 'Add') {
-      elem.value = 'Added';
-    } else {
-      elem.value = 'Add';
-    }
-  }
-
   async function onDelete(mongooseId) {
     const userID = sessionStorage.getItem('userID');
     // e.preventDefault();
@@ -49,9 +40,7 @@ function CartCard_2(props) {
         'Content-Type': 'application/json'
       }
     });
-    console.log({ obj });
     const data = await res.json();
-    console.log(data);
 
     window.location.reload();
   }
@@ -73,7 +62,6 @@ function CartCard_2(props) {
           <button
             className="cart-btn"
             onClick={() => {
-              // removeItem(props.item.id);
               onDelete(props.mongooseId);
               // change();
             }}>

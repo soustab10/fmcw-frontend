@@ -29,17 +29,17 @@ function Authentication() {
 
     // send request to backend api and check if the user already exists or is a new one
     try {
-        const res = await fetch(process.env.REACT_APP_BACKEND_URI + '/api/google-login', {
-          method: 'POST',
-          body: JSON.stringify({
-            token: googleData.tokenId
-          }),
-          headers: {
-            'Content-Type': 'application/json'
-          }
-        });
-        const data = await res.json();
-        console.log(data);
+      const res = await fetch(process.env.REACT_APP_BACKEND_URI + '/api/google-login', {
+        method: 'POST',
+        body: JSON.stringify({
+          token: googleData.tokenId
+        }),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+      const data = await res.json();
+      console.log(data);
       sessionStorage.setItem('tokenID', googleData.tokenId);
       // authCtx.updateToken(googleData.tokenId)
       // Update context with value of token

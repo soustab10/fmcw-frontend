@@ -73,14 +73,6 @@ function Cart(props) {
   }, []);
 
   async function checkoutHandler(e) {
-    let paymentAmount = 0;
-    for (const item of cartItems) {
-      if (item.verifyStatus == false) {
-        paymentAmount += item.price;
-      }
-    }
-    console.log(paymentAmount);
-
     e.preventDefault();
     const obj = {
       name: e.target[0].value,
@@ -98,17 +90,22 @@ function Cart(props) {
         'Content-Type': 'application/json'
       }
     });
-    console.log({ obj });
+    // console.log({ obj });
     const data = await res.json();
     console.log(data);
   }
-
+  let paymentAmount = 0;
+  for (const item of cartItems) {
+    if (item.verifyStatus == false) {
+      paymentAmount += item.price;
+    }
+  }
   return (
     <section className="cart-page">
       <h1>Cart</h1>
       <div className="purchase_details">
-        <h3>Total Items: ({totalItems})</h3>
-        <h3>Total Price = ₹ {cartTotal} </h3>
+        <h3>Total Items: ({cartItems.length})</h3>
+        <h3>Total Price = ₹ {paymentAmount} </h3>
 
         <div className="checkout_button">
           <CheckoutButton onClick={handleOpen}>CHECKOUT</CheckoutButton>

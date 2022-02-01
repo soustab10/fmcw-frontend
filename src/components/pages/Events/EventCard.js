@@ -10,7 +10,8 @@ import './events.css';
 import styled from 'styled-components';
 import Tilt from 'react-tilt';
 // import addToCart from './CartModal';
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { useCart } from 'react-use-cart';
 
 const CardTitle = styled.h2`
@@ -21,6 +22,7 @@ function EventCard(props) {
   const { isEmpty, items, totalItems, cartTotal, removeItem, emptyCart, updateItemQuantity } =
     useCart();
   const [click, setClick] = useState(false);
+  const [buttonText, setButtonText] = useState('Next');
   const { addItem, inCart } = useCart();
   const { getItem } = useCart();
   const handleClick = () => {
@@ -51,23 +53,24 @@ function EventCard(props) {
         'Content-Type': 'application/json'
       }
     });
-    console.log({ obj });
-    console.log(JSON.stringify(obj));
-    const data = await res.json();
-    console.log(data);
+    // console.log({ obj });
 
-    if (data.status == 'Success') {
-      addItem(item);
-    } else {
-      alert('Unable to add item to cart! Try again later');
-    }
+    // alert('Item added to cart successfully!');/
+    window.setTimeout(function () {
+      location.reload();
+    }, 1000);
+    toast.warn('Item added to cart successfully!', {
+      position: 'top-center',
+      autoClose: 3000,
+      draggable: true,
+      icon: false
+    });
 
     // post not working because status isn't upadated in data.js;
 
     //only for show purposed
     // window.location.href = "/register";
   }
-
   const options = {
     reverse: true,
     max: 15,
