@@ -48,7 +48,6 @@ function Authentication() {
       // const isNewUser = true; // for trial purpose only // COMMENT THIS LINE
 
       sessionStorage.setItem('isNewUser', isNewUser);
-
       if (isNewUser) {
         window.location.href = '/register';
       } else {

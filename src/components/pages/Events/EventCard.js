@@ -94,10 +94,8 @@ function EventCard(props) {
               // addItem(props.item);
 
               // change();
-            }}
-            disabled={inCart(props.item.id)}>
-            {inCart(props.item.id) ? 'Added' : 'Add'}
-            {inCart(props.item.id) ? '' : <img src="/add-cartPURPLE_OLD_1.svg" />}
+            }}>
+            Add <img src="/add-cartPURPLE_OLD_1.svg" />
           </button>
         )}
         <div className="separator">

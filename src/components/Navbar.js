@@ -118,7 +118,7 @@ function Navbar() {
         }
       } catch (e) {
         console.log(e);
-        alert('Error with authentication, login again');
+        // alert('Error with authentication, login again');
       }
     };
     getCartItems();

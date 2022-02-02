@@ -178,7 +178,7 @@ const data = {
       title: 'Unreal',
       link: 'https://drive.google.com/file/d/13FR_L6kpYO6Zo5-kbikKxoA6Q1YzerEX/view?usp=sharing',
       price: 129,
-      prize: '6K'
+      prize: '9K'
     },
     {
       id: 19,
@@ -188,7 +188,7 @@ const data = {
       title: 'Realm of Wonders',
       link: 'https://drive.google.com/file/d/17n4rzKwRtKgCljrkxgUF6DZ02qwsZOG_/view?usp=sharing',
       price: 129,
-      prize: '9K'
+      prize: '6K'
     }
   ]
 };

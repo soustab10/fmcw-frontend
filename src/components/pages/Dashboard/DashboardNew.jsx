@@ -51,6 +51,7 @@ function DashBoardNew() {
         // data has message : 'success' if valid and 'invalid' else
         // on valid, data also has user.email, user.name, user.isNewUser, user.role
         if (data.message === 'success') {
+          localStorage.removeItem('react-use-cart');
           console.log(data);
           // console.log(data.user.userID.userCart.cartItems);
           if (data.user.userID) {
