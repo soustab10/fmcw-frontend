@@ -101,52 +101,53 @@ function Cart(props) {
     }
   }
   return (
-    <section className="cart-page">
-      <h1>Cart</h1>
-      <div className="purchase_details">
-        <h3>Total Items: ({cartItems.length})</h3>
-        <h3>Total Price = ₹ {paymentAmount} </h3>
+    <div>
+      <section className="cart-page">
+        <h1>Cart</h1>
+        <div className="purchase_details">
+          <h3>Total Items: ({cartItems.length})</h3>
+          <h3>Total Price = ₹ {paymentAmount} </h3>
 
-        <div className="checkout_button">
-          <CheckoutButton onClick={handleOpen}>CHECKOUT</CheckoutButton>
-        </div>
+          <div className="checkout_button">
+            <CheckoutButton onClick={handleOpen}>CHECKOUT</CheckoutButton>
+          </div>
 
-        {/* <a href="/events">
+          {/* <a href="/events">
           <div className="add-more-cards">
             <span>+</span>
             <h3>Purchase More Cards</h3>
           </div>
         </a> */}
-        <div className="cart_cards">
-          {cartItems.map((item, index) => {
-            return (
-              <div key={index} className="cart-container">
-                <CartCard_2
-                  className="cart-card"
-                  img={item.img}
-                  title={item.title}
-                  type={item.Type}
-                  link={item.link}
-                  price={item.price}
-                  prize={item.prize}
-                  item={item}
-                  key={index}
-                  verified={item.verifyStatus}
-                  mongooseId={item._id}
-                />
-              </div>
-            );
-          })}
+          <div className="cart_cards">
+            {cartItems.map((item, index) => {
+              return (
+                <div key={index} className="cart-container">
+                  <CartCard_2
+                    className="cart-card"
+                    img={item.img}
+                    title={item.title}
+                    type={item.Type}
+                    link={item.link}
+                    price={item.price}
+                    prize={item.prize}
+                    item={item}
+                    key={index}
+                    verified={item.verifyStatus}
+                    mongooseId={item._id}
+                  />
+                </div>
+              );
+            })}
+          </div>
         </div>
-      </div>
-      <Modal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-        className="payment-modal">
-        <Box class={style}>
-          {/* <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+        <Modal
+          open={open}
+          onClose={handleClose}
+          aria-labelledby="modal-modal-title"
+          aria-describedby="modal-modal-description"
+          className="payment-modal">
+          <Box class={style}>
+            {/* <Typography id="modal-modal-description" sx={{ mt: 2 }}>
             <div className="back"></div>
 
             <div className="register-form">
@@ -169,49 +170,52 @@ function Cart(props) {
               </form>
             </div>            
           </Typography> */}
-          <Typography id="modal-modal-title" variant="h6" component="h2">
-            <h1>Payment Details</h1>
-          </Typography>
-          <hr />
-          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            <h3>The bank details are as follows:</h3>
-            <ul>
-              <li>
-                <span>Account Name: </span>
-                <h3>FMC Weekend IIT(BHU), Varanasi</h3>
-              </li>
-              <li>
-                <span>Account Number: </span>
-                <h3>33223440456</h3>
-              </li>
-              <li>
-                <span>IFSC: </span>
-                <h3>SBIN0011445</h3>
-              </li>
-              <li>
-                <span>Current Bank: </span>
-                <h3>State Bank of India</h3>
-              </li>
-              <li>
-                <span>Branch: </span>
-                <h3>IIT(BHU), Varanasi</h3>
-              </li>
-            </ul>
-            <p className="form-para">
-              {' '}
-              We hereby request you to fill out this google form as soon as you complete the payment
-              successfully and attach the screenshot of the payment with it. Do send the screenshot
-              to your person of contact and feel free to enquire about the passes to them.<br></br>
-              See you in large numbers at the fest!✨
-            </p>
-            <a href="https://forms.gle/Su8HRznfUAhfzjPcA" target="_blank" rel="noreferrer">
-              <Button>Registeration Form</Button>
-            </a>
-          </Typography>
-        </Box>
-      </Modal>
+            <Typography id="modal-modal-title" variant="h6" component="h2">
+              <h1>Payment Details</h1>
+            </Typography>
+            <hr />
+            <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+              <h3>The bank details are as follows:</h3>
+              <ul>
+                <li>
+                  <span>Account Name: </span>
+                  <h3>FMC Weekend IIT(BHU), Varanasi</h3>
+                </li>
+                <li>
+                  <span>Account Number: </span>
+                  <h3>33223440456</h3>
+                </li>
+                <li>
+                  <span>IFSC: </span>
+                  <h3>SBIN0011445</h3>
+                </li>
+                <li>
+                  <span>Current Bank: </span>
+                  <h3>State Bank of India</h3>
+                </li>
+                <li>
+                  <span>Branch: </span>
+                  <h3>IIT(BHU), Varanasi</h3>
+                </li>
+              </ul>
+              <p className="form-para">
+                {' '}
+                We hereby request you to fill out this google form as soon as you complete the
+                payment successfully and attach the screenshot of the payment with it. Do send the
+                screenshot to your person of contact and feel free to enquire about the passes to
+                them.<br></br>
+                See you in large numbers at the fest!✨
+              </p>
+              <a href="https://forms.gle/Su8HRznfUAhfzjPcA" target="_blank" rel="noreferrer">
+                <Button>Registeration Form</Button>
+              </a>
+            </Typography>
+          </Box>
+        </Modal>
+      </section>
+
       <Footer />
-    </section>
+    </div>
   );
 }
 
