@@ -107,7 +107,7 @@ function Cart(props) {
         <h1>Cart</h1>
         <div className="purchase_details">
           <h3>Total Items: ({cartItems.length})</h3>
-          <h3>Total Price = ₹ {paymentAmount} </h3>
+          <h3>Total Price = ₹ {paymentAmount.toFixed(2)} </h3>
 
           <div className="checkout_button">
             <CheckoutButton onClick={handleOpen}>CHECKOUT</CheckoutButton>
@@ -207,7 +207,7 @@ function Cart(props) {
                 See you in large numbers at the fest!✨
               </p>
 
-              <h3>Total Amount = ₹ {paymentAmount} </h3>
+              <h3>Total Amount = ₹ {paymentAmount.toFixed(2)} </h3>
               <a href="https://forms.gle/Su8HRznfUAhfzjPcA" target="_blank" rel="noreferrer">
                 <Button>Registeration Form</Button>
               </a>
