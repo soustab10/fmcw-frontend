@@ -155,7 +155,17 @@
   letter-spacing: 0em;
   text-align: center;
 }
-
+.w_card .prizes {
+  font-family: Nunito Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  color: #fcc907;
+  line-height: 18px;
+  margin-top: 20px;
+  letter-spacing: 0em;
+  text-align: center;
+}
 .MuiSlider-root {
   color: #fcc907;
 }
@@ -341,6 +351,46 @@
   text-decoration: none;
   padding: 20px;
   color: #fff;
+}
+.w_card {
+  margin-right: 100px;
+  margin-top: 10px;
+  max-width: 450px;
+  width: 250px;
+  height: 420px;
+  transition-duration: 300ms;
+  transition-property: transform;
+  transition-timing-function: ease-out;
+  transform: rotate3d(90);
+  border-radius: 10px;
+  /* padding: 20px; */
+  background: #27094B;
+  text-align: center;
+  box-shadow: 0px 24px 48px 0px #0000005c;
+}
+.w_card:hover {
+  transition-duration: 150ms;
+  box-shadow: 0px 12px 24px 0px #00000029;
+  transition: all 0.4s ease;
+}
+.workshop_card_img {
+  object-fit: cover;
+  position: relative;
+  height: 280px;
+  width: 100%;
+  background-color: #080111;
+}
+.workshop_card_title {
+  margin: 0 auto;
+  color: #fff;
+  font-family: Marcellus;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  margin-top: 10px;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: center;
 }
 @media screen and (max-width: 1006px) {
   .event_page {

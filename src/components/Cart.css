@@ -49,6 +49,9 @@
     right: 1%;
     font-family: Marcellus;
   }
+  .payment-modal {
+    width: 40vw;
+  }
   .col-12 {
   }
   .add-more-cards span {

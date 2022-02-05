@@ -59,7 +59,7 @@ function EventCard(props) {
     window.setTimeout(function () {
       location.reload();
     }, 1000);
-    toast.warn('Item added to cart successfully!', {
+    toast.warn('Event added to cart successfully!', {
       position: 'top-center',
       autoClose: 3000,
       draggable: true,

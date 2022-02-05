@@ -206,19 +206,14 @@ function Navbar() {
               </Button>
             )}
           </li>
-          <li className="nav-item">
-            {sessionStorage.getItem('isLoggedIn') == 'true' && (
-              <NavLink
-                to="/cart"
-                className={cartItems.length ? 'cartBtn' : 'cartBtn empty_cart'}
-                sign
-                onClick={closeMobileMenu}>
-                <span id="quantity">{cartItems.length} </span>
-                <i className="fas fa-shopping-cart"></i>
-              </NavLink>
-            )}
-          </li>
         </ul>
+
+        {sessionStorage.getItem('isLoggedIn') == 'true' && (
+          <NavLink to="/cart" className={cartItems.length ? 'cartBtn' : 'cartBtn empty_cart'}>
+            <span id="quantity">{cartItems.length} </span>
+            <i className="fas fa-shopping-cart"></i>
+          </NavLink>
+        )}
       </div>
     </nav>
   );

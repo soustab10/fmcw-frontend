@@ -21,7 +21,6 @@ const style = {
   transform: 'translate(-50%, -50%)',
   width: 400,
   bgcolor: '#fff',
-  border: '2px solid #000',
   boxShadow: 24,
   p: 4
 };
@@ -72,18 +71,17 @@ function Cart(props) {
     // console.log(isTokenValid());
   }, []);
 
-  async function checkoutHandler(e) {
-    e.preventDefault();
-    const obj = {
-      name: e.target[0].value,
-      email: e.target[1].value,
-      phone: e.target[2].value,
+  async function checkoutHandler() {
+    let obj = {
+      name: document.getElementById('name').value,
+      email: document.getElementById('email').value,
+      phone: document.getElementById('phone').value,
       amount: paymentAmount,
-      redirect_url: window.location.origin + '/dashboard'
+      redirect_url: 'https://fmcbackend.herokuapp.com/api/pay/callback'
     };
-    // console.log(obj);
+    console.log(obj);
 
-    const res = await fetch(process.env.REACT_APP_BACKEND_URI + '/api/pay', {
+    const res = await fetch('https://fmcbackend.herokuapp.com/api/pay', {
       method: 'POST',
       body: JSON.stringify(obj),
       headers: {
@@ -98,6 +96,9 @@ function Cart(props) {
   for (const item of cartItems) {
     if (item.verifyStatus == false) {
       paymentAmount += item.price;
+    }
+    if (paymentAmount >= 699) {
+      paymentAmount = paymentAmount * 0.9;
     }
   }
   return (
@@ -130,6 +131,7 @@ function Cart(props) {
                     link={item.link}
                     price={item.price}
                     prize={item.prize}
+                    name={item.name}
                     item={item}
                     key={index}
                     verified={item.verifyStatus}
@@ -146,31 +148,29 @@ function Cart(props) {
           aria-labelledby="modal-modal-title"
           aria-describedby="modal-modal-description"
           className="payment-modal">
-          <Box class={style}>
-            {/* <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+          <Box>
             <div className="back"></div>
 
             <div className="register-form">
               <h1 className="reg-text">register</h1>
-              <form className="reg-form" action="https://www.instagram.com/simeonleni" onSubmit={checkoutHandler}>
+              <div className="reg-form">
                 <div className="text">
-                  <input type="text" placeholder="Enter your name" required/>
+                  <input type="text" id="name" placeholder="Enter your name" required />
                   <hr />
-                  <input type="email" placeholder="Enter your email" required/>
+                  <input type="email" id="email" placeholder="Enter your email" required />
                   <hr />
-                  <input type="phone" placeholder="Enter your Phone No" required/>
+                  <input type="phone" id="phone" placeholder="Enter your Phone No" required />
                   <br></br>
                   <label htmlFor="cart-amount">
-                    <h3>Total Price = ₹ {cartTotal} </h3>
+                    <h3>Total Price = ₹ {paymentAmount} </h3>
                   </label>
                 </div>
-                <Button type="submit" name="registor-button">
+                <div onClick={checkoutHandler} name="registor-button">
                   Pay Now
-                </Button>
-              </form>
-            </div>            
-          </Typography> */}
-            <Typography id="modal-modal-title" variant="h6" component="h2">
+                </div>
+              </div>
+            </div>
+            {/* <Typography id="modal-modal-title" variant="h6" component="h2">
               <h1>Payment Details</h1>
             </Typography>
             <hr />
@@ -206,10 +206,12 @@ function Cart(props) {
                 them.<br></br>
                 See you in large numbers at the fest!✨
               </p>
+
+              <h3>Total Amount = ₹ {paymentAmount} </h3>
               <a href="https://forms.gle/Su8HRznfUAhfzjPcA" target="_blank" rel="noreferrer">
                 <Button>Registeration Form</Button>
               </a>
-            </Typography>
+            </Typography> */}
           </Box>
         </Modal>
       </section>

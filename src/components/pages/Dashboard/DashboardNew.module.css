@@ -4,6 +4,8 @@
 .section {
   background: #1d033e;
   display: flex;
+  min-height: 100vh;
+  height: 100%;
   flex-direction: column;
   overflow: hidden;
 }

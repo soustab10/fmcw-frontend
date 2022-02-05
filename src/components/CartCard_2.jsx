@@ -56,8 +56,12 @@ function CartCard_2(props) {
   return (
     <Tilt className="card" options={options}>
       <div className="card-div">
-        <img src={props.img} alt="unicorn" className="card-img" />
-        <h3>₹ {props.price}</h3>
+        <img
+          src={props.img}
+          alt="unicorn"
+          className={props.type == 'Contest' ? 'card-img' : 'workshop-card-img'}
+        />
+        {props.type == 'Contest' ? <h3>₹ {props.price}</h3> : ''}
         {!props.verified && (
           <button
             className="cart-btn"
@@ -74,10 +78,8 @@ function CartCard_2(props) {
           <div className="line" />
         </div>
         <CardTitle className="card-title">{props.title}</CardTitle>
-        <h2 className="prizes">
-          PRIZES WORTH <br></br>
-          <b>{props.prize}</b>
-        </h2>
+        <h2 className="prizes">{props.type == 'Contest' ? 'PRIZES WORTH' : 'By'}</h2>
+        <h2 style={{ fontSize: '1.2em' }}>{props.prize}</h2>
         <a href={props.link} target="_blank" className="btn1" rel="noreferrer">
           {props.ps}
         </a>
@@ -88,7 +90,7 @@ function CartCard_2(props) {
 CartCard_2.defaultProps = {
   type: 'Contest',
   title: 'That’s How B’roll',
-  ps: 'View Problem Statement',
+  ps: '',
   price: 150
 };
 export default CartCard_2;

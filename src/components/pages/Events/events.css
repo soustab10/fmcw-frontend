@@ -30,6 +30,7 @@ body {
   margin-top: 10px;
   max-width: 450px;
   height: 400px;
+  width: 250px;
   transition-duration: 300ms;
   transition-property: transform;
   transition-timing-function: ease-out;
@@ -144,6 +145,18 @@ width: 80vw;
   letter-spacing: 0em;
   text-align: center;
 }
+.workshop-card-title {
+  margin: 0 auto;
+  color: #fff;
+  font-family: Marcellus;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  margin-top: 10px;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: center;
+}
 .card .prizes {
   font-family: Nunito Sans;
   font-size: 16px;
@@ -212,6 +225,15 @@ width: 80vw;
 .sidebar {
   display: block;
 }
+.workshop-card-img-div {
+  /* border: 1px solid #FCC907; */
+  box-sizing: border-box;
+  width: 100%;
+  -moz-box-sizing: border-box;
+  /* margin: 10px; */
+  background-color: #170231;
+  -webkit-box-sizing: border-box;
+}
 .showOnMobile {
   display: none;
 }
@@ -228,9 +250,13 @@ width: 80vw;
   text-align: center;
   margin-top: 18px;
   padding: 5px;
+  text-decoration: none;
   background: #fcc907;
   border: 1px solid #FCC907;
   font-weight: 700;
+}
+.cart-btn span {
+  text-decoration: none;
 }
 .cart-btn:hover {
   /* border-color:#fcc907; */
@@ -313,12 +339,76 @@ width: 80vw;
 }
 .payment-modal {
   width: 800px;
-  display: inline-block;
   overflow-x: hidden;
   margin: auto;
-  opacity: 1;
   font-family: Marcellus;
-  border: 2px solid #FCC907;
+}
+.workshop-modal {
+  width: 80vw;
+  background:#35096b;
+  opacity: 1;
+  display: flex;
+  border-radius: 15PX;
+  height: 300px;
+  padding: 20px;
+  margin: auto;
+}
+.workshop-card-img {
+  object-fit: cover;
+  position: relative;
+  height: 250px;
+  width: 100%;
+  background-color: #170231;
+}
+.workshop-card-img:hover {
+  cursor: pointer;
+}
+.workshop-modal .guest-details {
+ float: right;
+ display: flex;
+ position: absolute;
+ font-family: Marcellus;
+}
+.workshop-modal .guest-details p {
+  display: flex;
+  float: right;
+  color: #fff;
+  margin: 45px;
+  font-size: 1.3em;
+  font-family: Marcellus;
+ }
+ .workshop-modal .guest-details h2 {
+  color: #fcc907;
+  font-size: 1.6em;
+  position: absolute;
+  left: 293px;
+  font-family: Marcellus;
+ }
+ .workshop-modal .guest-details h3 {
+  color: #fcc907;
+  font-size: 1.2em;
+  position: absolute;
+  left: 293px;
+  bottom: 0;
+  font-family: Marcellus;
+ }
+ .dates {
+   
+ }
+ .time {
+  margin-left: 250px;
+ }
+ .workshop-modal .guest-details span {
+  color: #fff;
+  font-size: 1.0em;
+  font-family: Marcellus;
+ }
+.workshop-modal-img {
+  object-fit: cover;
+  position: relative;
+  height: 250px;
+  width: 250px;
+  /* border-radius: 50%; */
 }
 #modal-modal-description ul li {
   display: flex;
@@ -334,6 +424,26 @@ width: 80vw;
   font-size: 1.4em;
   margin-top: 3px;
   padding-left: 20px;
+}
+.w-card {
+  margin-right: 50px;
+  margin-top: 10px;
+  max-width: 450px;
+  height: 420px;
+  transition-duration: 300ms;
+  transition-property: transform;
+  transition-timing-function: ease-out;
+  transform: rotate3d(90);
+  border-radius: 10px;
+  /* padding: 20px; */
+  background: #27094B;
+  text-align: center;
+  box-shadow: 0px 24px 48px 0px #0000005c;
+}
+.w-card:hover {
+  transition-duration: 150ms;
+  box-shadow: 0px 12px 24px 0px #00000029;
+  transition: all 0.4s ease;
 }
 #modal-modal-description p {
   font-family: Marcellus;
@@ -375,13 +485,9 @@ width: 80vw;
   }
   .workshop-cards {
     flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: -15px;
   }
-  .workshop {
-    position: relative;
-    /* padding: 20px; */
-   top: 80px;
-   right: 8%;
-   }
    .tabs {
 
    }
@@ -401,6 +507,83 @@ width: 80vw;
    }
    .btn-danger {
     margin-bottom: 30px;
+  }
+  .workshop-modal {
+    width: 80vw;
+    background:#35096b;
+    opacity: 1;
+    overflow: hidden;
+    height: 75vh;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: auto;
+  }
+  .workshop-card-img {
+    object-fit: cover;
+    position: relative;
+    height: 280px;
+    width: 100%;
+    background-color: #170231;
+  }
+  .workshop-modal .guest-details {
+   margin: auto;
+   width: 60vw;
+   text-align: center;
+   left: 40px;
+   display: contents;
+   flex-direction: column;
+   position: absolute;
+   font-family: Marcellus;
+  }
+  .workshop-modal .guest-details p {
+    color: #fff;
+    margin: auto;
+    position: relative;
+    font-size: 1.2em;
+    text-align: center;
+    font-family: Marcellus;
+   }
+   .workshop-modal .guest-details h2 {
+    color: #fcc907;
+    font-size: 1.6em;
+    position: relative;
+    /* margin-top: 0; */
+    right: 0px;
+    left: 0;
+    font-family: Marcellus;
+   }
+   .workshop-modal .guest-details h3 {
+    color: #fcc907;
+    font-size: 1.0em;
+    bottom: -40px;
+    left: 0;
+    display: contents;
+    font-family: Marcellus;
+   }
+   .dates {
+     
+   }
+   .time {
+     margin-top: 40px;
+   }
+   .workshop-modal .guest-details .timing {
+    flex-direction: column;
+    display: flex;
+    margin-top: 120px;
+    position: relative;
+   }
+   .workshop-modal .guest-details span {
+    color: #fff;
+    font-size: 1.0em;
+    font-family: Marcellus;
+   }
+  .workshop-modal-img {
+    object-fit: cover;
+    position: relative;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
   }
    .mobile h2{
      font-family: Marcellus;
@@ -506,4 +689,19 @@ width: 80vw;
     text-decoration: none;
     color: #fff;
   } 
+  .w-cart {
+    bottom: -58px;
+    right: 0;
+    left: 0;
+  }
+}
+@media screen and (max-width: 500px) {
+  .workshop-modal .guest-details p {
+    color: #fff;
+    margin: auto;
+    position: relative;
+    font-size: 0.9em;
+    text-align: center;
+    font-family: Marcellus;
+   }
 }

@@ -190,6 +190,171 @@ const data = {
       price: 129,
       prize: '6K'
     }
+  ],
+  photographyWorkshopData: [
+    {
+      id: 1,
+      img: '/Rathika-01.png',
+      genre: 'photography',
+      type: 'Workshop',
+      title: 'Photography Workshop',
+      link: 'https://drive.google.com/file/d/1ypZkoyI1x3Es-zCTiT0jytmZTazSXmNp/view?usp=sharing',
+      price: 149,
+      prize: 'Rathika Ramasamy',
+      date: '30th January',
+      time: '5:00 p.m. - 6:00 p.m.',
+      desc: 'Rathika Ramasay captures the beauty in nature in unbeleivbaly beautiful shots! Unparallelled experience behind the lense and unrivalled skills in the field proudly adorn her.'
+    },
+    {
+      id: 2,
+      img: '/NaveenVatsa-01.png',
+      genre: 'photography',
+      type: 'Workshop',
+      title: 'Photography Workshop',
+      link: 'https://drive.google.com/file/d/1YyKAYn-PBXPoKSB1Z1iU6fa6wjaVGULL/view?usp=sharing',
+      price: 199,
+      prize: 'Navin Vatsa',
+      date: '13th February',
+      time: '2:00 p.m. - 3:00 p.m.',
+      desc: 'A Contributer to National Geographic Your Shot and a Mentor at Tamron India, Navin Vatsa caputes unbelievably beautiful photographs in search of soul!'
+    }
+    // {
+    //   id: 3,
+    //   img: 'https://drive.google.com/uc?export=view&id=10GSj5pAbMYv_Pb36iJO7US4Tg6AIsRjv',
+    //   genre: 'photography',
+    //   type: 'Workshop',
+    //   title: 'Photo Art',
+    //   link: 'https://drive.google.com/file/d/1nEwQqQeI5mulbMTA1I6u9YzXsLLLEiKC/view?usp=sharing',
+    //   price: 129,
+    //   prize: '10K'
+    // }
+  ],
+  outreachWorkshopData: [
+    {
+      id: 4,
+      img: '/priyankaoutreach.png',
+      genre: 'outreach',
+      type: 'Workshop',
+      title: 'Travel Vlogging',
+      link: 'https://drive.google.com/file/d/1qTdAlnarcZ47eOS-R7O_ImNfsZPnvnBZ/view?usp=sharing',
+      price: 149,
+      prize: 'Priyanka Chandola',
+      date: '11th February',
+      time: '4:00 p.m. - 5:00 p.m.',
+      desc: 'From a software engineer to a YouTuber, Priyanka Chandola is going places with her ‘Desi Girl Traveller’ channel on social media platforms. She creates content on travel in the digital space with the aim to break societal norms. Here’s a look at her journey.'
+    },
+    {
+      id: 5,
+      img: '/Csvenkateshwaran-01.png',
+      genre: 'outreach',
+      type: 'Workshop',
+      title: 'Documentary Filmmaking workshop',
+      link: 'https://drive.google.com/file/d/1-j7QXOXQpBTioe3S7jrTeydKBLGPkcZe/view?usp=sharing',
+      price: 149,
+      prize: 'C.S. Venkateswaran',
+      date: '11th February',
+      time: '2:00 p.m. - 3:00 p.m.',
+      desc: 'He is a National-award winning film critic, professor, documentary filmmaker and writer.'
+    }
+  ],
+  cineWorkshopData: [
+    {
+      id: 7,
+      img: '/sanjayf.png',
+      genre: 'cine',
+      type: 'Workshop',
+      title: 'Filmmaking workshop ',
+      link: 'https://drive.google.com/file/d/1pQMLQD-NpXDh26tlTystzPNsU9Mcxzge/view?usp=sharing',
+      price: 149,
+      prize: 'Sanjay F. Gupta',
+      date: '12th February',
+      time: '5:00p.m. - 6:00 p.m',
+      desc: 'Film Director, Cinematographer, and Photographer Sanjay F Gupta brings energy, creativity and professionalism to each and every production! The tale of his incredivle career and journey is one to applaud!'
+    },
+    {
+      id: 8,
+      img: 'https://drive.google.com/uc?export=view&id=10GSj5pAbMYv_Pb36iJO7US4Tg6AIsRjv',
+      genre: 'cine',
+      type: 'Workshop',
+      title: '(Screenwriting + cinematograpy) session',
+      link: 'https://drive.google.com/file/d/1MF0nFWgHMGxGEU3Kad9qEKbAOTVWVM-w/view?usp=sharing',
+      price: 199,
+      date: '13th February',
+      time: '4:00 p.m. - 5:00 p.m.',
+      prize: 'Mitesh Shah + Anand Gandhi',
+      desc: 'Acclaimed writer Mitesh Shah is known for his contributions to Helicopter Eela, Tumbbad, Mitwa, and the Intern. Indian filmmaker, entrepreneur, media producer and innovator Anand Gandhi is renowned for his debut feature film Ship of Thesaurus which won the National Film Award for Best Picture. His film Tumbbad opened the Critic’s Week at the 75th Venice Film Festival.'
+    }
+  ],
+  designWorkshopData: [
+    {
+      id: 11,
+      img: '/annada.png',
+      genre: 'design',
+      type: 'Workshop',
+      title: 'Design Workshop',
+      link: 'https://drive.google.com/file/d/1-VApwFFzYsxfs5Kc8vGfzK5YowaJ7DYP/view?usp=sharing',
+      price: 149,
+      prize: 'Annada Menon',
+      date: '4th February',
+      time: '11:00a.m. - 12:00 p.m.',
+      desc: 'Creating illustrations with the silver lining of nostalgia is an astounding skill and Annada Menon has it all! Having illustration featured in the cosmopolitan Annada is a going places!'
+    },
+    {
+      id: 12,
+      img: '/rishabh-01.png',
+      genre: 'design',
+      type: 'Workshop',
+      title: 'Product design',
+      link: 'https://drive.google.com/file/d/1miS5p8eaeN-ZaLiip4ApnatmpnoVVMqj/view?usp=sharing',
+      price: 149,
+      prize: 'Rishabh Jain',
+      date: '11th February',
+      time: '6:00 p.m. - 7:00 p.m.',
+      desc: "Rishabh Jain's Journey as a product designer and as the founder of confetti studios, is admirable and one known to encompass learnings from multiple UI/UX projects impacting millions of users!"
+    }
+  ],
+  mediaWorkshopData: [
+    {
+      id: 14,
+      img: '/NikitaSingh-2-01.png',
+      genre: 'media',
+      type: 'Workshop',
+      title: 'Creative Writing workshop',
+      link: 'https://drive.google.com/file/d/1L4xS562Rld4_j7Lr1xv7iU0L4cu7gHPW/view?usp=sharing',
+      price: 199,
+      prize: 'Nikita Singh',
+      date: '13th February',
+      time: '10:00 a.m. - 11:00 a.m.',
+      desc: 'Having written a number of best selling novels, Nikita Singh is impacting and influencing numersous minds and lives. Having spoken on the Tedx platform on multiple occasions, this indian author is winning hearts!'
+    },
+    {
+      id: 15,
+      img: '/ankitmedia.png',
+      genre: 'media',
+      type: 'Workshop',
+      title: 'Tech Journalism Workshop',
+      link: 'https://drive.google.com/file/d/1w-fj86xTKa9X0jQjhH4UFLNu5HRpRvdO/view?usp=sharing',
+      price: 149,
+      date: '',
+      time: '',
+      desc: 'He has worked with renowned news channels and has received numerous awards for his outstanding works including “India’s Best Gadget Show” by ENBA India for his show- Tech it out.',
+      prize: 'Ankit Tuteja'
+    }
+  ],
+  animationWorkshopData: [
+    {
+      id: 17,
+      img: '/sandeepvfx.png',
+      genre: 'animation',
+      type: 'Workshop',
+      title: 'VFX Workshop',
+      link: 'https://drive.google.com/file/d/1jRpV-ZjKNNTm8RFOGktaaZfCz73uQfAx/view?usp=sharing',
+      price: 199,
+      prize: 'Sandeep Kamal',
+      date: '12th February',
+      time: '11:00 a.m.- 12:00 p.m.',
+      desc: "Having contributed to critically acclaimed films such as Jal, Panipat, Badla, and Barfi, VFX designer and digitla nomad, Sandeep kamal's career is admired greatly"
+    }
   ]
 };
 

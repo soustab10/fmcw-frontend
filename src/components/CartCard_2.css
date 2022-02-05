@@ -29,7 +29,7 @@ body {
     margin-right: 50px;
     margin-top: 10px;
     max-width: 450px;
-    height: 400px;
+    height: 420px;
     transition-duration: 300ms;
     transition-property: transform;
     transition-timing-function: ease-out;
@@ -41,6 +41,27 @@ body {
     box-shadow: 0px 24px 48px 0px #0000005c;
   }
   .card:hover {
+    transition-duration: 150ms;
+    box-shadow: 0px 12px 24px 0px #00000029;
+    transition: all 0.4s ease;
+  }
+  .w-card {
+    margin-right: 50px;
+    margin-top: 10px;
+    max-width: 450px;
+    width: 250px;
+    height: 420px;
+    transition-duration: 300ms;
+    transition-property: transform;
+    transition-timing-function: ease-out;
+    transform: rotate3d(90);
+    border-radius: 10px;
+    /* padding: 20px; */
+    background: #27094B;
+    text-align: center;
+    box-shadow: 0px 24px 48px 0px #0000005c;
+  }
+  .w-card:hover {
     transition-duration: 150ms;
     box-shadow: 0px 12px 24px 0px #00000029;
     transition: all 0.4s ease;
@@ -77,9 +98,9 @@ body {
   }
   .event-cards {
     display: flex;
-    /* float: left; */
+    flex-wrap: wrap;
     margin: 0 auto;
-    justify-content: space-around;
+    justify-content: flex-start;
     width: 80vw;
     padding-right: 240px;
     padding-bottom: 89px;
@@ -92,10 +113,13 @@ body {
     transform: rotate3d(180deg);
   }
   .workshop-cards {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-  width: 80vw;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: flex-start;
+    width: 80vw;
+    padding-right: 240px;
+    padding-bottom: 89px;
   }
   .tabs {
    font-size: 1em;
@@ -139,6 +163,17 @@ body {
     text-align: center;
   }
   .card .prizes {
+    font-family: Nunito Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    color: #FCC907;
+    line-height: 18px;
+    margin-top: 20px;
+    letter-spacing: 0em;
+    text-align: center;
+  }
+  .w-card .prizes {
     font-family: Nunito Sans;
     font-size: 16px;
     font-style: normal;
@@ -202,7 +237,12 @@ body {
     align-items: flex-start;
     margin-right: 20px;
   }
-  
+  .MuiTabs-flexContainer {
+    z-index: 1;
+  }
+  .MuiTabs-scroller {
+    scrollbar-width: 100px;
+  }
   .sidebar {
     display: block;
   }
@@ -308,7 +348,8 @@ body {
   .payment-modal {
     background:#27094B;
     font-family: Marcellus;
-    border: 2px solid #FCC907;
+    width: 80vw;
+    height: 90vh;
   }
   #modal-modal-description ul li {
     display: flex;
@@ -324,6 +365,13 @@ body {
     font-size: 1.4em;
     margin-top: 3px;
     padding-left: 20px;
+  }
+  
+  .w-cart {
+    right: 0;
+    left: 0;
+    top: -19px;
+    margin-right: 50px;
   }
   #modal-modal-description p {
     font-family: Marcellus;
@@ -347,7 +395,7 @@ body {
     .event-cards {
       margin-left: -15px;
     flex-wrap: wrap;
-    justify-content: center;
+    /* justify-content: center; */
     flex-direction: column;
   }
   
@@ -364,15 +412,34 @@ body {
       margin-right: -10px;
       flex-wrap: wrap;
       min-width: 280px;
-      margin-top: 40px;
       height: 500px;
+      margin-top: 40px;
+    }
+    .w-card {
+      width: 60vw;
+      max-width: 400px;
+      margin-right: -10px;
+      flex-wrap: wrap;
+      min-width: 280px;
+      margin-top: 40px;
     }
     .card-img {
       height: 300px;
       min-height: 200px;
+      object-fit: cover;
     }
     .workshop-cards {
-      flex-wrap: wrap;
+      margin-left: -15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    }
+    .workshop-card-img {
+      object-fit: cover;
+      position: relative;
+      height: 250px;
+      width: 100%;
+      background-color: #170231;
     }
     .workshop {
       position: relative;
@@ -380,6 +447,14 @@ body {
      top: 80px;
      right: 8%;
      }
+      
+  .w-cart {
+    right: 0;
+    margin-right: 0;
+    left: 0;
+    margin: auto;
+    top: 135px;
+  }
      .tabs {
      }
      #menuBtn {
@@ -411,7 +486,6 @@ body {
       width: 90px;
       height: 35px;
       position: absolute;
-      right: 30px;
     }
      .mobile ul {
        color: #fff;
@@ -496,6 +570,7 @@ body {
     #modal-modal-description p {
       font-family: Marcellus;
       font-size: 0.8em;
+      width: 75vw;
     }
     #modal-modal-description a {
       font-family: Marcellus;

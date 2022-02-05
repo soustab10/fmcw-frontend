@@ -77,7 +77,7 @@ function EventCard(props) {
   );
 }
 EventCard.defaultProps = {
-  type: 'Contest',
+  type: '',
   title: 'That’s How B’roll',
   ps: 'View Problem Statement',
   price: 150

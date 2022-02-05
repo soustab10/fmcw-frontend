@@ -3,6 +3,7 @@ import Loading from '../../Loading';
 import { useState, useEffect, useContext } from 'react';
 import Classes from './DashboardNew.module.css';
 import EventCard from './EventCard';
+import WorkshopCard from './WorkshopCard';
 import { useCart } from 'react-use-cart';
 import Button from './Button/Button';
 import Footer from '../../Footer';
@@ -128,7 +129,7 @@ function DashBoardNew() {
                 <EventCard
                   img={item.img}
                   title={item.title}
-                  type={item.type}
+                  type={item.Type}
                   link={item.link}
                   price={item.price}
                   prize={item.prize}
@@ -150,13 +151,14 @@ function DashBoardNew() {
           {userData.cartItems.map((item, index) => {
             if (item.Type === 'Workshop') {
               return (
-                <EventCard
+                <WorkshopCard
                   img={item.img}
                   title={item.title}
-                  type={item.type}
+                  type={item.Type}
                   link={item.link}
                   price={item.price}
                   prize={item.prize}
+                  desc={item.desc}
                   item={item}
                   key={index}
                 />
