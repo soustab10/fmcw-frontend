@@ -149,7 +149,7 @@ function Cart(props) {
           aria-describedby="modal-modal-description"
           className="payment-modal">
           <Box>
-            <div className="back"></div>
+            {/* <div className="back"></div>
 
             <div className="register-form">
               <h1 className="reg-text">register</h1>
@@ -169,8 +169,8 @@ function Cart(props) {
                   Pay Now
                 </div>
               </div>
-            </div>
-            {/* <Typography id="modal-modal-title" variant="h6" component="h2">
+            </div> */}
+            <Typography id="modal-modal-title" variant="h6" component="h2">
               <h1>Payment Details</h1>
             </Typography>
             <hr />
@@ -211,7 +211,7 @@ function Cart(props) {
               <a href="https://forms.gle/Su8HRznfUAhfzjPcA" target="_blank" rel="noreferrer">
                 <Button>Registeration Form</Button>
               </a>
-            </Typography> */}
+            </Typography>
           </Box>
         </Modal>
       </section>
