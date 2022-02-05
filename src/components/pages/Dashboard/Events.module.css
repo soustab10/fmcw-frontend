@@ -49,7 +49,22 @@
   margin: 10px;
   background-color: #fcc907;
 }
-
+.workshop-card-img-div {
+  /* border: 1px solid #FCC907; */
+  box-sizing: border-box;
+  width: 100%;
+  -moz-box-sizing: border-box;
+  /* margin: 10px; */
+  background-color: #170231;
+  -webkit-box-sizing: border-box;
+}
+.workshop-card-img {
+  object-fit: cover;
+  position: relative;
+  height: 250px;
+  width: 100%;
+  background-color: #170231;
+}
 .separator h2 {
   font-family: Nunito Sans;
   font-size: 1em;
@@ -73,6 +88,7 @@
 .card_img {
   /* object-fit: cover; */
   position: relative;
+  background-color: #170231;
   height: 240px;
   width: 100%;
 }
@@ -410,7 +426,7 @@
   }
   .card {
     /* width: 60vw; */
-    width: 240px;
+    width: 300px;
     margin-right: 0px;
     flex-wrap: wrap;
   }

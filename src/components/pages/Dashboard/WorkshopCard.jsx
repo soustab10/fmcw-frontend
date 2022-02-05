@@ -92,9 +92,9 @@ function EventCard(props) {
     scale: 1.06
   };
   return (
-    <Tilt className={Classes.w_card} options={options}>
+    <Tilt className={Classes.card} options={options}>
       <div className={Classes.card_div}>
-        <img src={props.img} alt="unicorn" className={Classes.workshop_card_img} />
+        <img src={props.img} alt="unicorn" className={Classes.card_img} />
 
         <div className={Classes.separator}>
           <div className={Classes.line} />
