@@ -270,20 +270,20 @@ const data = {
       date: '12th February',
       time: '5:00p.m. - 6:00 p.m',
       desc: 'Film Director, Cinematographer, and Photographer Sanjay F Gupta brings energy, creativity and professionalism to each and every production! The tale of his incredivle career and journey is one to applaud!'
-    },
-    {
-      id: 8,
-      img: 'https://drive.google.com/uc?export=view&id=10GSj5pAbMYv_Pb36iJO7US4Tg6AIsRjv',
-      genre: 'cine',
-      type: 'Workshop',
-      title: '(Screenwriting + cinematograpy) session',
-      link: 'https://drive.google.com/file/d/1MF0nFWgHMGxGEU3Kad9qEKbAOTVWVM-w/view?usp=sharing',
-      price: 199,
-      date: '13th February',
-      time: '4:00 p.m. - 5:00 p.m.',
-      prize: 'Mitesh Shah + Anand Gandhi',
-      desc: 'Acclaimed writer Mitesh Shah is known for his contributions to Helicopter Eela, Tumbbad, Mitwa, and the Intern. Indian filmmaker, entrepreneur, media producer and innovator Anand Gandhi is renowned for his debut feature film Ship of Thesaurus which won the National Film Award for Best Picture. His film Tumbbad opened the Critic’s Week at the 75th Venice Film Festival.'
     }
+    // {
+    //   id: 8,
+    //   img: 'https://drive.google.com/uc?export=view&id=10GSj5pAbMYv_Pb36iJO7US4Tg6AIsRjv',
+    //   genre: 'cine',
+    //   type: 'Workshop',
+    //   title: '(Screenwriting + cinematograpy) session',
+    //   link: 'https://drive.google.com/file/d/1MF0nFWgHMGxGEU3Kad9qEKbAOTVWVM-w/view?usp=sharing',
+    //   price: 199,
+    //   date: '13th February',
+    //   time: '4:00 p.m. - 5:00 p.m.',
+    //   prize: 'Mitesh Shah + Anand Gandhi',
+    //   desc: 'Acclaimed writer Mitesh Shah is known for his contributions to Helicopter Eela, Tumbbad, Mitwa, and the Intern. Indian filmmaker, entrepreneur, media producer and innovator Anand Gandhi is renowned for his debut feature film Ship of Thesaurus which won the National Film Award for Best Picture. His film Tumbbad opened the Critic’s Week at the 75th Venice Film Festival.'
+    // }
   ],
   designWorkshopData: [
     {
