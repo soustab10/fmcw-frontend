@@ -19,6 +19,12 @@ body {
   margin: 10px;
   margin-left: 19px;
 }
+.workshop-card-img-div h3 {
+  position: absolute;
+  top: 20px;
+  color: #FCC907;
+  left: 18px;
+}
 .card-div h3 {
   position: absolute;
   top: 20px;

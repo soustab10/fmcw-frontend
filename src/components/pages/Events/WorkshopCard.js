@@ -96,10 +96,12 @@ function EventCard(props) {
   };
   return (
     <Tilt className="w-card" options={options}>
-      <div className="card-div">
+      <div className="w-card-div">
         <div className="workshop-card-img-div">
           <img src={props.img} onClick={handleOpen} alt="unicorn" className="workshop-card-img" />
+          <h3>₹ {props.price}</h3>
         </div>
+
         <div className="separator">
           <div className="line" />
           <h2>{props.type}</h2>
