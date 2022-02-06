@@ -194,7 +194,7 @@ const data = {
   photographyWorkshopData: [
     {
       id: 1,
-      img: '/Rathika-01.png',
+      img: '/rathika.jpeg',
       genre: 'photography',
       type: 'Workshop',
       title: 'Photography Workshop',
@@ -207,7 +207,7 @@ const data = {
     },
     {
       id: 2,
-      img: '/NaveenVatsa-01.png',
+      img: '/navin.jpeg',
       genre: 'photography',
       type: 'Workshop',
       title: 'Photography Workshop',
@@ -245,7 +245,7 @@ const data = {
     },
     {
       id: 5,
-      img: '/Csvenkateshwaran-01.png',
+      img: '/csvenketaram.jpeg',
       genre: 'outreach',
       type: 'Workshop',
       title: 'Documentary Filmmaking workshop',
@@ -301,7 +301,7 @@ const data = {
     },
     {
       id: 12,
-      img: '/rishabh-01.png',
+      img: '/rishabh.jpeg',
       genre: 'design',
       type: 'Workshop',
       title: 'Product design',
@@ -316,7 +316,7 @@ const data = {
   mediaWorkshopData: [
     {
       id: 14,
-      img: '/NikitaSingh-2-01.png',
+      img: '/nikita.jpeg',
       genre: 'media',
       type: 'Workshop',
       title: 'Creative Writing workshop',

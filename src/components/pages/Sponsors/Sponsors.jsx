@@ -22,13 +22,34 @@ function Sponsors(props) {
             <h2>Powered By</h2>
             <div className="line_2" />
           </div>
-          <a href="https://www.lapcare.com/" target="_blank"><img src="https://drive.google.com/uc?export=view&id=1ftavQQIClarxTN6gfxFKipEt9Bh_JNxy" /></a>
+          <a href="https://www.lapcare.com/" target="_blank" rel="noreferrer">
+            <img src="https://drive.google.com/uc?export=view&id=1ftavQQIClarxTN6gfxFKipEt9Bh_JNxy" />
+          </a>
           <div className="separator-1">
             <div className="line_1" />
             <h2>Co-Powered By</h2>
             <div className="line_2" />
           </div>
-          <a href="https://www.tickertape.in/" target="_blank"><img src="https://drive.google.com/uc?export=view&id=1nLK6rWZGLfCfdb7Y2FMdR7lI7W6-FT0-" /></a>
+          <a href="https://www.tickertape.in/" target="_blank" rel="noreferrer">
+            <img src="https://drive.google.com/uc?export=view&id=1nLK6rWZGLfCfdb7Y2FMdR7lI7W6-FT0-" />
+          </a>
+          <div className="separator-1">
+            <div className="line_1" />
+            <h2>Co-Powered By</h2>
+            <div className="line_2" />
+          </div>
+          <a href="https://indiafilmproject.co/" target="_blank" rel="noreferrer">
+            <img src="https://drive.google.com/uc?export=view&id=1fqzXH6KtY_kM8KrSTYAin0zXOhnZis0x" />
+          </a>
+          <div className="separator-1">
+            <div className="line_1" />
+            <h2>Title Sponsor</h2>
+            <div className="line_2" />
+          </div>
+          <a href="https://picsart.com/create" target="_blank" rel="noreferrer">
+            <img src="https://drive.google.com/uc?export=view&id=1fwU408_95JcMTdOCWbyZZzSScUNSQHpI" />
+          </a>
+
           {/* <div className="separator-1">
             <div className="line_1" />
             <h2>Presents</h2>
@@ -36,6 +57,20 @@ function Sponsors(props) {
           </div> */}
         </div>
         <div className="cards-sponsor">
+          <SponsorCard
+            className="sponsor-card"
+            img="https://drive.google.com/uc?export=view&id=1g24NVNEBcteGSJTCjQxU2q4rQW37ouWX"
+            name="Media Partner"
+            position="Amar Ujala"
+            websiteLink="https://www.amarujala.com/"
+          />
+          <SponsorCard
+            className="sponsor-card"
+            img="https://drive.google.com/uc?export=view&id=1g5MXjiel7FwzJUTaGGhbLQtc7f--2XKi"
+            name="Learning Partner"
+            position="Geeks For Geeks"
+            websiteLink="https://www.geeksforgeeks.org/"
+          />
           <SponsorCard
             className="sponsor-card"
             img="https://drive.google.com/uc?export=view&id=1sW-Sn1Sf7p1b1Y7fuyzny6oBTcMYNA0i"
@@ -63,6 +98,14 @@ function Sponsors(props) {
             name="Media Partner"
             position="India Education"
             websiteLink="https://www.indiaeducation.net/"
+          />
+
+          <SponsorCard
+            className="sponsor-card"
+            img="https://drive.google.com/uc?export=view&id=1hCKPGMn4BeDqc8kmtVWy6j_ToPdRFAjp"
+            name="Audio Electronics Partner"
+            position="Urbanista"
+            websiteLink="https://www.urbanista.com/gl/"
           />
         </div>
 
