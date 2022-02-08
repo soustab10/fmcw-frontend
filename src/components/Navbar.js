@@ -146,6 +146,15 @@ function Navbar() {
           </li>
           <li className="nav-item">
             <NavLink
+              to="/passes"
+              className="nav-links"
+              activeClassName="target"
+              onClick={closeMobileMenu}>
+              PASSES
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink
               to="/team"
               className="nav-links"
               activeClassName="target"

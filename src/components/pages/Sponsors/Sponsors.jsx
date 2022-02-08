@@ -26,7 +26,14 @@ function Sponsors(props) {
             <div className="line_2" />
           </div>
           <img src="https://drive.google.com/uc?export=view&id=128UU4QrdniNQj2LCVkf-MomRRR1udwkU" />
-
+          <div className="separator-1">
+            <div className="line_1" />
+            <h2>Co-Presented By</h2>
+            <div className="line_2" />
+          </div>
+          <a href="https://www.lapcare.com/" target="_blank" rel="noreferrer">
+            <img src="/XPpenco-title.png" />
+          </a>
           <div className="separator-1">
             <div className="line_1" />
             <h2>Powered By</h2>
@@ -62,7 +69,7 @@ function Sponsors(props) {
           <SponsorCard
             className="sponsor-card"
             img="https://drive.google.com/uc?export=view&id=1g24NVNEBcteGSJTCjQxU2q4rQW37ouWX"
-            name="Media Partner"
+            name="National Media Partner"
             position="Amar Ujala"
             websiteLink="https://www.amarujala.com/"
           />

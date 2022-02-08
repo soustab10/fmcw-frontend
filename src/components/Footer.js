@@ -11,7 +11,9 @@ function Footer() {
       <footer>
         <div className="footer">
           <section>
-            <img src={temp} className="image"></img>
+            <img
+              src="https://drive.google.com/uc?export=view&id=1fqWH1KoCSic6KfpfZl_yT2UZ5PGecRz_"
+              className="image"></img>
           </section>
         </div>
       </footer>

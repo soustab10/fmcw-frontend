@@ -49,8 +49,8 @@ a:hover {
 }
 
 .image {
-  height: 400px;
-  width: 533px;
+  /* height: 400px; */
+  width: 600px;
 }
 
 @media screen and (max-width: 768px) {
