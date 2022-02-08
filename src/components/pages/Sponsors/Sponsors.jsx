@@ -31,7 +31,7 @@ function Sponsors(props) {
             <h2>Co-Presented By</h2>
             <div className="line_2" />
           </div>
-          <a href="https://www.lapcare.com/" target="_blank" rel="noreferrer">
+          <a href="https://xp-pen.co.in/" target="_blank" rel="noreferrer">
             <img src="/XPpenco-title.png" />
           </a>
           <div className="separator-1">
