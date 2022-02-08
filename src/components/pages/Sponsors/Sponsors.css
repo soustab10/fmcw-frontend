@@ -50,7 +50,8 @@
   padding: 20px;
   width: 600px;
   background: #1b083d;
-  height: 250px;
+  height: 300px;
+  object-fit: contain;
 }
 .separator-1 {
   display: flex;

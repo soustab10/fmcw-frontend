@@ -16,7 +16,17 @@ function Sponsors(props) {
             <h2>Presents</h2>
             <div className="line_2" />
           </div> */}
+
+          <a href="https://picsart.com/create" target="_blank" rel="noreferrer">
+            <img src="https://drive.google.com/uc?export=view&id=1fsc_Fq1gE-eGUuDfPCbApWUxqs3Wqy6U" />
+          </a>
+          <div className="separator-1">
+            <div className="line_1" />
+            <h2>Presents</h2>
+            <div className="line_2" />
+          </div>
           <img src="https://drive.google.com/uc?export=view&id=128UU4QrdniNQj2LCVkf-MomRRR1udwkU" />
+
           <div className="separator-1">
             <div className="line_1" />
             <h2>Powered By</h2>
@@ -40,14 +50,6 @@ function Sponsors(props) {
           </div>
           <a href="https://indiafilmproject.co/" target="_blank" rel="noreferrer">
             <img src="https://drive.google.com/uc?export=view&id=1fqzXH6KtY_kM8KrSTYAin0zXOhnZis0x" />
-          </a>
-          <div className="separator-1">
-            <div className="line_1" />
-            <h2>Title Sponsor</h2>
-            <div className="line_2" />
-          </div>
-          <a href="https://picsart.com/create" target="_blank" rel="noreferrer">
-            <img src="https://drive.google.com/uc?export=view&id=1fwU408_95JcMTdOCWbyZZzSScUNSQHpI" />
           </a>
 
           {/* <div className="separator-1">
