@@ -33,7 +33,7 @@ function landingPage() {
     <div className={Classes.landing_page}>
       {/* <h1> Landing Page</h1> */}
 
-      <Banner imagePath="/HERO-WO-LOGO-011.svg" />
+      <Banner imagePath="/Group_7139.svg" />
 
       <div className={Classes.texture_bg}></div>
       <img src="/SECT_DIV_LINE.svg" alt="line" className={Classes.line_sep} />

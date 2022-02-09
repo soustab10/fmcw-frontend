@@ -10,13 +10,11 @@
 }
 .logo_dates {
     position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    top: 200px;
+    top: 99px;
     margin: auto;
-    width: 55vw;
-    right: 26vw;
+    width: 50vw;
+    right: 0;
+    left: 0;
 }
 .mobile_hero {
     display: none;
@@ -31,12 +29,6 @@
         display: none;
     }
     .logo_dates {
-        position: absolute;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 70vw;
-        left: 60px;
-        top: 150px
+        width: 80vw;
     }
   }
