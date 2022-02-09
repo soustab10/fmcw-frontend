@@ -108,7 +108,13 @@ function Sponsors(props) {
             position="India Education"
             websiteLink="https://www.indiaeducation.net/"
           />
-
+          <SponsorCard
+            className="sponsor-card"
+            img="/dating_partner.png"
+            name="Dating Partner"
+            position="NyuCrush"
+            websiteLink="https://www.nyucrush.com/"
+          />
           <SponsorCard
             className="sponsor-card"
             img="https://drive.google.com/uc?export=view&id=1hCKPGMn4BeDqc8kmtVWy6j_ToPdRFAjp"
