@@ -7,6 +7,7 @@
 body {
   overflow-x: hidden;
   z-index: -999;
+  background-image: url('/public/website_texture_2245x2245.svg') !important;
 }
 .home,
 .services,
@@ -42,4 +43,9 @@ body {
   background-repeat: no-repeat;
   color: #fff;
   font-size: 100px;
+}
+@media screen and (max-width: 1280px) {
+  body {
+    background-image: none;
+  }
 }

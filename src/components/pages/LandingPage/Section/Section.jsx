@@ -11,16 +11,7 @@ function Section(props) {
 
       <div className={Classes.row}>
         <div className={Classes.column_1}>
-          <p className={Classes.section_content}>
-            {/* After weeks of speculation, uncertainty and postponement, the FMC Weekend is back with a
-            bang. After 6 hugely successful editions, this year's edition is going to be just as
-            majestic as ever. What's even better this time around is the fact that you can have the
-            same surreal experience in its entirety from the comfort of your own homes. Participate
-            in various events to put your mettle to test, attend various workshops conducted by
-            masters of their respective craft to refine your skills, all without getting out of your
-            PJs. */}
-            {props.children}
-          </p>
+          <p className={Classes.section_content}>{props.children}</p>
           <div className={Classes.section_button}>
             <a href={props.link}>
               <Button>{props.buttonText}</Button>

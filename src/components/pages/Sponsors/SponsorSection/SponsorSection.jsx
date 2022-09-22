@@ -31,7 +31,7 @@ function SponsorSection(props) {
       <div className={classes.sponsor_title} id="sponsor_3">
         <div className={classes.cards}>
           <Card
-            img="https://play-lh.googleusercontent.com/KBYiuGdXwAt6NnW2PPStPDhb-WoLpadCSq2qbYbgmURNBUONjEcbUCfQuWoOkF6KWg"
+            img="/Billionbooks-Official-Logo_(1).svg"
             name="Billionbooks"
             sponsor="Book Reading Partner"
             site="https://thebillionbooks.store/"

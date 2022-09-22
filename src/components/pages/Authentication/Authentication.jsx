@@ -45,7 +45,6 @@ function Authentication() {
       // Update context with value of token
 
       const isNewUser = data.user.newUser;
-      sessionStorage.setItem('isLoggedIn', 'true');
       // const isNewUser = true; // for trial purpose only // COMMENT THIS LINE
 
       sessionStorage.setItem('isNewUser', isNewUser);

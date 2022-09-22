@@ -24,11 +24,11 @@ function TeamCard(props) {
         </div>
         <h3 className="position">{props.position}</h3>
       </div>
-      <CardTitle className="card-title">{props.name}</CardTitle>
+      <CardTitle className="cardTitle">{props.name}</CardTitle>
     </div>
   );
 }
 TeamCard.defaultProps = {
-  img: 'https://wallpapercave.com/wp/wp2831956.png',
+  img: 'https://wallpapercave.com/wp/wp2831956.png'
 };
 export default TeamCard;

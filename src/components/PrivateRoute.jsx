@@ -19,7 +19,6 @@ const PrivateRoute = (props) => {
       setIsLoading(true);
       const token = sessionStorage.getItem('tokenID');
       try {
-        // console.log(token);
         const res = await fetch('/api/verify-token', {
           method: 'POST',
           body: JSON.stringify({
@@ -30,7 +29,6 @@ const PrivateRoute = (props) => {
           }
         });
         const data = await res.json();
-        // console.log(data);
 
         // data has message : 'success' if valid and 'invalid' else
         // on valid, data also has user.email, user.name, user.isNewUser, user.role
@@ -40,8 +38,7 @@ const PrivateRoute = (props) => {
           setIsNewUser(data.isNewUser); //data.user.isNewUser
           // userRole = data.user.role;
         }
-      } catch (e){
-        // console.log(e)
+      } catch {
         console.log('Error with authentication, login again');
       }
       
@@ -57,13 +54,11 @@ const PrivateRoute = (props) => {
     // console.log(isTokenValid());
   }, []);
 
-
-  if (props.path == '/register') {
+  if (props.path === '/register') {
     return (
       <Route path={props.path} component={(isLoading ? Loading : (isNewUser && isValid ? props.component : Error))}></Route>
     );
-  } else if (props.path == '/dashboard') {
-
+  } else if (props.path === '/dashboard') {
     return (
       <Route path={props.path} component={(isLoading ? Loading : (!isNewUser && isValid ? props.component : Error))}></Route>
     );

@@ -2,39 +2,17 @@ import React from 'react';
 import './Footer.css';
 import { Link } from 'react-router-dom';
 import { Button } from './Button';
-import logo from './fmcfooter1.png';
-import temp from './logo.png';
+import logo from './foo.png';
+import temp from './foop.png';
 
 function Footer() {
   return (
     <div className="footer-container">
       <footer>
-        <div className="sub-footer">
-          <p>
-            <h6>Luv Bansal: </h6>
-            <span className="phone1">9024552872</span>
-            <h5>Manhar Joshi: </h5>
-            <span className="phone2">7015461454</span>
-          </p>
-        </div>
         <div className="footer">
-          <section1 />
-          <section5>
-            <h3>PRESENTS</h3>
-          </section5>
           <section>
-            <img src="/fmc_logo.png" className="image" alt="FMC" />
+            <img src={temp} className="image"></img>
           </section>
-          <section2>
-            <div className="powered-by">
-              <h2>POWERED BY</h2>
-              <img src="/LAPCARE_LOGO.png" alt="POWERED BY" />
-            </div>
-            <br />
-            <br />
-            <br />
-            <h3>CO-POWERED BY</h3>
-          </section2>
         </div>
       </footer>
 

@@ -26,7 +26,7 @@ const Container = styled.div`
   position: absolute;
   top: 5%;
   color: #27094b;
-  max-width: 768px;
+  max-width: 900px;
 `;
 
 const Wrap = styled.div`
@@ -39,7 +39,7 @@ const Wrap = styled.div`
   text-align: center;
   cursor: pointer;
   border: 1px solid #6f5700;
-  margin: 15px;
+  margin: 10px;
   border-radius: 10px;
   position: relative;
   h1 {

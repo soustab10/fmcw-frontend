@@ -14,7 +14,7 @@ function RegisterationForm() {
       userType: e.target[7].value //insti user usertype 0
     };
 
-    const res = await fetch('/api/user', {
+    const res = await fetch('api/user', {
       method: 'PATCH',
       body: JSON.stringify(obj),
       headers: {
@@ -61,7 +61,7 @@ function RegisterationForm() {
             <input
               type="text"
               name="college"
-              value="IIT (BHU), Varanasi"
+              value="Indian Institute of Technology (BHU) Varanasi"
               required
               readOnly
             />
@@ -69,13 +69,13 @@ function RegisterationForm() {
             <input
               type="text"
               name="college"
-              placeholder="e.g. - IIT (BHU), Varanasi"
+              placeholder="e.g. - Indian Institute of Technology (BHU) Varanasi"
               required
             />
           )}
 
           <label htmlFor="phone">
-            <b>Phone Number</b>
+            <b>Phone Number (+91)</b>
           </label>
           <input type="tel" name="phone" required />
           <label htmlFor="year">
@@ -91,7 +91,7 @@ function RegisterationForm() {
           <label htmlFor="redeem">
             <b>Referral Code</b>
           </label>
-          <input type="text" name="redeem" placeholder="XXXXXXXXXX" />
+          <input type="text" name="redeem" placeholder="XXXXXX" />
           <label htmlFor="insta">
             <b>Instagram Handle</b>
           </label>

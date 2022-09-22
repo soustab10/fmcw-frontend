@@ -51,7 +51,6 @@ function SponsorSection(props) {
           {data.designData.map((item, index) => (
             <Card img={item.img} position={item.position} name={item.name} key={index} />
           ))}
-
         </div>
       </div>
       <div className={classes.sponsor_title} id="sponsor_5">

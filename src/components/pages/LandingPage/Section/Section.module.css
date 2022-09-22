@@ -65,11 +65,11 @@
 }
 
 .section_image {
-  padding-left: 3vw;
+  padding-left: 0.6vw;
   height: 100%;
   object-fit: contain;
   /* width: 100%; */
-  width: 40vw;
+  width: 35vw;
 }
 
 .section_title {
@@ -82,8 +82,6 @@
   line-height: 60px;
   color: #fcc907;
   top: 12vh;
-
-  padding-left: 0.7vw;
   /* float: left; */
   /* padding-left: 10vw; */
   /* text-align: left; */
@@ -106,12 +104,13 @@
 .section_button {
   display: flex;
   position: absolute;
-  left: 0.5vw;
-  bottom: -5vh;
+  left: 2vw;
+  width: 250px;
+  bottom: -10vh;
   font-family: Nunito Sans;
   font-style: normal;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 1.3em;
   /* line-height: 33px; */
 }
 .section_button a {

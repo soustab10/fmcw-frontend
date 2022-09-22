@@ -1,6 +1,10 @@
 body {
+  font-family: Marcellus;
+  background-color: #1D033E;
+}
+.event_page {
   background: #1D033E;
-  font-family: Marcellus;  
+  overflow: hidden;
 }
 .tabs {
   color: #fff;
@@ -10,28 +14,31 @@ body {
   position: relative;
 }
 .card-container {
-  padding: 20px;
-  width: 79vw;
+  max-width: 1000px;
   position: relative;
-  /* overflow: hidden; */
 }
-.event-card,
-.workshop-card {
-  margin-right: 50px;
-  margin-top: 40px;
-  width: 70vw;
-  height: 450px;
+.card-div h3 {
+  position: absolute;
+  top: 20px;
+  color: #FCC907;
+  left: 18px;
+}
+.card {
+  margin-right: 126px;
+  margin-top: 50px;
+  width: 100vw;
+  height: 440px;
   transition-duration: 300ms;
   transition-property: transform;
   transition-timing-function: ease-out;
   transform: rotate3d(90);
-  border-radius: 5px;
+  border-radius: 10px;
   /* padding: 20px; */
   background: #27094B;
-text-align: center;
-  box-shadow: 0px 24px 48px 0px #0000005C;
+  text-align: center;
+  box-shadow: 0px 24px 48px 0px #0000005c;
 }
-.event-card:hover {
+.card:hover {
   transition-duration: 150ms;
   box-shadow: 0px 12px 24px 0px #00000029;
   transition: all 0.4s ease;
@@ -42,38 +49,41 @@ text-align: center;
 }
 
 .separator .line{
-  height: 1px;
-  flex: 1;
-  margin: 15px;
+  height: 0.5px;
+  margin-top: 15px;
+  flex: 2;
+  margin: 10px;
   background-color: #FCC907;
 }
 
 .separator h2{
-  font-family: Marcellus;
-  font-size: 36px;
+  font-family: Nunito Sans;
+  font-size: 1.0em;
   font-style: normal;
   font-weight: 400;
   color: #FCC907;
   line-height: 20px;
+  text-transform: uppercase;
   letter-spacing: 0em;
-  margin-top: 20px;
+  margin-top: 15px;
 }
 .card-img {
-  object-fit: cover;
+  /* object-fit: cover; */
   position: relative;
-  height: 250px;
+  height: 240px;
   width: 100%;
-  background-color: #000;
 }
 .event-cards {
  display: flex;
  /* float: left; */
- justify-content: space-between;
- width: 80vw;
+ margin: 0 auto;
+ justify-content: flex-start;
+ width: 90vw;
+ padding-right: 80px;
 }
 .all-events {
   display: flex;
-  width: 60vw;
+  width: 30vw;
   padding-left: 20px;
   margin: 0 auto;
 }
@@ -98,18 +108,19 @@ width: 80vw;
   text-decoration: none;
 }
 .btn1 {
-  font-family: Marcellus;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 1.0em;
-  line-height: 20px;
   color:#FCC907;
   margin: 0 auto;
   text-align: center;
-  top: 20px;
   position: relative;
-  text-transform: uppercase;
-  text-decoration: none;
+  text-decoration: underline;
+  font-family: Nunito Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: center;
+ margin-top: 20px;
 }
 .btn1:hover {
   color: #fff
@@ -120,17 +131,32 @@ width: 80vw;
 }
 .card-title {
   margin: 0 auto;
-  font-size: 24px;
   color: #fff;
   font-family: Marcellus;
-  font-size: 24px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 400;
+  margin-top: 10px;
   line-height: 30px;
   letter-spacing: 0em;
   text-align: center;
 }
+.card .prizes {
+  font-family: Nunito Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  color: #FCC907;
+  line-height: 18px;
+  margin-top: 20px;
+  letter-spacing: 0em;
+  text-align: center;
+}
 
+
+.MuiSlider-root {
+  color: #FCC907;
+}
 #vertical-tab-0,
 #vertical-tab-1,
 #vertical-tab-2,
@@ -139,16 +165,18 @@ width: 80vw;
 #vertical-tab-5,
 #vertical-tab-6 {
   font-family: Marcellus;
-font-size: 0.4em;
-font-style: normal;
-font-weight: 400;
-line-height: 30px;
-letter-spacing: 0em;
-padding: 20px;
-text-align: left;
-position: relative;
-color: #F9F4F5;
-text-transform: capitalize;
+  font-size: 0.4em;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0em;
+  padding: 15px;
+  align-items: flex-start;
+  text-align: left;
+  position: relative;
+  padding-left: 40px;
+  color: #F9F4F5;
+  text-transform: capitalize;
 }
 #vertical-tab-0:focus,
 #vertical-tab-1:focus,
@@ -160,35 +188,50 @@ text-transform: capitalize;
   color: #FCC907;
   border-right: none;
 }
+#vertical-tab-0[aria-selected="true"],
+#vertical-tab-1[aria-selected="true"],
+#vertical-tab-2[aria-selected="true"],
+#vertical-tab-3[aria-selected="true"],
+#vertical-tab-4[aria-selected="true"],
+#vertical-tab-5[aria-selected="true"],
+#vertical-tab-6[aria-selected="true"] {
+  color: #FCC907;
+}
+.MuiTabs-indicator {
+  width: 0px;
+  background: #fcc907;
+}
+.MuiButtonBase-root-MuiTab-root {
+  align-items: flex-start;
+  margin-right: 20px;
+}
+
 .sidebar {
   display: block;
 }
 .showOnMobile {
   display: none;
 }
-.box1 {
-  width: 80vw;
-}
 #menuBtn {
   display: none;
 }
 .cart-btn {
-  width: auto;
-  height: 40px;
-  position: relative;
+  width: 90px;
+  height: 35px;
+  position: absolute;
   margin: auto;
+  border-radius: 40px;
+  right: 18px;
   text-align: center;
-  margin-top: 30px;
+  margin-top: 18px;
   padding: 5px;
-  background: transparent;
+  background: #fcc907;
   border: 1px solid #FCC907;
-  color: #FCC907;
   font-weight: 700;
 }
 .cart-btn:hover {
-  background: #FCC907;
-  color:#27094B;
-  transition: all 0.6s ease-in-out;
+  /* border-color:#fcc907; */
+  box-shadow: 0px 0px 24px 0px rgba(255, 212, 48, 0.7);
 }
 .fees {
   color: #FCC907;
@@ -206,11 +249,11 @@ text-transform: capitalize;
   background: transparent;
   padding: 3px;
   outline: none;
-  position: absolute;
+  position: fixed;
   border: none;
   bottom: 80%;
   cursor: pointer;
-  z-index: 1;
+  z-index: 5;
   margin: auto;
 }
 .cart:hover {
@@ -297,7 +340,13 @@ text-transform: capitalize;
   padding: 20px;
   color: #fff;
 } 
-@media screen and (max-width: 786px) {
+@media screen and (max-width: 1006px) {
+  .event_page {
+    background-color: #1D033E;
+  }
+  body {
+    background: #1D033E;
+  }
   .event-cards {
     flex-wrap: wrap;
   }
@@ -307,8 +356,9 @@ text-transform: capitalize;
   .showOnMobile {
     display: block;
   }
-  .event-card {
-    /* width: 0vw; */
+  .card {
+    /* width: 60vw; */
+    margin-right: 0px;
     flex-wrap: wrap;
   }
   .workshop-cards {
@@ -321,13 +371,14 @@ text-transform: capitalize;
    right: 8%;
    }
    .tabs {
-     float: none;
    }
    #menuBtn {
     display: block;
     font-size: 2em;
     position: absolute;
     margin-right: 20px;
+  }
+  .card-container {
   }
   .mobile {
     max-width: 480px;
@@ -348,6 +399,12 @@ text-transform: capitalize;
      line-height: 20px;
      color:#FCC907;
    }
+   .cart-btn {
+    width: 90px;
+    height: 35px;
+    position: absolute;
+    right: 30px;
+  }
    .mobile ul {
      color: #fff;
      padding: 20px;
@@ -437,4 +494,8 @@ text-transform: capitalize;
     text-decoration: none;
     color: #fff;
   } 
+}
+
+button:disabled{
+  color: #27094B;  
 }

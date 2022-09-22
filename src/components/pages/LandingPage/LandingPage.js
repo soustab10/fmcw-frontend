@@ -6,9 +6,7 @@ import Section from './Section/Section';
 import Classes from './LandingPage.module.css';
 import Footer from '../../Footer';
 import { Button } from '../../Button';
-
 import closeMobileMenu from '../../Navbar';
-
 
 function landingPage() {
   const [button, setButton] = useState(true);
@@ -57,12 +55,15 @@ function landingPage() {
         )}
       </div>
 
-      <Banner imagePath="/Rectangle_29.png" />
+      <Banner imagePath="/weekennd_herosection-01.svg" />
+      <img src="/SECT_DIV_LINE.svg" alt="line" className={Classes.line_sep} />
       <Section
         title="ABOUT US"
         imagePath="/clubs_2X.png"
         buttonText="REGISTER"
-        link="/authentication">
+        link="/authentication"
+        className="about-img">
+        <img src="/LINEE.svg" alt="line" className={Classes.about_sep} />
         The long-awaited exemplary 8th edition of FMC Weekend is finally here! This time we not only
         bring to you a plethora of exciting events that will put your creative mettle to test, but
         also some awe-inspiring workshops by the notable and established names of the digital arts
@@ -72,6 +73,7 @@ function landingPage() {
       </Section>
 
       <Section title="EVENTS" imagePath="/EVENTSS.png" buttonText="KNOW MORE" link="/events">
+        <img src="/LINEE.svg" alt="line" className={Classes.event_sep} />
         The electrifying eighth edition of FMC Weekend brings to you an opportunity to compete with
         your contemporaries and establish your talent. Participate in events of creative writing,
         photography, cinematography, design and animation, discover your true potential and watch

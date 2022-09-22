@@ -1,30 +1,26 @@
 .parent_wrapper {
 
-  width: 50%;
+  width: 100%;
   display: flex;
   text-align: center;
   justify-content: center;
-  padding-left: calc(vw);
-  /* align-items: center; */
-  
-
 }
+
 .position {
   margin-top: 10px;
-  font-size: 1.2em;
 }
 .team-card {
   /* width: 33vw; */
-  width: calc(100px +10vw);
-  max-width: 250px;
+  /* width: calc(100px +10vw); */
+  width: 220px;
   /* mix-blend-mode: multiply; merges image with the page background */
 
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  height: 300px;
+  height: 270px;
   transition: 0.3s;
   border-radius: 5px;
   /* flex: 1 0 500px; */
-  flex: 2 2 auto;
+  flex: 2 2 2;
   box-sizing: border-box;
   /* margin: 1rem 0.25em; */
   margin: 20px;
@@ -41,7 +37,7 @@
 }
 .team-card h3 {
   font-family: Marcellus;
-  font-size: 1.2em;
+  font-size: 1.0em;
 }
 /* Add rounded corners to the top left and the top right corner of the image */
 /* Add some padding inside the card container */
@@ -53,10 +49,23 @@
 .cardImg {
   object-fit: cover;
   position: relative;
-  height: 220px;
+  height: 180px;
   width: 100%;
   overflow: hidden;
   transition: all .5s ease;
+  background-color: #27094B;
+}
+.cardTitle {
+  margin: 0 auto;
+  color: #fff;
+  font-family: Marcellus;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  margin-top: 10px;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: center;
 }
 .cardImg img {}
 .cardImg img:hover {

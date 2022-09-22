@@ -33,7 +33,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding-left: 20px;
+  align-items: center;
+  /* padding-left: 20px; */
   margin: 0 auto;
 }
 h2 {

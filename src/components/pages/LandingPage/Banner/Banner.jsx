@@ -4,7 +4,7 @@ import Classes from './Banner.module.css';
 function Banner(props) {
   return (
     <div className={Classes.banner}>
-      <img src="/Rectangle_28_(1).png" className={Classes.image} />
+      <img src="/weekennd_herosection-01.svg" className={Classes.image} />
     </div>
   );
 }

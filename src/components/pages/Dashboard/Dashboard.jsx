@@ -1,11 +1,26 @@
+/* eslint-disable react/react-in-jsx-scope */
 import { Fragment, useContext, useEffect, useState } from 'react';
 import AuthContext from '../../../store/auth-context';
 import Loading from '../../Loading';
 import Classes from './Dashboard.module.css';
-
+import { Button } from '../../Button';
 function Dashboard() {
   const [isLoading, setIsLoading] = useState(false);
   const sleep = (ms) => new Promise((res) => setTimeout(res, ms));
+  const authCtx = useContext(AuthContext);
+
+  const [click, setClick] = useState(false);
+  const [button, setButton] = useState(true);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  const handleClick = () => setClick(!click);
+  const closeMobileMenu = () => setClick(false);
+
+  const logoutHandler = () => {
+    sessionStorage.clear();
+    window.location.href = '/';
+    closeMobileMenu();
+  };
   const [userData, setUserData] = useState({
     name: 'John Doe',
     email: 'foo@foo.com',
@@ -21,53 +36,33 @@ function Dashboard() {
       setIsLoading(true);
       const token = sessionStorage.getItem('tokenID');
       try {
-        const res = await fetch('/api/user', {
-          method: 'GET',
-          // body: JSON.stringify({
-          //   token: token
-          // }),
-          headers: {
-            'Content-Type': 'application/json',
+        const res = await fetch('/api/verify-token', {
+          method: 'POST',
+          body: JSON.stringify({
             token: token
+          }),
+          headers: {
+            'Content-Type': 'application/json'
           }
         });
         const data = await res.json();
-        // console.log(data);
 
         // data has message : 'success' if valid and 'invalid' else
         // on valid, data also has user.email, user.name, user.isNewUser, user.role
         if (data.message === 'success') {
           console.log(data);
-          if (data.user.userID) {
-            setUserData((prevState) => ({
-              // ...prevState,
-              name: data.user.userID.name,
-              email: data.user.userID.email,
-              college: data.user.userID.college,
-              phone: data.user.userID.number,
-              year: data.user.userID.yearOfStudy,
-              instaHandle: data.user.userID.instaHandle,
-              userType: data.user.userID.role,
-              refCode: data.user.ref_code,
-              timesReferred: data.user.norefcode
-            }));
-          } else {
-            setUserData((prevState) => ({
-              // ...prevState,
-              name: data.user.name,
-              email: data.user.email,
-              college: data.user.college,
-              phone: data.user.number,
-              year: data.user.yearOfStudy,
-              instaHandle: data.user.instaHandle,
-              userType: data.user.role,
-              // refCode: data.user.ref_code
-              // timesReferred:
-            }));
-          }
+          setUserData((prevState) => ({
+            // ...prevState,
+            name: data.user.name,
+            email: data.user.email,
+            college: data.user.college,
+            phone: data.user.number,
+            year: data.user.yearOfStudy,
+            instaHandle: data.user.instaHandle,
+            userType: data.user.role
+          }));
         }
-      } catch (e) {
-        console.log(e);
+      } catch {
         alert('Error with authentication, login again');
       }
 
@@ -90,11 +85,11 @@ function Dashboard() {
               {userData.userType == 0 && (
                 <Fragment>
                   <h1>
-                    <a href="events">Events</a>
+                    <a href="#">Events</a>
                   </h1>
                   <br />
                   <h1>
-                    <a href="merchandise">Merchandise</a>
+                    <a href="#">Merchandise</a>
                   </h1>
                 </Fragment>
               )}
@@ -162,20 +157,6 @@ function Dashboard() {
                       <td>:</td>
                       <td>{userData.userType == 2 ? 'Campus Ambassador' : 'Participant'}</td>
                     </tr>
-                    {userData.refCode && <tr>
-                      <td>
-                        <strong>Referral Code</strong>
-                      </td>
-                      <td>:</td>
-                      <td>{userData.refCode}</td>
-                    </tr>}
-                    {userData.refCode && <tr>
-                      <td>
-                        <strong>People Referred</strong>
-                      </td>
-                      <td>:</td>
-                      <td>{userData.timesReferred}</td>
-                    </tr>}
                   </tbody>
                 </table>
               </div>

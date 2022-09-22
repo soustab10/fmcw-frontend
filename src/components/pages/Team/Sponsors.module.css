@@ -1,10 +1,16 @@
+.wrapper {
+  background-color: #1b083d;
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
 .sidebar {
   height: 100%;
-  width: calc(200px + 10vw);
+  width: calc(180px + 10vw);
   /* min-width: 200px; */
   position: fixed;
   top: 20;
-  left: 0;
+  left: 200px;
   background: transparent;
   overflow-x: hidden;
   padding-top: 20px;
@@ -16,21 +22,21 @@
   scrollbar-color: #FCC907;
 }
 .sidebar h1 {
-  font-size: 1.6em;
+  font-size: 1.2em;
   font-family: Nunito Sans;
 }
 .sidebar a {
   padding: 15px;
   text-decoration: none;
   color: #fff;
+  font-family: Nunito Sans;
   display: block;
   list-style: none;
 }
-
-.sidebar a:hover {
+.sidebar .target {
   color: #FCC907;
 }
-.sidebar a:focus {
+.sidebar a:hover {
   color: #FCC907;
 }
 .main {

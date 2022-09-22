@@ -21,28 +21,6 @@
     text-align: center;
 
 }
-.separator{
-    display:flex;
-    align-items: center;
-  }
-  
-  .separator .line{
-    height: 1px;
-    flex: 1;
-    margin: 15px;
-    background-color: #FCC907;
-  }
-  
-  .separator h2{
-    font-family: Marcellus;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    color: #FCC907;
-    line-height: 20px;
-    letter-spacing: 0em;
-    margin-top: 20px;
-  }
 .merch-content span {
     font-size: 1.8em;
     font-family: Marcellus;

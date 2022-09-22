@@ -1,0 +1,120 @@
+.cart-page {
+  background-color: #1b083d;
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  padding: 20px;
+  padding-left: 40px;
+  border-bottom: 2px solid #fcc907;
+  color: #fcc907;
+}
+.cart-page h1 {
+  color: #fcc907;
+  font-family: Marcellus;
+  text-align: center;
+  /* padding-bottom: 3vh; */
+}
+.cart-card {
+  width: 300px;
+}
+.price-data {
+  position: absolute;
+  color: #fcc907;
+  font-family: Nunito Sans;
+  bottom: 5px;
+  font-family: 2em;
+  display: flex;
+}
+.cart-container {
+  display: flex;
+  flex-direction: row;
+  float: left;
+  width: max(25vw, 300px);
+  justify-content: flex-start;
+  margin-top: 20px;
+  padding-left: 10px;
+}
+.add-more-cards {
+  width: 300px;
+  height: 400px;
+  background: transparent;
+  border: 2px solid #fcc907;
+  border-radius: 10px;
+  display: flex;
+  padding: 20px;
+  color: #fcc907;
+  float: right;
+  text-align: center;
+  position: absolute;
+  top: 220px;
+  right: 1%;
+  font-family: Marcellus;
+}
+.col-12 {
+}
+.add-more-cards span {
+  font-size: 4em;
+  margin: 0 auto;
+  font-family: Marcellus;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.add-more-cards h3 {
+  display: flex;
+
+  font-family: Marcellus;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .cart-container {
+    width: 200px;
+  }
+  .cart_cards {
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-left: 0 !important;
+  }
+  .add-more-cards {
+    width: 300px;
+    height: 400px;
+    position: relative;
+    top: 98%;
+    right: 1%;
+  }
+  .checkout_button{    
+    display: flex;
+    position: relative;
+    width: 100vw !important;
+    justify-content: center;
+    padding-bottom: 20px;
+    margin-top: 15px;
+    margin-left: 6vw !important;
+    right: 10px !important;
+
+    width: 30vw;
+    padding-left: 10vw;
+  }
+  .purchase_details {
+    padding-top: 15vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.cart_cards {
+  display: flex;
+  /* padding: 2vw; */
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-left: 6vw;
+}
+.checkout_button {
+  position: absolute;
+  right: 20px;
+  top: 50px;
+}

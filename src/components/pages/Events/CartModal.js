@@ -22,79 +22,21 @@ export default function Cart(props) {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-  const { isEmpty, items, totalItems, cartTotal, removeItem, emptyCart } = useCart();
+  const { isEmpty, items, totalItems, cartTotal, removeItem, emptyCart, updateItemQuantity } =
+    useCart();
   const handlePayment = () => {
     document.querySelector('.payment-modal').style.display = 'block';
     document.querySelector('.cart-modal').style.display = 'none';
   };
-
+  if (cartTotal > 699) {
+  }
   return (
     <div>
       <button onClick={handleOpen} className="cart">
         <span id="quantity">{totalItems} </span>
         <i className="fas fa-shopping-cart"></i>
       </button>
-      <Modal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-        className="cart-modal">
-        <Box sx={style}>
-          <Typography id="modal-modal-title" variant="h6" component="h2">
-            <h1>My Cart</h1>
-          </Typography>
-          <hr />
-          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            <div className="col-12">
-              <h5>Total Items: ({totalItems})</h5>
-              <table className="table m-0">
-                <tbody>
-                  <tr>
-                    <th>Event Name</th>
-                    <th>Type</th>
-                    <th>Price</th>
-                  </tr>
-                  {items.map((item, index) => {
-                    return (
-                      <tr key={index}>
-                        <td>{item.title}</td>
-                        <td>{item.type}</td>
-                        <td>
-                          <i className="fas fa-rupee-sign"></i> {item.price}
-                        </td>
-                        <th className="trash-btn" onClick={() => removeItem(item.id)}>
-                          <i className="fas fa-trash"></i>
-                        </th>
-                      </tr>
-                    );
-                  })}
-                </tbody>
-              </table>
-            </div>
-            <div className="col-auto ms-auto">
-              <h3>
-                Total Price: <i className="fas fa-rupee-sign"></i> {cartTotal}
-              </h3>
-            </div>
-            <div className="col-auto ms-auto btns">
-              <span>
-                <h3 style={{ color: 'white' }}>Cart Cutoff Price:</h3>
-                <p>
-                  10% off on total bill in excess of 699 and access to all Events+Workshops
-                  (Pre-weekend+Post-weekend included)+Pronites
-                </p>
-              </span>
-              <button className="btn btn-danger" onClick={() => emptyCart()}>
-                Clear Cart
-              </button>
-              <button onClick={() => handlePayment()} className="btn btn-primary">
-                Pay Now
-              </button>
-            </div>
-          </Typography>
-        </Box>
-      </Modal>
+
       <Modal
         open={open}
         onClose={handleClose}

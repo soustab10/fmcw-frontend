@@ -9,7 +9,7 @@ const CardTitle = styled.h3`
 
 function SponsorCard(props) {
   return (
-    <div>
+    <div className="sponsor-card">
       <div className="sponsorImg">
         <a href={props.site} target="_blank" rel="noreferrer">
           <img src={props.img} alt="unicorn" />
