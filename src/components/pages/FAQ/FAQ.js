@@ -75,7 +75,7 @@ const Dropdown = styled.div`
 function Accordion() {
   const [clicked, setClicked] = useState(false);
 
-  const toggle = (index) => {
+  const toggle = index => {
     if (clicked === index) {
       // if clicked question is already active, then close it
       return setClicked(null);

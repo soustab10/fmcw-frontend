@@ -7,12 +7,12 @@ import Loading from './Loading';
 // var isNewUser = false;
 // var userRole = -1;
 
-const PrivateRoute = (props) => {
+const PrivateRoute = props => {
   const [isValid, setIsValid] = useState(false);
   const [isNewUser, setIsNewUser] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-  const sleep = (ms) => new Promise((res) => setTimeout(res, ms));
+  const sleep = ms => new Promise(res => setTimeout(res, ms));
 
   useEffect(() => {
     const isTokenValid = async () => {
@@ -22,18 +22,18 @@ const PrivateRoute = (props) => {
         const res = await fetch('/api/verify-token', {
           method: 'POST',
           body: JSON.stringify({
-            token: token
+            token: token,
           }),
           headers: {
-            'Content-Type': 'application/json'
-          }
+            'Content-Type': 'application/json',
+          },
         });
         const data = await res.json();
 
         // data has message : 'success' if valid and 'invalid' else
         // on valid, data also has user.email, user.name, user.isNewUser, user.role
         if (data.message === 'success') {
-          console.log(data)
+          console.log(data);
           setIsValid(true);
           setIsNewUser(data.isNewUser); //data.user.isNewUser
           // userRole = data.user.role;
@@ -41,13 +41,12 @@ const PrivateRoute = (props) => {
       } catch {
         console.log('Error with authentication, login again');
       }
-      
+
       // await sleep(5000);
       // let data = [true, true, true];
       // setIsValid(data[0]);
       // setIsNewUser(data[1]);
       setIsLoading(false);
-
     };
     isTokenValid();
 
@@ -56,11 +55,19 @@ const PrivateRoute = (props) => {
 
   if (props.path === '/register') {
     return (
-      <Route path={props.path} component={(isLoading ? Loading : (isNewUser && isValid ? props.component : Error))}></Route>
+      <Route
+        path={props.path}
+        component={
+          isLoading ? Loading : isNewUser && isValid ? props.component : Error
+        }></Route>
     );
   } else if (props.path === '/dashboard') {
     return (
-      <Route path={props.path} component={(isLoading ? Loading : (!isNewUser && isValid ? props.component : Error))}></Route>
+      <Route
+        path={props.path}
+        component={
+          isLoading ? Loading : !isNewUser && isValid ? props.component : Error
+        }></Route>
     );
   }
 

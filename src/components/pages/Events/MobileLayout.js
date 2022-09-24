@@ -1,6 +1,5 @@
 import React from 'react';
 import './events.css';
-import CartModal from './CartModal';
 import { Link } from 'react-router-dom';
 
 function MobileLayout() {

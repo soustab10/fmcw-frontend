@@ -16,20 +16,26 @@ const style = {
   bgcolor: '#1D033E',
   border: '2px solid #000',
   boxShadow: 24,
-  p: 3
+  p: 3,
 };
 export default function Cart(props) {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-  const { isEmpty, items, totalItems, cartTotal, removeItem, emptyCart, updateItemQuantity } =
-    useCart();
+  const {
+    isEmpty,
+    items,
+    totalItems,
+    cartTotal,
+    removeItem,
+    emptyCart,
+    updateItemQuantity,
+  } = useCart();
   const handlePayment = () => {
     document.querySelector('.payment-modal').style.display = 'block';
     document.querySelector('.cart-modal').style.display = 'none';
   };
-  if (cartTotal > 699) {
-  }
+
   return (
     <div>
       <button onClick={handleOpen} className="cart">
@@ -74,12 +80,16 @@ export default function Cart(props) {
             </ul>
             <p className="form-para">
               {' '}
-              We hereby request you to fill out this google form as soon as you complete the payment
-              successfully and attach the screenshot of the payment with it. Do send the screenshot
-              to your person of contact and feel free to enquire about the passes to them.<br></br>
+              We hereby request you to fill out this google form as soon as you
+              complete the payment successfully and attach the screenshot of the
+              payment with it. Do send the screenshot to your person of contact
+              and feel free to enquire about the passes to them.<br></br>
               See you in large numbers at the fest!✨
             </p>
-            <a href="https://forms.gle/Su8HRznfUAhfzjPcA" target="_blank" rel="noreferrer">
+            <a
+              href="https://forms.gle/Su8HRznfUAhfzjPcA"
+              target="_blank"
+              rel="noreferrer">
               Google Form
             </a>
           </Typography>

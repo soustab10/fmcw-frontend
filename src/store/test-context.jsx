@@ -1,18 +1,19 @@
+/* eslint-disable react/prop-types */
 import React, { useState } from 'react';
 
 const AuthContext = React.createContext({
   token: '',
   isLoggedIn: false,
-  login: (token) => {},
+  login: token => {},
   logout: () => {},
 });
 
-export const AuthContextProvider = (props) => {
+export const AuthContextProvider = props => {
   const [token, setToken] = useState(null);
 
   const userIsLoggedIn = !!token;
 
-  const loginHandler = (token) => {
+  const loginHandler = token => {
     setToken(token);
   };
 

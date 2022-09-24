@@ -1,3 +1,4 @@
+/* eslint-disable react/react-in-jsx-scope */
 import { Fragment, useContext } from 'react';
 import AuthContext from '../../../store/auth-context';
 import Classes from './Registeration.module.css';
