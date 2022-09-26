@@ -58,7 +58,7 @@ jobs:
       - name: Login to DockerHub
         uses: docker/login-action@v1
         with:
-          username: ${{ secrets.fmc_weekend }}
+          username: ${{ secrets.FMC_WEEKEND }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Build and push
