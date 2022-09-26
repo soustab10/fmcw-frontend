@@ -18,8 +18,15 @@ const CardTitle = styled.h2`
 `;
 
 function EventCard(props) {
-  const { isEmpty, items, totalItems, cartTotal, removeItem, emptyCart, updateItemQuantity } =
-    useCart();
+  const {
+    isEmpty,
+    items,
+    totalItems,
+    cartTotal,
+    removeItem,
+    emptyCart,
+    updateItemQuantity,
+  } = useCart();
   const [click, setClick] = useState(false);
   const { addItem, inCart } = useCart();
   const { getItem } = useCart();
@@ -41,7 +48,7 @@ function EventCard(props) {
     reset: true,
     easing: 'cubic-bezier(.03,.98,.52,.99)',
     perspective: 1000,
-    scale: 1.06
+    scale: 1.06,
   };
   return (
     <Tilt className="card" options={options}>
@@ -53,9 +60,10 @@ function EventCard(props) {
           onClick={() => {
             addItem(props.item);
             // change();
-          } } disabled={inCart(props.item.id)}>
-          {inCart(props.item.id) ? "Added" : "Add"} 
-          {inCart(props.item.id) ? "" : <img src="/add-cartPURPLE_OLD_1.svg" />} 
+          }}
+          disabled={inCart(props.item.id)}>
+          {inCart(props.item.id) ? 'Added' : 'Add'}
+          {inCart(props.item.id) ? '' : <img src="/add-cartPURPLE_OLD_1.svg" />}
         </button>
         <div className="separator">
           <div className="line" />
@@ -78,6 +86,6 @@ EventCard.defaultProps = {
   type: 'Contest',
   title: 'That’s How B’roll',
   ps: 'View Problem Statement',
-  price: 150
+  price: 150,
 };
 export default EventCard;
