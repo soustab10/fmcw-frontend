@@ -5,7 +5,7 @@
     "node": "14.x"
   },
   "private": true,
-  "proxy": "https://fmcw-deployedp.herokuapp.com",
+  "proxy": "https://sheltered-depths-82114.herokuapp.com/",
   "dependencies": {
     "@chec/commerce.js": "^2.8.0",
     "@emotion/react": "^11.5.0",
