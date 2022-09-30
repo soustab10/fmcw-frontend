@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
+import { gapi } from 'gapi-script';
 import Home from './components/pages/Home';
 import SignUp from './components/pages/Sign-up/SignUp';
 import events from './components/pages/Events/events';
@@ -32,6 +33,12 @@ function App() {
   if (window.innerWidth <= 1280) {
     document.body.style.backgroundImage = 'none';
   }
+  gapi.load('client:auth2', () => {
+    gapi.client.init({
+      clientId: '682212443685-o74ke9aehaiok569ab70aie5qepfjc67.apps.googleusercontent.com',
+      plugin_name: 'chat'
+    });
+  });
   return (
     <>
       <Router>
