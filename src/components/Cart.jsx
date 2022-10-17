@@ -70,18 +70,20 @@ function Cart(props) {
     getCartItems();
     // console.log(isTokenValid());
   }, []);
-
+  const [sent, setSent] = useState(false);
+  const [email, setEmail] = useState('');
+  const [amt, setAmt] = useState(0);
   async function checkoutHandler() {
     let obj = {
       name: document.getElementById('name').value,
       email: document.getElementById('email').value,
       phone: document.getElementById('phone').value,
       amount: paymentAmount,
-      redirect_url: 'https://fmcbackend.herokuapp.com/api/pay/callback'
+      redirect_url: process.env.REACT_APP_BACKEND_URI + '/api/pay/callback'
     };
     console.log(obj);
 
-    const res = await fetch('https://fmcbackend.herokuapp.com/api/pay', {
+    const res = await fetch(process.env.REACT_APP_BACKEND_URI + '/api/pay', {
       method: 'POST',
       body: JSON.stringify(obj),
       headers: {
@@ -91,6 +93,25 @@ function Cart(props) {
     // console.log({ obj });
     const data = await res.json();
     console.log(data);
+    setSent(true);
+    setAmt(paymentAmount);
+    try {
+      await fetch(process.env.REACT_APP_BACKEND_URI + '/api/send-mail', {
+        method: 'POST',
+        body: JSON.stringify({
+          name: obj.name,
+          email: email,
+          amount: paymentAmount,
+          cartItems: cartItems
+        }),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+      // console.log(res);
+    } catch (err) {
+      console.log(err);
+    }
   }
   let paymentAmount = 0;
   for (const item of cartItems) {
@@ -149,7 +170,7 @@ function Cart(props) {
           aria-describedby="modal-modal-description"
           className="payment-modal">
           <Box>
-            {/* <div className="back"></div>
+            <div className="back"></div>
 
             <div className="register-form">
               <h1 className="reg-text">register</h1>
@@ -157,20 +178,29 @@ function Cart(props) {
                 <div className="text">
                   <input type="text" id="name" placeholder="Enter your name" required />
                   <hr />
-                  <input type="email" id="email" placeholder="Enter your email" required />
+                  <input
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    id="email"
+                    placeholder="Enter your email"
+                    required
+                  />
                   <hr />
                   <input type="phone" id="phone" placeholder="Enter your Phone No" required />
                   <br></br>
                   <label htmlFor="cart-amount">
-                    <h3>Total Price = ₹ {paymentAmount} </h3>
+                    <h6 id="amount" style={{ color: '#fff' }}>
+                      Total Price = ₹ {paymentAmount}{' '}
+                    </h6>
                   </label>
                 </div>
-                <div onClick={checkoutHandler} name="registor-button">
+                <button type="submit" onClick={checkoutHandler} name="registor-button">
                   Pay Now
-                </div>
+                </button>
               </div>
-            </div> */}
-            <Typography id="modal-modal-title" variant="h6" component="h2">
+            </div>
+            {/* <Typography id="modal-modal-title" variant="h6" component="h2">
               <h1>Payment Details</h1>
             </Typography>
             <hr />
@@ -211,7 +241,7 @@ function Cart(props) {
               <a href="https://forms.gle/Su8HRznfUAhfzjPcA" target="_blank" rel="noreferrer">
                 <Button>Registeration Form</Button>
               </a>
-            </Typography>
+            </Typography> */}
           </Box>
         </Modal>
       </section>

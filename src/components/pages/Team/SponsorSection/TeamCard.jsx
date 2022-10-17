@@ -1,6 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import './Card.css';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import LazyLoad from 'react-lazy-load';
+import { Facebook } from 'react-content-loader';
 
 const CardTitle = styled.h3`
   transform: translateZ(55px);
@@ -20,7 +23,7 @@ function TeamCard(props) {
     <div className="team-card" options={options}>
       <div>
         <div className="cardImg">
-          <img src={props.img} alt="unicorn" className="cardImg" />
+          <img src={props.img} effect="blur" alt="unicorn" className="cardImg" />
         </div>
         <h3 className="position">{props.position}</h3>
       </div>

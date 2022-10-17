@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import './App.css';
 import Navbar from './components/Navbar';
 import { gapi } from 'gapi-script';
@@ -35,10 +35,11 @@ function App() {
   }
   gapi.load('client:auth2', () => {
     gapi.client.init({
-      clientId: '682212443685-o74ke9aehaiok569ab70aie5qepfjc67.apps.googleusercontent.com',
+      clientId: process.env.REACT_APP_GOOGLE_CLIENT_ID,
       plugin_name: 'chat'
     });
   });
+
   return (
     <>
       <Router>

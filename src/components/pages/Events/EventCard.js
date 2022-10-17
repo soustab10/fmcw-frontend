@@ -13,6 +13,7 @@ import Tilt from 'react-tilt';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useCart } from 'react-use-cart';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const CardTitle = styled.h2`
   transform: translateZ(55px);
@@ -82,7 +83,7 @@ function EventCard(props) {
   return (
     <Tilt className="card" options={options}>
       <div className="card-div">
-        <img src={props.img} alt="unicorn" className="card-img" />
+        <LazyLoadImage src={props.img} alt="unicorn" className="card-img" />
         <h3>₹ {props.price}</h3>
         {sessionStorage.getItem('isLoggedIn') == 'true' && (
           <button
