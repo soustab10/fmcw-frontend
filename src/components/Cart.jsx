@@ -91,6 +91,11 @@ function Cart(props) {
     // console.log({ obj });
     const data = await res.json();
     console.log(data);
+
+    //ToDo: You just have to make an API request to /api/send-mail to send the email to the user with the details of the
+    // event they have booked and the total payment amount
+    // The body of the API request should contain: name, email, phone and paymentAmount of the user.
+    // The API request should be made in the checkoutHandler function and you should use the register-form to get the email of user.
   }
   let paymentAmount = 0;
   for (const item of cartItems) {
@@ -149,7 +154,7 @@ function Cart(props) {
           aria-describedby="modal-modal-description"
           className="payment-modal">
           <Box>
-            {/* <div className="back"></div>
+            <div className="back"></div>
 
             <div className="register-form">
               <h1 className="reg-text">register</h1>
@@ -169,8 +174,8 @@ function Cart(props) {
                   Pay Now
                 </div>
               </div>
-            </div> */}
-            <Typography id="modal-modal-title" variant="h6" component="h2">
+            </div>
+            {/* <Typography id="modal-modal-title" variant="h6" component="h2">
               <h1>Payment Details</h1>
             </Typography>
             <hr />
@@ -211,7 +216,7 @@ function Cart(props) {
               <a href="https://forms.gle/Su8HRznfUAhfzjPcA" target="_blank" rel="noreferrer">
                 <Button>Registeration Form</Button>
               </a>
-            </Typography>
+            </Typography> */}
           </Box>
         </Modal>
       </section>
