@@ -68,11 +68,11 @@ function Cart(props) {
       email: document.getElementById('email').value,
       phone: document.getElementById('phone').value,
       amount: paymentAmount,
-      redirect_url: 'https://fmcbackend.herokuapp.com/api/pay/callback'
+      redirect_url: process.env.REACT_APP_BACKEND_URI+'/api/pay/callback'
     };
     console.log(obj);
 
-    const res = await fetch('https://fmcbackend.herokuapp.com/api/pay', {
+    const res = await fetch(process.env.REACT_APP_BACKEND_URI+'/api/pay', {
       method: 'POST',
       body: JSON.stringify(obj),
       headers: {
@@ -81,6 +81,7 @@ function Cart(props) {
     });
     const data = await res.json();
     console.log(data);
+
 
     let mailsend = {
       name: document.getElementById('name').value,
@@ -100,6 +101,9 @@ function Cart(props) {
     const yougotmail = await mailgot;
     console.log('this is your mail data according to your cart');
     console.log(yougotmail);
+
+   
+
   }
   let paymentAmount = 0;
   for (const item of cartItems) {
@@ -155,20 +159,20 @@ function Cart(props) {
             <div className="back"></div>
 
             <div className="register-form">
-              <h1 className="reg-text">register</h1>
+              <h1 className="reg-text">REGISTER</h1>
               <div className="reg-form">
                 <div className="text">
-                  <input type="text" id="name" placeholder="Enter your name" required />
+                  <input className="register-input" type="text" id="name" placeholder="Name" required />
                   <hr />
-                  <input type="email" id="email" placeholder="Enter your email" required />
+                  <input className="register-input" type="email" id="email" placeholder="Email" required />
                   <hr />
-                  <input type="phone" id="phone" placeholder="Enter your Phone No" required />
+                  <input className="register-input" type="phone" id="phone" placeholder="Contact Number" required />
                   <br></br>
                   <label htmlFor="cart-amount">
-                    <h3>Total Price = ₹ {paymentAmount} </h3>
+                    <h3 className='price-info'>Total Price = ₹ {paymentAmount} </h3>
                   </label>
                 </div>
-                <button onClick={checkoutHandler} name="registor-button">
+                <button onClick={checkoutHandler} name="registor-button" className='register-btn'>
                   Pay Now
                 </button>
               </div>
