@@ -1,16 +1,8 @@
 /* eslint-disable react/prop-types */
 import React, { useState } from 'react';
-// import Card from '@mui/material/Card';
-// import CardContent from '@mui/material/CardContent';
-// import CardMedia from '@mui/material/CardMedia';
-// import Typography from '@mui/material/Typography';
-// import './Events.css';
-// import { Button } from '@mui/material';
-// import unicorn from "./assets/test.png";
 import styled from 'styled-components';
 import Tilt from 'react-tilt';
 import Classes from './Events.module.css';
-// import addToCart from './CartModal';
 
 import { useCart } from 'react-use-cart';
 
@@ -21,12 +13,7 @@ const CardTitle = styled.h2`
 function EventCard(props) {
   const { isEmpty, items, totalItems, cartTotal, removeItem, emptyCart, updateItemQuantity } =
     useCart();
-  const [click, setClick] = useState(false);
-  const { addItem, inCart } = useCart();
-  const { getItem } = useCart();
-  const handleClick = () => {
-    setClick(!click);
-  };
+  const [click] = useState(false);
   function change() {
     var elem = document.querySelector('.cart-btn');
     if (elem.value == 'Add') {
@@ -48,17 +35,6 @@ function EventCard(props) {
     <Tilt className={Classes.card} options={options}>
       <div className={Classes.card_div}>
         <img src={props.img} alt="unicorn" className={Classes.card_img} />
-        {/* <h3>₹ {props.price}</h3> */}
-        {/* <button
-          className="cart-btn"
-          onClick={() => {
-            addItem(props.item);
-            // change();
-          }}
-          disabled={inCart(props.item.id)}>
-          {inCart(props.item.id) ? 'Added' : 'Add'}
-          {inCart(props.item.id) ? '' : <img src="/add-cartPURPLE_OLD_1.svg" />}
-        </button> */}
         <div className={Classes.separator}>
           <div className={Classes.line} />
           <span>{props.type}</span>
