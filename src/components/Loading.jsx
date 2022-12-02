@@ -1,4 +1,4 @@
-\/* eslint-disable react/react-in-jsx-scope */
+
 import { CircularProgress } from '@mui/material';
 import './Loading.css';
 
