@@ -1,18 +1,12 @@
 import './Cart.css';
 import { useCart } from 'react-use-cart';
-import EventCard from './pages/Events/EventCard';
-import { NavLink } from 'react-router-dom';
-// import { Button } from '../components/Button';
 import * as React from 'react';
 import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import Footer from './Footer';
 import CheckoutButton from './CheckoutButton/CheckoutButton';
 import CartCard_2 from './CartCard_2';
 import { useState, useEffect } from 'react';
-// import Button from './pages/LandingPage/Section/Button/Button';
-import Button from './Button_2';
 
 const style = {
   position: 'absolute',
@@ -51,11 +45,9 @@ function Cart(props) {
           }
         });
         const data = await res.json();
-        // console.log(data);
 
         if (data.message === 'success') {
           console.log(data);
-          // console.log(data.user.userID.userCart.cartItems);
           if (data.user.userID) {
             setCartItems(data.user.userID.userCart.cartItems);
           } else {
@@ -68,7 +60,6 @@ function Cart(props) {
       }
     };
     getCartItems();
-    // console.log(isTokenValid());
   }, []);
 
   async function checkoutHandler() {
@@ -88,7 +79,6 @@ function Cart(props) {
         'Content-Type': 'application/json'
       }
     });
-    // console.log({ obj });
     const data = await res.json();
     console.log(data);
 
@@ -96,9 +86,8 @@ function Cart(props) {
       name: document.getElementById('name').value,
       email: document.getElementById('email').value,
       phone: document.getElementById('phone').value,
-      paymentAmount: paymentAmount,
-    }
-    // console.log(send)
+      paymentAmount: paymentAmount
+    };
 
     const mailgot = await fetch(process.env.REACT_APP_BACKEND_URI + '/api/send-mail', {
       method: 'POST',
@@ -106,15 +95,11 @@ function Cart(props) {
       headers: {
         'Content-Type': 'application/json'
       }
-    })
+    });
 
     const yougotmail = await mailgot;
-    console.log("this is your mail data according to your cart");
+    console.log('this is your mail data according to your cart');
     console.log(yougotmail);
-    //ToDo: You just have to make an API request to /api/send-mail to send the email to the user with the details of the
-    // event they have booked and the total payment amount
-    // The body of the API request should contain: name, email, phone and paymentAmount of the user.
-    // The API request should be made in the checkoutHandler function and you should use the register-form to get the email of user.
   }
   let paymentAmount = 0;
   for (const item of cartItems) {
@@ -136,6 +121,7 @@ function Cart(props) {
           <div className="checkout_button">
             <CheckoutButton onClick={handleOpen}>CHECKOUT</CheckoutButton>
           </div>
+
           <div className="cart_cards">
             {cartItems.map((item, index) => {
               return (
