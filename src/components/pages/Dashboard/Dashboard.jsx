@@ -1,26 +1,15 @@
 /* eslint-disable react/react-in-jsx-scope */
-import { Fragment, useContext, useEffect, useState } from 'react';
-import AuthContext from '../../../store/auth-context';
+import { Fragment, useEffect, useState } from 'react';
 import Loading from '../../Loading';
 import Classes from './Dashboard.module.css';
-import { Button } from '../../Button';
 function Dashboard() {
   const [isLoading, setIsLoading] = useState(false);
-  const sleep = (ms) => new Promise((res) => setTimeout(res, ms));
-  const authCtx = useContext(AuthContext);
 
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  const handleClick = () => setClick(!click);
-  const closeMobileMenu = () => setClick(false);
 
-  const logoutHandler = () => {
-    sessionStorage.clear();
-    window.location.href = '/';
-    closeMobileMenu();
-  };
   const [userData, setUserData] = useState({
     name: 'John Doe',
     email: 'foo@foo.com',
@@ -38,24 +27,16 @@ function Dashboard() {
       try {
         const res = await fetch(process.env.REACT_APP_BACKEND_URI + '/api/user', {
           method: 'GET',
-          // body: JSON.stringify({
-          //   token: token
-          // }),
           headers: {
             'Content-Type': 'application/json',
             token: token
           }
         });
         const data = await res.json();
-        // console.log(data);
-
-        // data has message : 'success' if valid and 'invalid' else
-        // on valid, data also has user.email, user.name, user.isNewUser, user.role
         if (data.message === 'success') {
           console.log(data);
           if (data.user.userID) {
-            setUserData((prevState) => ({
-              // ...prevState,
+            setUserData(() => ({
               name: data.user.userID.name,
               email: data.user.userID.email,
               college: data.user.userID.college,
@@ -67,8 +48,7 @@ function Dashboard() {
               timesReferred: data.user.norefcode
             }));
           } else {
-            setUserData((prevState) => ({
-              // ...prevState,
+            setUserData(() => ({
               name: data.user.name,
               email: data.user.email,
               college: data.user.college,
@@ -76,8 +56,6 @@ function Dashboard() {
               year: data.user.yearOfStudy,
               instaHandle: data.user.instaHandle,
               userType: data.user.role
-              // refCode: data.user.ref_code
-              // timesReferred:
             }));
           }
         }
@@ -89,11 +67,8 @@ function Dashboard() {
       setIsLoading(false);
     };
     isTokenValid();
-
-    // console.log(isTokenValid());
   }, []);
   return (
-    // <Loading />
     <div>
       {isLoading ? (
         <Loading />
@@ -125,7 +100,6 @@ function Dashboard() {
             <h2>User Information</h2>
             <div className={Classes.card}>
               <div className={Classes.card_body}>
-                {/* <i class="fa fa-pen fa-xs edit"></i> */}
                 <table>
                   <tbody>
                     <tr>
