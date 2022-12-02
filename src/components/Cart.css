@@ -10,7 +10,6 @@
     color: #fcc907;
     font-family: Marcellus;
     text-align: center;
-    /* padding-bottom: 3vh; */
   }
   .cart-card {
     width: 300px;
@@ -109,7 +108,7 @@
 
   .text input{
     width:100%;
-    heiht:0px;
+    height:0px;
     margin:10px auto;
     border:none;
     outline:none;
@@ -174,7 +173,6 @@ transform: scale(2);
   
   .cart_cards {
     display: flex;
-    /* padding: 2vw; */
     flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: wrap;
