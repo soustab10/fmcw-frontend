@@ -2,8 +2,7 @@
 import React, { useState } from 'react';
 import './events.css';
 import styled from 'styled-components';
-import Tilt from 'react-tilt';
-import { toast } from 'react-toastify';
+
 import 'react-toastify/dist/ReactToastify.css';
 import { useCart } from 'react-use-cart';
 
@@ -44,7 +43,7 @@ function EventCard(props) {
     scale: 1.06
   };
   return (
-    <Tilt className="card" options={options}>
+    <div className="card">
       <div className="card-div">
         <img src={props.img} alt="unicorn" className="card-img" />
         <h3>₹ {props.price}</h3>
@@ -72,7 +71,7 @@ function EventCard(props) {
           {props.ps}
         </a>
       </div>
-    </Tilt>
+    </div>
   );
 }
 EventCard.defaultProps = {

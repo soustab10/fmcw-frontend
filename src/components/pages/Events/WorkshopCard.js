@@ -2,8 +2,7 @@
 import React, { useState } from 'react';
 import './events.css';
 import styled from 'styled-components';
-import Tilt from 'react-tilt';
-import { toast } from 'react-toastify';
+<
 import { useCart } from 'react-use-cart';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
@@ -61,7 +60,7 @@ function EventCard(props) {
     scale: 1.06
   };
   return (
-    <Tilt className="w-card" options={options}>
+    <div className="w-card">
       <div className="w-card-div">
         <div className="workshop-card-img-div">
           <img src={props.img} onClick={handleOpen} alt="unicorn" className="workshop-card-img" />
@@ -117,7 +116,7 @@ function EventCard(props) {
           </Typography>
         </Box>
       </Modal>
-    </Tilt>
+    </div>
   );
 }
 EventCard.defaultProps = {

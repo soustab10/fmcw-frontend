@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import Tilt from 'react-tilt';
+// import Tilt from 'react-tilt';
 import Classes from './Events.module.css';
 
 import { useCart } from 'react-use-cart';
@@ -32,7 +32,7 @@ function EventCard(props) {
     scale: 1.06
   };
   return (
-    <Tilt className={Classes.card} options={options}>
+    <div className={Classes.card}>
       <div className={Classes.card_div}>
         <img src={props.img} alt="unicorn" className={Classes.card_img} />
         <div className={Classes.separator}>
@@ -49,7 +49,7 @@ function EventCard(props) {
           {props.ps}
         </a>
       </div>
-    </Tilt>
+    </div>
   );
 }
 EventCard.defaultProps = {

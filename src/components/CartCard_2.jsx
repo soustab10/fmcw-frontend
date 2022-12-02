@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import './CartCard_2.css';
 
 import styled from 'styled-components';
-import Tilt from 'react-tilt';
 
 import CloseIcon from '@mui/icons-material/Close';
 import { useCart } from 'react-use-cart';
@@ -37,7 +36,7 @@ function CartCard_2(props) {
     scale: 1.06
   };
   return (
-    <Tilt className="card" options={options}>
+    <div className="card">
       <div className="card-div">
         <img
           src={props.img}
@@ -66,7 +65,7 @@ function CartCard_2(props) {
           {props.ps}
         </a>
       </div>
-    </Tilt>
+    </div>
   );
 }
 CartCard_2.defaultProps = {
