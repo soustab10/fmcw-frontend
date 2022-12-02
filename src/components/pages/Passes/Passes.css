@@ -34,7 +34,6 @@
   .pass-cards {
     width: 80vw;
     margin-top: 10px;
-    /* margin-left: auto; */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     grid-gap: 0.5rem;
@@ -255,7 +254,6 @@ transform: scale(2);
   
   .cart_cards {
     display: flex;
-    /* padding: 2vw; */
     flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: wrap;
