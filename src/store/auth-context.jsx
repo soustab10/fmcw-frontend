@@ -60,3 +60,4 @@ export const AuthContextProvider = (props) => {
 };
 
 export default AuthContext;
+
