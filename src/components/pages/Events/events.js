@@ -3,7 +3,7 @@ import MobileLayout from './MobileLayout';
 import SideBar from '../../Sidebar';
 import './events.css';
 import Footer from '../../Footer';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 function Events() {
   return (
