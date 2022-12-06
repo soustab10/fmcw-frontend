@@ -63,9 +63,7 @@ body {
     display: block;
   }
   .texture_bg {
-    /* margin: ; */
     height: 10vh;
-    /* mix-blend-mode: screen; */
     background: linear-gradient(180deg, #14052C 0%, #1D033E 100%);
   }
   .line_sep {

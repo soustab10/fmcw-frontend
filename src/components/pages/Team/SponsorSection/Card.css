@@ -10,21 +10,18 @@
   margin-top: 10px;
 }
 .team-card {
-  /* width: 33vw; */
-  /* width: calc(100px +10vw); */
   width: 220px;
-  /* mix-blend-mode: multiply; merges image with the page background */
 
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   height: 270px;
   transition: 0.3s;
   border-radius: 5px;
-  /* flex: 1 0 500px; */
+ 
   flex: 2 2 2;
   box-sizing: border-box;
-  /* margin: 1rem 0.25em; */
+
   margin: 20px;
-  /* 5px rounded corners */
+
   color:#FCC907;
   background: #27094B;
   font-family: Nunito Sans;
@@ -37,15 +34,9 @@
 }
 .team-card h3 {
   font-family: Marcellus;
-  font-size: .9em;
-  transition: transform .5s ease;
+  font-size: 1.0em;
 }
 
-.team-card:hover h3{
-  transform: scale(1.2);
-}
-/* Add rounded corners to the top left and the top right corner of the image */
-/* Add some padding inside the card container */
 .container {
   padding: 2px 16px;
   text-align: center;
@@ -79,7 +70,6 @@
 }
 @media screen and (max-width: 700px) {
   .team-card {
-    /* max-width: calc(45% - 1em); */
     width: 60vw;
   }
   .parent_wrapper{
