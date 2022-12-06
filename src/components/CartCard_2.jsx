@@ -1,9 +1,15 @@
 /* eslint-disable react/prop-types */
 import React, { useState } from 'react';
+// import Card from '@mui/material/Card';
+// import CardContent from '@mui/material/CardContent';
+// import CardMedia from '@mui/material/CardMedia';
+// import Typography from '@mui/material/Typography';
 import './CartCard_2.css';
-
+// import { Button } from '@mui/material';
+// import unicorn from "./assets/test.png";
 import styled from 'styled-components';
-
+// import Tilt from 'react-tilt';
+// import addToCart from './CartModal';
 import CloseIcon from '@mui/icons-material/Close';
 import { useCart } from 'react-use-cart';
 
@@ -17,12 +23,24 @@ function CartCard_2(props) {
   const [click, setClick] = useState(false);
   const { addItem, inCart } = useCart();
   const { getItem } = useCart();
+  const handleClick = () => {
+    setClick(!click);
+  };
   async function onDelete(mongooseId) {
     const userID = sessionStorage.getItem('userID');
+    // e.preventDefault();
     let obj = {
       userID: userID,
       itemId: mongooseId
     };
+    const res = await fetch(process.env.REACT_APP_BACKEND_URI + '/api/cart', {
+      method: 'DELETE',
+      body: JSON.stringify(obj),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
+    const data = await res.json();
 
     window.location.reload();
   }
@@ -49,6 +67,7 @@ function CartCard_2(props) {
             className="cart-btn"
             onClick={() => {
               onDelete(props.mongooseId);
+              // change();
             }}>
             <CloseIcon />
           </button>

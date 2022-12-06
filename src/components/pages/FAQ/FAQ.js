@@ -4,6 +4,7 @@ import { IconContext } from 'react-icons';
 import { FiPlus, FiMinus } from 'react-icons/fi';
 import { Data } from './Data';
 import Footer from '../../Footer';
+// import './FAQ.css';
 
 const AccordionSection = styled.div`
   display: flex;
@@ -79,6 +80,7 @@ function Accordion() {
 
   const toggle = (index) => {
     if (clicked === index) {
+      // if clicked question is already active, then close it
       return setClicked(null);
     }
 

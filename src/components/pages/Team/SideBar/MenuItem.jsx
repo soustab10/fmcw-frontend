@@ -1,7 +1,5 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable react/react-in-jsx-scope */
-/* eslint-disable prettier/prettier */
 import { useState, useEffect } from 'react';
+import Classes from './MenuItem.module.css';
 
 function MenuItem({ anchorId, itemName, active }) {
   const [anchorTarget, setAnchorTarget] = useState(null);
@@ -12,11 +10,16 @@ function MenuItem({ anchorId, itemName, active }) {
 
   function handleClick(e) {
     e.preventDefault();
-   
+    // anchorTarget.scrollIntoView({ behavior: "smooth", block: "center" });
     const yOffset = -90;
     const y = anchorTarget.getBoundingClientRect().top + window.pageYOffset + yOffset;
 
     window.scrollTo({ top: y, behavior: 'smooth' });
+    // const yOffset = 0;
+    // const y = anchorTarget.getBoundingClientRect().top + yOffset;
+    // window.scrollTo({ top: y, behavior: "smooth" });
+
+    //   window.scrollBy(0, -10);
   }
 
   return (
@@ -24,6 +27,7 @@ function MenuItem({ anchorId, itemName, active }) {
       <a
         href={`#${itemName}`}
         onClick={handleClick}
+        // className={true ? Classes.active : ""}
         aria-label={`Scroll to ${itemName}`}
         style={active ? { color: '#fcc907' } : { color: 'white' }}>
         <h1>{itemName}</h1>

@@ -1,12 +1,18 @@
 import './Cart.css';
 import { useCart } from 'react-use-cart';
+import EventCard from './pages/Events/EventCard';
+import { NavLink } from 'react-router-dom';
+// import { Button } from '../components/Button';
 import * as React from 'react';
 import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import Footer from './Footer';
 import CheckoutButton from './CheckoutButton/CheckoutButton';
 import CartCard_2 from './CartCard_2';
 import { useState, useEffect } from 'react';
+// import Button from './pages/LandingPage/Section/Button/Button';
+import Button from './Button_2';
 
 const style = {
   position: 'absolute',
@@ -45,9 +51,11 @@ function Cart(props) {
           }
         });
         const data = await res.json();
+        // console.log(data);
 
         if (data.message === 'success') {
           console.log(data);
+          // console.log(data.user.userID.userCart.cartItems);
           if (data.user.userID) {
             setCartItems(data.user.userID.userCart.cartItems);
           } else {
@@ -60,6 +68,7 @@ function Cart(props) {
       }
     };
     getCartItems();
+    // console.log(isTokenValid());
   }, []);
 
   async function checkoutHandler() {
@@ -79,31 +88,26 @@ function Cart(props) {
         'Content-Type': 'application/json'
       }
     });
+    // console.log({ obj });
     const data = await res.json();
     console.log(data);
 
 
-    let mailsend = {
-      name: document.getElementById('name').value,
-      email: document.getElementById('email').value,
-      phone: document.getElementById('phone').value,
-      paymentAmount: paymentAmount
-    };
-
-    const mailgot = await fetch(process.env.REACT_APP_BACKEND_URI + '/api/send-mail', {
-      method: 'POST',
-      body: JSON.stringify(mailsend),
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    });
-
-    const yougotmail = await mailgot;
-    console.log('this is your mail data according to your cart');
-    console.log(yougotmail);
-
-   
-
+    
+    //ToDo: You just have to make an API request to /api/send-mail to send the email to the user with the details of the
+    // event they have booked and the total payment amount
+    // The body of the API request should contain: name, email, phone and paymentAmount of the user.
+    // The API request should be made in the checkoutHandler function and you should use the register-form to get the email of user.
+    // const mailData = await fetch(process.env.REACT_APP_BACKEND_URI+'/api/send-mail', {
+    //   method: 'POST',
+    //   body: JSON.stringify(obj),
+    //   headers: {
+    //     'Content-Type': 'application/json'
+    //   }
+    // });
+    // console.log({ obj });
+    // const userData = await mailData.json();
+    // console.log(userData);
   }
   let paymentAmount = 0;
   for (const item of cartItems) {
@@ -126,6 +130,12 @@ function Cart(props) {
             <CheckoutButton onClick={handleOpen}>CHECKOUT</CheckoutButton>
           </div>
 
+          {/* <a href="/events">
+          <div className="add-more-cards">
+            <span>+</span>
+            <h3>Purchase More Cards</h3>
+          </div>
+        </a> */}
           <div className="cart_cards">
             {cartItems.map((item, index) => {
               return (
@@ -177,6 +187,48 @@ function Cart(props) {
                 </button>
               </div>
             </div>
+            {/* <Typography id="modal-modal-title" variant="h6" component="h2">
+              <h1>Payment Details</h1>
+            </Typography>
+            <hr />
+            <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+              <h3>The bank details are as follows:</h3>
+              <ul>
+                <li>
+                  <span>Account Name: </span>
+                  <h3>FMC Weekend IIT(BHU), Varanasi</h3>
+                </li>
+                <li>
+                  <span>Account Number: </span>
+                  <h3>33223440456</h3>
+                </li>
+                <li>
+                  <span>IFSC: </span>
+                  <h3>SBIN0011445</h3>
+                </li>
+                <li>
+                  <span>Current Bank: </span>
+                  <h3>State Bank of India</h3>
+                </li>
+                <li>
+                  <span>Branch: </span>
+                  <h3>IIT(BHU), Varanasi</h3>
+                </li>
+              </ul>
+              <p className="form-para">
+                {' '}
+                We hereby request you to fill out this google form as soon as you complete the
+                payment successfully and attach the screenshot of the payment with it. Do send the
+                screenshot to your person of contact and feel free to enquire about the passes to
+                them.<br></br>
+                See you in large numbers at the fest!✨
+              </p>
+
+              <h3>Total Amount = ₹ {paymentAmount.toFixed(2)} </h3>
+              <a href="https://forms.gle/Su8HRznfUAhfzjPcA" target="_blank" rel="noreferrer">
+                <Button>Registeration Form</Button>
+              </a>
+            </Typography> */}
           </Box>
         </Modal>
       </section>

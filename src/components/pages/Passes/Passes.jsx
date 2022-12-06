@@ -1,7 +1,19 @@
 import './Passes.css';
+import { useCart } from 'react-use-cart';
+// import EventCard from './Events/EventCard';
 import { NavLink } from 'react-router-dom';
+// import { Button } from '../components/Button';
 import * as React from 'react';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Modal from '@mui/material/Modal';
 import Footer from '../../Footer';
+// import CheckoutButton from './CheckoutButton/CheckoutButton';
+// import CartCard_2 from './CartCard_2';
+import { useState, useEffect } from 'react';
+// import Button from './pages/LandingPage/Section/Button/Button';
+// import Button from './Button_2';
+
 const style = {
   position: 'absolute',
   top: '50%',
