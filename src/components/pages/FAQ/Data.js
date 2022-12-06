@@ -25,5 +25,10 @@ export const Data = [
     answer:
       "Each participant will be provided with a referral code, which they may distribute among their acquaintances, who would receive a 10% discount on their pass prices. The leaderboard will display the number of times a referral code has been used and rank the participants accordingly. Whosoever's referral code is used the maximum number of times will receive cash prizes worth 3k!"
   },
-];
 
+  // {
+  //   question: 'How does the leaderboard work?',
+  //   answer:
+  //     "Participants each receive a referral code which they distribute among their acquaintances who would receive a 10% discount on their pass prices. The leaderboard will display the number of times a referral code has been used and rank the participants accordingly. Whosoever's referral code is used the maximum number of times will receive cash prizes worth 3k."
+  // }
+];
