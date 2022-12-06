@@ -86,6 +86,7 @@
   color: #fcc907;
 }
 .card_img {
+  /* object-fit: cover; */
   position: relative;
   background-color: #170231;
   height: 240px;
@@ -93,6 +94,7 @@
 }
 .event-cards {
   display: flex;
+  /* float: left; */
   margin: 0 auto;
   justify-content: flex-start;
   width: 90vw;
@@ -105,6 +107,7 @@
   margin: 0 auto;
 }
 .card-action {
+  /* width: 100%; */
   perspective: 500px;
 }
 .card-action:hover {
@@ -255,6 +258,7 @@
   font-weight: 700;
 }
 .cart-btn:hover {
+  /* border-color:#fcc907; */
   box-shadow: 0px 0px 24px 0px rgba(255, 212, 48, 0.7);
 }
 .fees {
@@ -421,6 +425,7 @@
     display: block;
   }
   .card {
+    /* width: 60vw; */
     width: 300px;
     margin-right: 0px;
     flex-wrap: wrap;
@@ -430,6 +435,7 @@
   }
   .workshop {
     position: relative;
+    /* padding: 20px; */
     top: 80px;
     right: 8%;
   }

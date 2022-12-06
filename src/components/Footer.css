@@ -10,6 +10,7 @@
   z-index: 999;
 }
 
+/* Social Icons */
 .social-icon-link {
   color: #fff;
   font-size: 35px;
@@ -48,18 +49,19 @@ a:hover {
 }
 
 .image {
+  /* height: 400px; */
   width: 500px;
 }
 
 @media screen and (max-width: 768px) {
   .footer {
-
+    /* margin: auto; */
   }
   .footer section3 {
     display: flex;
   }
   .image {
- 
+    /* height: 300px; */
     width: 300px;
   }
 
@@ -71,6 +73,7 @@ a:hover {
     margin-top: 10px;
   }
   .footer section {
+    /* padding: 20px; */
   }
   .tab {
     display: inline-block;
