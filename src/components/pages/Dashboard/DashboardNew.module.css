@@ -11,7 +11,7 @@
 }
 @media screen and (max-width: 960px) {
   .section {
-    /* align-items: center; */
+
   }
   .section_title h1,
   .section_top h2 {
@@ -21,29 +21,25 @@
   
 }
 .section_title {
-  /* display: inline-block; */
-  /* position: relative; */
+
   display: flex;
   flex-direction: column;
-  /* width: 100vw; */
+
   justify-content: center;
   margin-bottom: 7vh;
   top: 12vh;
-  /* float: left; */
-  /* padding-left: 10vw; */
-  /* text-align: left; */
-  /* padding-top: 10vh; */
+
 }
 
 .section_title h1 {
   padding-top: 8vh;
 
-  /* padding-bottom: 8vh; */
+
   display: block;
   text-align: center;
-  /* padding-bottom: -10px; */
+
   text-transform: uppercase;
-  /* font-size: 26px; */
+
   letter-spacing: 1px;
   margin: 5px;
   font-family: Marcellus;

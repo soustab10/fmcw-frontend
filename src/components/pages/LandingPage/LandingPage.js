@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Banner from './Banner/Banner';
-import Image from './merchandise.png';
-import sectionImage from '../../bg.png';
 import Section from './Section/Section';
 import Classes from './LandingPage.module.css';
 import Footer from '../../Footer';
-import { Button } from '../../Button';
 import closeMobileMenu from '../../Navbar';
 
 function landingPage() {
@@ -31,7 +28,6 @@ function landingPage() {
 
   return (
     <div className={Classes.landing_page}>
-      {/* <h1> Landing Page</h1> */}
 
       <Banner imagePath="/Group_7139.svg" />
 

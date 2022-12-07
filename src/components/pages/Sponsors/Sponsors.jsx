@@ -10,12 +10,6 @@ function Sponsors(props) {
     <div className="wrapper">
       <div className="current-sponsors">
         <div className="sponsors-container">
-          {/* <img src="https://drive.google.com/uc?export=view&id=1-8RfOKm9BmIg-zICOjdV3RX69xz97r2V" />
-          <div className="separator-1">
-            <div className="line_1" />
-            <h2>Presents</h2>
-            <div className="line_2" />
-          </div> */}
 
           <a href="https://picsart.com/create" target="_blank" rel="noreferrer">
             <img src="https://drive.google.com/uc?export=view&id=1fsc_Fq1gE-eGUuDfPCbApWUxqs3Wqy6U" />
@@ -58,12 +52,6 @@ function Sponsors(props) {
           <a href="https://indiafilmproject.co/" target="_blank" rel="noreferrer">
             <img src="https://drive.google.com/uc?export=view&id=1fqzXH6KtY_kM8KrSTYAin0zXOhnZis0x" />
           </a>
-
-          {/* <div className="separator-1">
-            <div className="line_1" />
-            <h2>Presents</h2>
-            <div className="line_2" />
-          </div> */}
         </div>
         <div className="cards-sponsor">
           <SponsorCard

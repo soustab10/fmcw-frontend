@@ -6,7 +6,7 @@ const AuthContext = React.createContext({
   isNewUser: true,
   name: '',
   email: '',
-  userType: '', // IN, CA, PA
+  userType: '',
   updateToken: (token) => {},
   updateName: (name) => {},
   updateEmail: (email) => {},
@@ -22,13 +22,11 @@ export const AuthContextProvider = (props) => {
   const [userType, setUserType] = useState('');
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  // const isLoggedIn = !!token;
-
-  const modifyToken = (token) => {    
+  const modifyToken = (token) => {
     console.log(token);
     setToken(token);
     setIsLoggedIn(!!token);
-    console.log(isLoggedIn)
+    console.log(isLoggedIn);
   };
 
   const modifyName = (name) => {
@@ -62,3 +60,4 @@ export const AuthContextProvider = (props) => {
 };
 
 export default AuthContext;
+
