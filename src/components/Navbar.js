@@ -21,7 +21,7 @@ function Navbar() {
   const [cartItems, setCartItems] = useState([]);
 
   const handleFailure = (result) => {
-
+    // alert('Unable to login using Google, Try again later!');
     console.log(result);
   };
   const handleLogin = async (googleData) => {
@@ -29,10 +29,12 @@ function Navbar() {
     const profile = googleData.profileObj;
     const email = googleData.profileObj.email;
     const name = googleData.profileObj.name;
+    // authCtx.updateName(name);
+    // authCtx.updateEmail(email);
     sessionStorage.setItem('name', name);
     sessionStorage.setItem('email', email);
 
-
+    // send request to backend api and check if the user already exists or is a new one
     try {
       const res = await fetch(process.env.REACT_APP_BACKEND_URI + '/api/google-login', {
         method: 'POST',
@@ -46,8 +48,11 @@ function Navbar() {
       const data = await res.json();
       console.log(data);
       sessionStorage.setItem('tokenID', googleData.tokenId);
+      // authCtx.updateToken(googleData.tokenId)
+      // Update context with value of token
 
       const isNewUser = data.user.newUser;
+      // const isNewUser = true; // for trial purpose only // COMMENT THIS LINE
 
       sessionStorage.setItem('isNewUser', isNewUser);
 
@@ -89,7 +94,7 @@ function Navbar() {
   window.addEventListener('resize', showButton);
   useEffect(() => {
     const getCartItems = async () => {
-     
+      // setIsLoading(true);
       const token = sessionStorage.getItem('tokenID');
       try {
         const res = await fetch(process.env.REACT_APP_BACKEND_URI + '/api/user', {
@@ -104,7 +109,7 @@ function Navbar() {
 
         if (data.message === 'success') {
           console.log(data);
-
+          // console.log(data.user.userID.userCart.cartItems);
           if (data.user.userID) {
             setCartItems(data.user.userID.userCart.cartItems);
           } else {
@@ -113,11 +118,11 @@ function Navbar() {
         }
       } catch (e) {
         console.log(e);
-   
+        // alert('Error with authentication, login again');
       }
     };
     getCartItems();
-
+    // console.log(isTokenValid());
   }, []);
   return (
     <nav className="navbar">
@@ -175,6 +180,20 @@ function Navbar() {
               FAQ
             </NavLink>
           </li>
+
+          {/* <li className="nav-item">
+            {button && sessionStorage.getItem('tokenID') && (
+              <Button
+                isInternalLink
+                toLink="/"
+                buttonStyle="btn--primary"
+                className="nav-links sign"
+                onClick={logoutHandler}>
+                DASHBOARD
+              </Button>
+            )}
+          </li> */}
+
           <li className="nav-item">
             {sessionStorage.getItem('isLoggedIn') == 'true' ? (
               <Button

@@ -8,7 +8,10 @@ import Divider from '@mui/material/Divider';
 import EventCard from './pages/Events/EventCard';
 import WorkshopCard from './pages/Events/WorkshopCard';
 import { makeStyles } from '@material-ui/core/styles';
-
+// import WorkshopCard from './pages/Events/WorkshopCard';
+// import MenuIcon from '@mui/icons-material/Menu';
+// import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+// import Card from '../../src/components/pages/Sponsors/SponsorSection/Card';
 import data from './pages/Events/Data/data';
 
 function TabPanel(props) {
@@ -56,6 +59,7 @@ export default function VerticalTabs() {
   };
   return (
     <Box sx={{ flexGrow: 1, display: 'flex', height: 'auto' }} className="box">
+      {/* <ArrowBackIosNewIcon onClick={collapseMenu} /> */}
       <Tabs
         orientation="vertical"
         variant="scrollable"
