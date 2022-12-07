@@ -1,16 +1,13 @@
 /* eslint-disable react/react-in-jsx-scope */
-import Loading from '../../Loading';
-import { useState, useEffect, useContext } from 'react';
+import { useState, useEffect } from 'react';
 import Classes from './DashboardNew.module.css';
 import EventCard from './EventCard';
 import WorkshopCard from './WorkshopCard';
 import { useCart } from 'react-use-cart';
 import Button from './Button/Button';
 import Footer from '../../Footer';
-// import './Events.css';
 
 function DashBoardNew() {
-  // const authCtx = useContext()
   const { items } = useCart();
   const [isLoading, setIsLoading] = useState(false);
   const [userData, setUserData] = useState({
@@ -26,7 +23,6 @@ function DashBoardNew() {
   });
   const sleep = (ms) => new Promise((res) => setTimeout(res, ms));
   const logoutHandler = () => {
-    // console.log("yash");
     sessionStorage.clear();
     window.location.href = '/';
     closeMobileMenu();
@@ -38,51 +34,29 @@ function DashBoardNew() {
       try {
         const res = await fetch(process.env.REACT_APP_BACKEND_URI + '/api/user', {
           method: 'GET',
-          // body: JSON.stringify({
-          //   token: token
-          // }),
           headers: {
             'Content-Type': 'application/json',
             token: token
           }
         });
         const data = await res.json();
-        // console.log(data);
-
-        // data has message : 'success' if valid and 'invalid' else
-        // on valid, data also has user.email, user.name, user.isNewUser, user.role
         if (data.message === 'success') {
           localStorage.removeItem('react-use-cart');
           console.log(data);
-          // console.log(data.user.userID.userCart.cartItems);
           if (data.user.userID) {
-            setUserData((prevState) => ({
-              // ...prevState,
+            setUserData((_prevState) => ({
               name: data.user.userID.name,
-              // email: data.user.userID.email,
-              // college: data.user.userID.college,
-              // phone: data.user.userID.number,
-              // year: data.user.userID.yearOfStudy,
-              // instaHandle: data.user.userID.instaHandle,
               userType: data.user.userID.role,
               refCode: data.user.ref_code,
-              // timesReferred: data.user.norefcode,
               cartItems: data.user.userID.userCart.cartItems
             }));
             sessionStorage.setItem('userID', data.user.userID._id);
           } else {
             setUserData((prevState) => ({
-              // ...prevState,
               name: data.user.name,
-              // email: data.user.email,
-              // college: data.user.college,
-              // phone: data.user.number,
-              // year: data.user.yearOfStudy,
-              // instaHandle: data.user.instaHandle,
               userType: data.user.role,
               cartItems: data.user.userCart.cartItems,
               refCode: data.user.ref_code
-              // timesReferred:
             }));
             sessionStorage.setItem('userID', data.user._id);
           }
@@ -98,9 +72,6 @@ function DashBoardNew() {
       setIsLoading(false);
     };
     isTokenValid();
-    // window.location.reload();
-
-    // console.log(isTokenValid());
   }, []);
 
   return (
@@ -121,7 +92,6 @@ function DashBoardNew() {
         </div>
       </div>
       <div className={Classes.contest_cards}>
-        {/* <div className="event-cards"> */}
         <div className={Classes.event_cards}>
           {userData.cartItems.map((item, index) => {
             if (item.Type === 'Contest') {
@@ -146,7 +116,6 @@ function DashBoardNew() {
         <h2>Registered Workshops</h2>
       </div>
       <div className={Classes.contest_cards}>
-        {/* <div className="event-cards"> */}
         <div className={Classes.event_cards}>
           {userData.cartItems.map((item, index) => {
             if (item.Type === 'Workshop') {
@@ -169,14 +138,7 @@ function DashBoardNew() {
         </div>
       </div>
       <div className={Classes.logout_button}>
-        <Button
-          // isInternalLink
-          // toLink="/"
-          // buttonStyle="btn--primary"
-          // className="nav-links sign"
-          onClick={logoutHandler}>
-          LOG OUT
-        </Button>
+        <Button onClick={logoutHandler}>LOG OUT</Button>
       </div>
       <Footer />
     </div>
