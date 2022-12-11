@@ -13,6 +13,7 @@ function Footer() {
           <section>
             <img
               src="https://drive.google.com/uc?export=view&id=1fqWH1KoCSic6KfpfZl_yT2UZ5PGecRz_"
+              alt="logo with sponsors"
               className="image"></img>
           </section>
         </div>
