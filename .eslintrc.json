@@ -18,9 +18,6 @@
         "react", "prettier"
     ],
     "rules": {
-        "prettier/prettier": "warn",
-        "react/prop-types": 0,
-        "react/react-in-jsx-scope": "off",
-        "endOfLine":0
+        "prettier/prettier": "warn"
     }
 }

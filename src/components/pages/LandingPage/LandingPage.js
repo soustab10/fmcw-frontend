@@ -7,7 +7,6 @@ import Classes from './LandingPage.module.css';
 import Footer from '../../Footer';
 import { Button } from '../../Button';
 import closeMobileMenu from '../../Navbar';
-import Testimoials from './Testimonials/Testimonials';
 
 function landingPage() {
   const [button, setButton] = useState(true);
@@ -80,7 +79,6 @@ function landingPage() {
         photography, cinematography, design and animation, discover your true potential and watch
         FMC Weekend truly transform into a celebration of excellence.
       </Section>
-      <Testimoials />
       <Footer />
     </div>
   );

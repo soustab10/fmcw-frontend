@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 export const Data = [
   {
     question: 'When is FMC Weekend?',
