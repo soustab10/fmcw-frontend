@@ -5,10 +5,10 @@
   position: relative;
   padding: 0;
   margin: 0;
-  font-family: Marcellus;
+  font-family: Manrope;
   font-weight: 300;
   font-size: 40px;
-  color:#FCC907;
+  color: #685EDA;
   -webkit-transition: all 0.4s ease 0s;
   -o-transition: all 0.4s ease 0s;
   transition: all 0.4s ease 0s;
@@ -34,8 +34,9 @@
   font-family: Nunito Sans;
 }
 .mssg h2 {
-  color: #FCC907;
-  font-family: Marcellus;
+  /* color: #FCC907; */
+  color: black;
+  font-family: 'Manrope';
   font-size: 1.2em;
   margin-top: 20px;
   margin: 27px 36px;

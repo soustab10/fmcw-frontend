@@ -8,6 +8,8 @@
 
 .position {
   margin-top: 10px;
+  font-weight: 700;
+  font-size: 1.2em;
 }
 .team-card {
   /* width: 33vw; */
@@ -25,9 +27,11 @@
   /* margin: 1rem 0.25em; */
   margin: 20px;
   /* 5px rounded corners */
-  color:#FCC907;
-  background: #27094B;
-  font-family: Nunito Sans;
+  /* color:#FCC907; */
+  color: #685EDA;
+  /* background: #27094B; */
+  background: #00CCF5;
+  font-family: Manrope;
   text-align: center;
   overflow-x: hidden;
 }
@@ -56,13 +60,18 @@
   position: relative;
   height: 180px;
   width: 100%;
+  padding-left: 27px;
+  padding-right: 27px;
+  padding-top: 39px;
   overflow: hidden;
   transition: all .5s ease;
-  background-color: #27094B;
+  /* background-color: #27094B; */
+  background-color: #00CCF5;
 }
 .cardTitle {
   margin: 0 auto;
-  color: #fff;
+  /* color: #fff; */
+  color: black;
   font-family: Marcellus;
   font-size: 20px;
   font-style: normal;
@@ -72,7 +81,9 @@
   letter-spacing: 0em;
   text-align: center;
 }
-.cardImg img {}
+.cardImg img {
+  padding: 0;
+}
 .cardImg img:hover {
   transform: scale(1.08);
   opacity: 0.8;
