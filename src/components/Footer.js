@@ -11,9 +11,10 @@ function Footer() {
       <footer>
         <div className="footer">
           <section>
-            <img
+          <img
               src={process.env.REACT_APP_AWS_S3_URI + '/FMCW_Sponsors_Logo_White.png'}
-              className="image"></img>
+              className="image"
+              alt="logo with image"></img>
           </section>
         </div>
       </footer>
