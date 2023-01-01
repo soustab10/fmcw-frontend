@@ -6,7 +6,6 @@
   /* flex-direction: row; */
   justify-content: center;
   align-items: center;
-  font-style: Nunito Sans;
   overflow-x: hidden;
   z-index: 999;
   border: 2px solid #000;
@@ -118,6 +117,9 @@
   border-radius: 8px;
   padding: 10px;
 }
+.contact-text:active {
+  border: 2px solid #f2ff00;
+}
 
 textarea::placeholder {
   font-family: 'Manrope';
@@ -175,29 +177,70 @@ textarea::placeholder {
   line-height: 36px;
   color: #000000;
 }
-@media screen and (max-width: 768px) {
-  .footer {
-    /* margin: auto; */
-  }
-  .footer section3 {
+@media screen and (max-width: 1000px) {
+  .footer-container {
     display: flex;
+    flex-direction: column-reverse;   
   }
+  .contact-heading {
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  .contact-section {
+    padding-top: 1rem;
+    padding-left: 0rem;
+    width: 80%;
+    border-bottom: 2px solid #000000;
+    border-left: 0px solid #000000;
+  }
+  .contact-info {
+    width: 100%;
+  }
+  .contact-submit-btn {
+    width: 100px;
+  }
+
+  .contact-details {
+  font-size: 0.95rem;
+  }
+
+  textarea::placeholder {
+    font-size: 14px;
+  
+  }
+
+  .facebook {
+    padding: 8px;
+    /* padding-top: -1px; */
+  }
+  .instagram {
+    padding: 8px;
+    /* padding-top: -1px; */
+  }
+  .youtube {
+    padding: 8px;
+  }
+  .linkedin {
+    padding: 8px;
+    /* padding-top: -1px; */
+  }
+  .fab {
+    position: relative;
+    top: -4px;
+  }
+}
+@media screen and (max-width: 768px) {
+  
   .image {
     /* height: 300px; */
     width: 300px;
+    height: auto;
   }
 
-  .social-icon-link {
-    color: #fff;
-    font-size: 20px;
-  }
+  
   .social-media {
     margin-top: 10px;
   }
-  .footer section {
-    /* padding: 20px; */
-  }
-  .tab {
-    display: inline-block;
-  }
+  
+  
 }

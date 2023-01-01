@@ -3,25 +3,34 @@
   }
   
   .btn {
-    padding: 6px 25px;
-    border-radius: 2px;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    font-family: Nunito Sans;
-font-style: normal;
-font-weight: bold;
-font-size: 18px;
+    height: 100%;
+    background: #00b3d6;
+    width: 100px;
+    font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 29px;
+  border-radius: 0 !important;
+  color: #000000;
   }
   
   .btn--primary {
-    background-color: var(--primary);
+    background: var(--primary);
     height: 100%;
     color: #000;
-    border: 1px solid #000;
+    border: 2px solid #000;
     position: absolute;
-    
-    right: 20px;
+    width: 12.5%;
+    right: 60px;
+    height: 100%;
+    font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 29px;
+  border-radius: 0 !important;
+  color: #000000;
   }
   
   .btn--outline {
@@ -32,10 +41,7 @@ font-size: 18px;
 
   }
   
-  .btn--medium {
-    padding: 8px 20px;
-    font-size: 14px;
-  }
+ 
   
   .btn--large {
     padding: 12px 26px;
@@ -47,4 +53,10 @@ font-size: 18px;
 
     background: var(--primary);
 
+  }
+
+  @media screen and (max-width: 960px) {
+    .btn--primary {
+      position: relative;
+    }
   }
