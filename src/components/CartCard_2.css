@@ -422,13 +422,8 @@ body {
     max-width: 400px;
     /* margin-right: -10px; */
     flex-wrap: wrap;
-<<<<<<< HEAD
-    min-width: 260px;
-    height: 500px;
-=======
     min-width: 320px;
     height: 400px;
->>>>>>> lpage
     margin-top: 40px;
   }
   .w-card {
