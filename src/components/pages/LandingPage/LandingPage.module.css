@@ -133,7 +133,11 @@ color: #FFFFFF;
   z-index: 1;
   position: relative;
   padding: 15px;
+<<<<<<< HEAD
   top: 224px;
+=======
+  top: 35vh;
+>>>>>>> lpage
   color: #fff;
 }
 .anim h2 {
@@ -590,6 +594,7 @@ color: #000000;
   left:15%;
 }
 .div1 h1{
+<<<<<<< HEAD
   top: 50%;
   width: auto;
   left:10%;
@@ -599,6 +604,23 @@ color: #000000;
 .div1 button{
   top: 75%;
   left: 25%;
+=======
+  top: 90vh;
+  width: auto;
+  left:0;
+  position: relative;
+  margin: auto;
+  text-align: center;
+  font-size: 2em;
+  /* background-image: url("./side_img.svg"); */
+}
+.div1 button{
+  top: 100vh;
+  left: 0;
+  position: relative;
+  margin: auto;
+  width: auto;
+>>>>>>> lpage
 }
 .div2 {
   width: 100%;
@@ -815,7 +837,11 @@ border-radius: 4px;
   height: 5%;
 }
 .anim {
+<<<<<<< HEAD
   top: -227px;
+=======
+  top: -30vh;
+>>>>>>> lpage
 }
 }
 @media screen and (max-width: 480px){

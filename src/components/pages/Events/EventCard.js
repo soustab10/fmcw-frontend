@@ -113,6 +113,7 @@ function EventCard(props) {
       </div>
 
       <div className="card-back card-div">
+<<<<<<< HEAD
         {sessionStorage.getItem('isLoggedIn') == 'true' && (
           <button
             className="cart-btn"
@@ -128,6 +129,10 @@ function EventCard(props) {
           </button>
         )}
         <div className="card-title" style={{ left: props.titleLeft, top: props.titleTop }}>
+=======
+        
+        <div className="card-title">
+>>>>>>> lpage
           {props.title}
           <div className="lineTitle"></div>
         </div>
@@ -142,6 +147,7 @@ function EventCard(props) {
           }}>
           <b>{props.content}</b>
         </div>
+<<<<<<< HEAD
         <img className="viewProbImg" src={viewProbImg} style={{ left: props.imgLeft }}></img>
         <a
           href={props.link}
@@ -158,9 +164,25 @@ function EventCard(props) {
             className="addToCartBtn"
             rel="noreferrer"
             style={{ left: props.addToCartLeft , overflow: 'hidden'}}>
+=======
+        <img className='viewProbImg' src='circle-arrow-right-solid.svg' alt='arrow' />
+        <a href={props.link} target="_blank" className="btnView" rel="noreferrer">
+          {props.ps}
+        </a>
+        {sessionStorage.getItem('isLoggedIn') == 'true' && (
+          <div className="addToCart" style={{background: props.color2}} onClick={() => {
+              // send post request to database
+
+              addItemToCart(props.item);
+              // addItem(props.item);
+
+              // change();
+            }}>
+>>>>>>> lpage
             {props.ps2}
-          </a>
+          
         </div>
+        )}
       </div>
     </div>
   );
@@ -171,6 +193,7 @@ EventCard.defaultProps = {
   ps: 'View Problem Statement',
   ps2: 'Add To Cart',
   content: 150,
+  color: '#000',
   color2: '#2ED9FC',
   left: '75px'
 };
