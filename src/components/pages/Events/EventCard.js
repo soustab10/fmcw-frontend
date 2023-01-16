@@ -133,7 +133,7 @@ function EventCard(props) {
           style={{ left: props.viewStatementLeft, fontSize: '1.2em' }}>
           {props.ps}
         </a>
-        {sessionStorage.getItem('isLoggedIn') == 'true' && (
+        {sessionStorage.getItem('isLoggedIn') == 'true' ? (
           <div
             className="addToCart"
             style={{ background: props.color2, cursor: 'pointer' }}
@@ -147,6 +147,16 @@ function EventCard(props) {
             }}>
             {props.ps2}
           </div>
+        ) : (
+          <a
+            className="addToCart"
+            target="_blank"
+            href="/authentication"
+            rel="noreferrer"
+            style={{ background: props.color2 }}
+            >
+            Login To Add
+          </a>
         )}
       </div>
     </div>
