@@ -19,12 +19,10 @@
   align-items: center;
   position: absolute;
   top: 40%;
-  text-align: center;
-  margin: auto;
   box-sizing: border-box;
 
   position: absolute;
-  width: 620px;
+  width: 30vw;
   height: 71px;
   background: #ffffff;
   border: 2px solid #000000;
@@ -69,20 +67,23 @@
     width: 100%;
     padding-left: 0;
     padding: 20px;
-    height: auto;
+    max-height: 140vh;
+    height: 140vh;
     /* overflow-x: hidden; */
   }
   .auth_section img {
     width: 60vw;
     min-width: 300px;
     padding: 0;
+    right: 0;
     margin: auto;
   }
   .authenticateButton {
     position: relative;
     width: 300px;
     height: 50px;
-    top: 0;
+    left: 0;
+    top: 50vh;
     margin: auto;
   }
   .authenticateButton p {
