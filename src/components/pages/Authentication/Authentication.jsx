@@ -3,7 +3,7 @@ import GoogleLogin from 'react-google-login';
 import { Redirect } from 'react-router-dom';
 import AuthContext from '../../../store/auth-context';
 import Classes from './Authentication.module.css';
-import { ReactComponent as Avatar1 } from './Group_7265.svg';
+// import { ReactComponent as Avatar1 } from './Group_7265.svg';
 import { ReactComponent as Tt } from './icons8-google-480 1.svg';
 
 function Authentication() {
@@ -67,6 +67,8 @@ function Authentication() {
   return (
     <div className={Classes.auth_section}>
       {/* <h1>Hello World!</h1> */}
+      
+      <img src="Group_7265.svg" />
       <div className={Classes.authenticateButton}>
         <GoogleLogin
           clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}
@@ -78,9 +80,7 @@ function Authentication() {
           className={Classes.gButton}>
           <p>Sign in with Google</p>
         </GoogleLogin>
-      </div>
-      <div className={Classes.Avatar1}>
-        <Avatar1 />
+        
       </div>
     </div>
   );
