@@ -136,7 +136,7 @@ function EventCard(props) {
         {sessionStorage.getItem('isLoggedIn') == 'true' ? (
           <div
             className="addToCart"
-            style={{ background: props.color2, cursor: 'pointer', fontFamily:"Manrope" }}
+            style={{ background: props.color2, cursor: 'pointer', fontFamily: 'Manrope' }}
             onClick={() => {
               // send post request to database
 
@@ -153,8 +153,7 @@ function EventCard(props) {
             target="_blank"
             href="/authentication"
             rel="noreferrer"
-            style={{ background: props.color2 }}
-            >
+            style={{ background: props.color2 }}>
             Login To Add
           </a>
         )}
