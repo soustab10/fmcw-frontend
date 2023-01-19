@@ -16,6 +16,7 @@ import img1 from './CartInfo1.png';
 import img2 from './CartInfo2.png';
 import leftStar from './leftStar.png';
 import rightStar from './rightStar.png';
+import GooglePayButton from '@google-pay/button-react';
 // import Button from './pages/LandingPage/Section/Button/Button';
 import Button from './Button_2';
 import WorkshopCard from './pages/Events/WorkshopCard';
@@ -85,11 +86,12 @@ function Cart(props) {
       email: document.getElementById('email').value,
       phone: document.getElementById('phone').value,
       amount: paymentAmount,
+      transactionID: document.getElementById('ref').value,
       redirect_url: process.env.REACT_APP_BACKEND_URI + '/api/pay/callback'
     };
     console.log(obj);
 
-    const res = await fetch(process.env.REACT_APP_BACKEND_URI + '/api/pay', {
+    const res = await fetch(process.env.REACT_APP_BACKEND_URI + '/api/cart', {
       method: 'POST',
       body: JSON.stringify(obj),
       headers: {
@@ -104,26 +106,29 @@ function Cart(props) {
     // event they have booked and the total payment amount
     // The body of the API request should contain: name, email, phone and paymentAmount of the user.
     // The API request should be made in the checkoutHandler function and you should use the register-form to get the email of user.
-    // const mailData = await fetch(process.env.REACT_APP_BACKEND_URI+'/api/send-mail', {
-    //   method: 'POST',
-    //   body: JSON.stringify(obj),
-    //   headers: {
-    //     'Content-Type': 'application/json'
-    //   }
-    // });
-    // console.log({ obj });
-    // const userData = await mailData.json();
-    // console.log(userData);
+    const mailData = await fetch(process.env.REACT_APP_BACKEND_URI + '/api/send-mail', {
+      method: 'POST',
+      body: JSON.stringify(obj),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
+    console.log({ obj });
+    const userData = await mailData.json();
+    console.log(userData);
   }
   let paymentAmount = 0;
   for (const item of cartItems) {
     if (item.verifyStatus == false) {
       paymentAmount += item.price;
+    } else if (item.verifyStatus == true) {
+      checkoutHandler();
     }
     if (paymentAmount >= 699) {
       paymentAmount = paymentAmount * 0.9;
     }
   }
+
   return (
     <div>
       <section className="cart-page">
@@ -150,7 +155,9 @@ function Cart(props) {
           </div>
           <a href="/events">
             <button className="knowMoreBtn">
-              <Link to="/passes"><p>Know More</p></Link>
+              <Link to="/passes">
+                <p>Know More</p>
+              </Link>
             </button>
           </a>
           <div className="imgDiv">
@@ -197,32 +204,29 @@ function Cart(props) {
         </div>
         <div className="lapTopView">
           <div className="contest_cards">
-              {console.log(cartItems.length)}
-              {/* {cartItems.length == undefined || cartItems.length == 0 ? (
-                <a href="/events">
-                  <section
-                    className="addContest"
-                    style={{ margin: '0px 30px 50px', right: 'auto', position: 'relative' }}>
-                    <h1>+</h1>
-                    <h2>Add more contest</h2>
-                  </section>
-                </a>
-              ): */}
-              {/* ( */}
-                <a href="/events">
-                  <section
-                    className="addContest">
-                    <h1>+</h1>
-                    <h2>Add more contest</h2>
-                  </section>
-                </a>
-              {/* )} */}
-              
+            {console.log(cartItems.length)}
+            {cartItems.length == undefined || cartItems.length == 0 ? (
+              <a href="/events">
+                <section
+                  className="addContest"
+                  style={{ margin: '0px 30px 50px', right: 'auto', position: 'relative' }}>
+                  <h1>+</h1>
+                  <h2>Add more contest</h2>
+                </section>
+              </a>
+            ) : (
+              <a href="/events">
+                <section className="addContest">
+                  <h1>+</h1>
+                  <h2>Add more contest</h2>
+                </section>
+              </a>
+            )}
 
             <div className="event_cards">
               {cartItems.map((item, index) => {
                 console.log(item, index, 'fdsdfghioluyjtrgfguiu');
-                if (item.Type === 'Contest') {
+                if (item.Type === 'Contest' && !item.verifyStatus) {
                   return (
                     <CartCard_2
                       img={item.img}
@@ -236,6 +240,8 @@ function Cart(props) {
                       key={index}
                       color={item.color}
                       color2={item.color2}
+                      verified={item.verifyStatus}
+                      mongooseId={item._id}
                     />
                   );
                 }
@@ -248,7 +254,7 @@ function Cart(props) {
           <div className="contest_cards">
             <div className="event_cards">
               {cartItems.map((item, index) => {
-                if (item.Type === 'Contest') {
+                if (item.Type === 'Contest' && !item.verifyStatus) {
                   return (
                     <CartCard_2
                       img={item.img}
@@ -297,16 +303,16 @@ function Cart(props) {
         </div>
         <div className="lapTopView">
           <div className="contest_cards">
-            {console.log(cartItems,"harsh")}
+            {console.log(cartItems)}
             {/* {cartItems.length == undefined || cartItems.length == 0 ? ( */}
-                <section
-                  className="addWorkshop"
-                  style={{ marginBottom: '50px', right: 'auto', position: 'relative' }}>
+            <section
+              className="addWorkshop"
+              style={{ marginBottom: '50px', right: 'auto', position: 'relative' }}>
               <a href="/events">
-                  <h1>+</h1>
-                  <h2>Add more Workshop</h2>
+                <h1>+</h1>
+                <h2>Add more Workshop</h2>
               </a>
-                </section>
+            </section>
             {/* // ) : (
               //   <section className="addWorkshop">
               // <a href="/events">
@@ -318,7 +324,7 @@ function Cart(props) {
             <div className="event_cards">
               {cartItems.map((item, index) => {
                 console.log(item, index);
-                if (item.Type === 'Workshop') {
+                if (item.Type === 'Workshop' && !item.verifyStatus) {
                   return (
                     <WorkshopCard
                       img={item.img}
@@ -329,6 +335,8 @@ function Cart(props) {
                       key={index}
                       color={item.color}
                       color2={item.color2}
+                      verified={item.verifyStatus}
+                      mongooseId={item._id}
                       desc={item.desc}
                       date={item.date}
                       time={item.time}
@@ -344,7 +352,7 @@ function Cart(props) {
           <div className="contest_cards">
             <div className="event_cards">
               {cartItems.map((item, index) => {
-                if (item.Type === 'Workshop') {
+                if (item.Type === 'Workshop' && !item.verifyStatus) {
                   return (
                     <WorkshopCard
                       margin={'0'}
@@ -385,12 +393,14 @@ function Cart(props) {
           <Box>
             <div className="back"></div>
 
+            <img src="qr.jpeg" className="qr" />
             <div className="register-form">
               <h1 className="reg-text">REGISTER</h1>
               <div className="reg-form">
                 <div className="text">
                   <input
                     className="register-input"
+                    value={sessionStorage.getItem('name')}
                     type="text"
                     id="name"
                     placeholder="Name"
@@ -399,6 +409,7 @@ function Cart(props) {
                   <hr />
                   <input
                     className="register-input"
+                    value={sessionStorage.getItem('email')}
                     type="email"
                     id="email"
                     placeholder="Email"
@@ -410,6 +421,13 @@ function Cart(props) {
                     type="phone"
                     id="phone"
                     placeholder="Contact Number"
+                    required
+                  />
+                  <input
+                    className="register-input"
+                    type="text"
+                    id="ref"
+                    placeholder="Transaction ID/Ref No"
                     required
                   />
                   <br></br>

@@ -67,8 +67,8 @@ function Authentication() {
   return (
     <div className={Classes.auth_section}>
       {/* <h1>Hello World!</h1> */}
-      
-      <img src="Group_7265.svg" />
+
+      <img src={process.env.REACT_APP_AWS_S3_URI + '/Group_7265.svg'} />
       <div className={Classes.authenticateButton}>
         <GoogleLogin
           clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}
@@ -80,7 +80,6 @@ function Authentication() {
           className={Classes.gButton}>
           <p>Sign in with Google</p>
         </GoogleLogin>
-        
       </div>
     </div>
   );

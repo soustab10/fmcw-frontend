@@ -73,7 +73,7 @@ function landingPage() {
               </button>
             </a>
             {/* </Link> */}
-            <img src={HeroAnimNew} className={Classes.div1_img} />;
+            <img src={process.env.REACT_APP_AWS_S3_URI + '/HeroAnim1.gif'} className={Classes.div1_img} />;
             {/* <img src="0001-0210.gif" className={Classes.div1_img} /> */}
           </Fade>
         </div>
