@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from 'react';
 import Banner from './Banner/Banner';
 import Image from './merchandise.png';
-import sectionImage from '../../bg.png';
 import Section from './Section/Section';
 import Classes from './LandingPage.module.css';
 import Footer from '../../Footer';
