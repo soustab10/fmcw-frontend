@@ -80,19 +80,19 @@ function Cart(props) {
     // console.log(isTokenValid());
   }, []);
 
-  async function checkoutHandler(item) {
+  async function checkoutHandler() {
     let obj = {
       name: document.getElementById('name').value,
       email: document.getElementById('email').value,
       phone: document.getElementById('phone').value,
+      userID: sessionStorage.getItem('userID'),
       amount: paymentAmount,
-      cartItems: item,
       transactionID: document.getElementById('ref').value,
       redirect_url: process.env.REACT_APP_BACKEND_URI + '/api/pay/callback'
     };
     console.log(obj);
 
-    const res = await fetch(process.env.REACT_APP_BACKEND_URI + '/api/pay', {
+    const res = await fetch(process.env.REACT_APP_BACKEND_URI + '/api/pa', {
       method: 'POST',
       body: JSON.stringify(obj),
       headers: {
@@ -396,11 +396,17 @@ function Cart(props) {
           className="payment-modal">
           <Box>
             <div className="back"></div>
-
-            <form className="container" onSubmit={(e) => checkoutHandler(e)}>
+            <div className="container">
+              <h2>Checkout</h2>
+              <p>
+                Just one more step to go. Complete your transaction and be part of FMC Weekend’23.
+              </p>
               <img src="Star.png" className="star3" />
               <img src="qr_fmc.jpeg" className="qr" />
               <div className="text">
+                <label htmlFor="name" className="input-title">
+                  <b>Name</b>
+                </label>
                 <input
                   className="register-input"
                   value={sessionStorage.getItem('name')}
@@ -410,6 +416,9 @@ function Cart(props) {
                   required
                 />
                 <hr />
+                <label htmlFor="email" className="input-title">
+                  <b>Email ID</b>
+                </label>
                 <input
                   className="register-input"
                   value={sessionStorage.getItem('email')}
@@ -419,14 +428,20 @@ function Cart(props) {
                   required
                 />
                 <hr />
+                <label htmlFor="phone" className="input-title">
+                  <b>Phone No</b>
+                </label>
                 <input
                   className="register-input"
-                  type="phone"
+                  type="tel"
                   id="phone"
                   placeholder="Contact Number"
                   required
                   pattern="^[0-9]{10,10}$"
                 />
+                <label htmlFor="transactionID" className="input-title">
+                  <b>Transaction ID</b>
+                </label>
                 <input
                   className="register-input"
                   type="text"
@@ -447,7 +462,7 @@ function Cart(props) {
                 Submit
               </button>
               <img src="Cube.svg" className="cube1" />
-            </form>
+            </div>
             {/* <Typography id="modal-modal-title" variant="h6" component="h2">
               <h1>Payment Details</h1>
             </Typography>
