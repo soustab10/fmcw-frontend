@@ -51,7 +51,7 @@ function Photography() {
             })}
           </div>
           <div className="workshop-cards">
-            {data.photographyWorkshopData.map((item, index) => {
+            {/* {data.photographyWorkshopData.map((item, index) => {
               return (
                 <WorkshopCard
                   img={item.img}
@@ -67,7 +67,7 @@ function Photography() {
                   time={item.time}
                 />
               );
-            })}
+            })} */}
           </div>
         </div>
       </section>

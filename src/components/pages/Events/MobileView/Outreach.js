@@ -51,7 +51,7 @@ function Outreach() {
             })}
           </div>
           <div className="workshop-cards">
-            {data.outreachWorkshopData.map((item, index) => {
+            {/* {data.outreachWorkshopData.map((item, index) => {
               return (
                 <WorkshopCard
                   img={item.img}
@@ -67,7 +67,7 @@ function Outreach() {
                   time={item.time}
                 />
               );
-            })}
+            })} */}
           </div>
         </div>
       </section>

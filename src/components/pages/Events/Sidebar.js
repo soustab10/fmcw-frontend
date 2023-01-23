@@ -124,7 +124,7 @@ export default function VerticalTabs() {
         </div>
 
         <div className="workshop-cards">
-          {data.photographyWorkshopData.map((item, index) => {
+          {/* {data.photographyWorkshopData.map((item, index) => {
             return (
               // <Modal>
                 <WorkshopCard
@@ -142,7 +142,7 @@ export default function VerticalTabs() {
                 />
               // </Modal>
             );
-          })}
+          })} */}
         </div>
       </TabPanel>
       <TabPanel value={value} index={1}>
@@ -175,7 +175,7 @@ export default function VerticalTabs() {
         </div>
 
         <div className="workshop-cards">
-          {data.cineWorkshopData.map((item, index) => {
+          {/* {data.cineWorkshopData.map((item, index) => {
             return (
               <WorkshopCard
                 img={item.img}
@@ -191,7 +191,7 @@ export default function VerticalTabs() {
                 time={item.time}
               />
             );
-          })}
+          })} */}
         </div>
       </TabPanel>
       <Divider />
@@ -221,7 +221,7 @@ export default function VerticalTabs() {
             </Fade>
           </div>
           <div className="workshop-cards">
-            {data.outreachWorkshopData.map((item, index) => {
+            {/* {data.outreachWorkshopData.map((item, index) => {
               return (
                 <WorkshopCard
                   img={item.img}
@@ -237,7 +237,7 @@ export default function VerticalTabs() {
                   time={item.time}
                 />
               );
-            })}
+            })} */}
           </div>
         </div>
       </TabPanel>
@@ -269,7 +269,7 @@ export default function VerticalTabs() {
           </div>
 
           <div className="workshop-cards">
-            {data.mediaWorkshopData.map((item, index) => {
+            {/* {data.mediaWorkshopData.map((item, index) => {
               return (
                 <WorkshopCard
                   img={item.img}
@@ -285,7 +285,7 @@ export default function VerticalTabs() {
                   time={item.time}
                 />
               );
-            })}
+            })} */}
           </div>
         </div>
       </TabPanel>
@@ -317,7 +317,7 @@ export default function VerticalTabs() {
           </div>
 
           <div className="workshop-cards">
-            {data.designWorkshopData.map((item, index) => {
+            {/* {data.designWorkshopData.map((item, index) => {
               return (
                 <WorkshopCard
                   img={item.img}
@@ -333,7 +333,7 @@ export default function VerticalTabs() {
                   time={item.time}
                 />
               );
-            })}
+            })} */}
           </div>
         </div>
       </TabPanel>
@@ -365,7 +365,7 @@ export default function VerticalTabs() {
           </div>
 
           <div className="workshop-cards">
-            {data.animationWorkshopData.map((item, index) => {
+            {/* {data.animationWorkshopData.map((item, index) => {
               return (
                 <WorkshopCard
                   img={item.img}
@@ -381,7 +381,7 @@ export default function VerticalTabs() {
                   time={item.time}
                 />
               );
-            })}
+            })} */}
           </div>
         </div>
       </TabPanel>

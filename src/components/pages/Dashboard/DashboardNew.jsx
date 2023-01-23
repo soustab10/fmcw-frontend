@@ -14,15 +14,15 @@ function DashBoardNew() {
   const { items } = useCart();
   const [isLoading, setIsLoading] = useState(false);
   const [userData, setUserData] = useState({
-    name: 'Tony Stark',
-    email: 'tony.stark@itbhu.ac.in',
-    college: 'Foo',
+    name: 'User',
+    email: '',
+    college: '',
     phone: 'XXXXXXXXXX',
-    yearOfStudy: '2',
-    instaHandle: '_blah_',
+    yearOfStudy: '',
+    instaHandle: '',
     userType: '-1',
     cartItems: [],
-    refCode: '45646'
+    refCode: ''
   });
   const sleep = (ms) => new Promise((res) => setTimeout(res, ms));
   const logoutHandler = () => {
@@ -185,7 +185,7 @@ function DashBoardNew() {
           {/* <div className="event-cards"> */}
           <div className={Classes.event_cards}>
             {userData.cartItems.map((item, index) => {
-              if (item.Type === 'Contest') {
+              if (item.Type === 'Contest' && item.verifyStatus) {
                 return (
                   <EventCard
                     img={item.img}
@@ -235,7 +235,7 @@ function DashBoardNew() {
           {/* <div className="event-cards"> */}
           <div className={Classes.event_cards}>
             {userData.cartItems.map((item, index) => {
-              if (item.Type === 'Workshop') {
+              if (item.Type === 'Workshop' && item.verifyStatus) {
                 return (
                   <WorkshopCard
                     img={item.img}
@@ -268,7 +268,7 @@ function DashBoardNew() {
           {/* <div className="event-cards"> */}
           <div className={Classes.event_cards}>
             {userData.cartItems.map((item, index) => {
-              if (item.Type === 'Workshop') {
+              if (item.Type === 'Workshop' && item.verifyStatus) {
                 return (
                   <WorkshopCard
                     margin={'0'}

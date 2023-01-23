@@ -51,7 +51,7 @@ function Cinematography() {
             })}
           </div>
           <div className="workshop-cards">
-            {data.cineWorkshopData.map((item, index) => {
+            {/* {data.cineWorkshopData.map((item, index) => {
               return (
                 <WorkshopCard
                   img={item.img}
@@ -67,7 +67,7 @@ function Cinematography() {
                   time={item.time}
                 />
               );
-            })}
+            })} */}
           </div>
         </div>
       </section>

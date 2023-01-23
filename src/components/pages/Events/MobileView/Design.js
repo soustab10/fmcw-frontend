@@ -51,7 +51,7 @@ function Design() {
             })}
           </div>
           <div className="workshop-cards">
-            {data.designWorkshopData.map((item, index) => {
+            {/* {data.designWorkshopData.map((item, index) => {
               return (
                 <WorkshopCard
                   img={item.img}
@@ -67,7 +67,7 @@ function Design() {
                   time={item.time}
                 />
               );
-            })}
+            })} */}
           </div>
         </div>
       </section>

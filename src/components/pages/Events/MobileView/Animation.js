@@ -51,7 +51,7 @@ function Animation() {
             })}
           </div>
           <div className="workshop-cards">
-            {data.animationWorkshopData.map((item, index) => {
+            {/* {data.animationWorkshopData.map((item, index) => {
               return (
                 <WorkshopCard
                   img={item.img}
@@ -67,7 +67,7 @@ function Animation() {
                   time={item.time}
                 />
               );
-            })}
+            })} */}
           </div>
         </div>
       </section>
