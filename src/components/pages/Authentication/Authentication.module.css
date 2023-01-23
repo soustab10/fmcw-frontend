@@ -102,18 +102,16 @@
     /* overflow-x: hidden; */
   }
   .auth_section img {
-    width: 60vw;
-    min-width: 300px;
-    padding: 0;
-  }
-  .authenticateButton {
+    width: 40vw;
     position: relative;
-    width: 300px;
-    height: 50px;
-    left: -1vh;
-    top: 0vh;
+    min-width: 200px;
+    padding: 0;
+    left: 0;
+    top: -5vh;
+    right: 0;
     margin: auto;
   }
+ 
   .authenticateButton p {
     font-size: 1.0em;
     font-family: 'Montserrat';
@@ -121,6 +119,22 @@
     opacity: 1;
     align-items: center;
     text-align: center;
+  }
+  .top{
+    width: 300px;
+    top: -15vh;
+    position: relative;
+    font-size: 36px;
+    left: 0;
+    margin: auto;
+  }
+  .top2{
+    width: 300px;
+    top: -10vh;
+    position: relative;
+    font-size: 27px;
+    left: 0;
+    margin: auto;
   }
   .gButton {
     width: 320px;
@@ -136,57 +150,21 @@
     left: 0;
     right: 0;
   }
-}
-
-@media screen and (max-width: 350px){
-  .auth_section img {
+  .authenticateButton {
     position: relative;
-    width: 200px;
-    left: 1%;
+    width: 300px;
+    height: 50px;
+    top: 0vh;
+    left: 0;
+    margin: auto;
   }
 }
 
-@media screen and (max-width: 1200px){
-  .auth_section img {
-    right: 13%;
-  }
-}
-
-@media screen and (max-width: 1100px){
-  .auth_section img {
-    right: 11%;
-  }
-}
-
-@media screen and (max-width: 1000px){
-  .auth_section img {
-    right: 7%;
-  }
-}
 
 @media screen and (max-width: 950px){
   .auth_section img {
     right: 3%;
   }
-  .top{
-    width: 300px;
-    top: 66%;
-    font-size: 36px;
-    left: 5%;
-    margin: auto;
-  }
-  .top2{
-    width: 300px;
-    top: 74%;
-    font-size: 27px;
-    left: 5%;
-    line-height: 32px;
-  }
-  .authenticateButton {
-    position: relative;
-    width: 300px;
-    height: 50px;
-    top: 16vh;
-    margin: auto;
-  }
+ 
+  
 }
