@@ -14,6 +14,8 @@ import './CartCard_2.css';
 import { useState, useEffect } from 'react';
 import img1 from './CartInfo1.png';
 import img2 from './CartInfo2.png';
+
+import { ToastContainer, toast } from 'react-toastify';
 import leftStar from './leftStar.png';
 import rightStar from './rightStar.png';
 import Fade from 'react-reveal/Reveal';
@@ -81,46 +83,14 @@ function Cart(props) {
     // console.log(isTokenValid());
   }, []);
   async function checkoutHandler() {
-    const token = sessionStorage.getItem('tokenID');
-    try {
-      const res1 = await fetch(process.env.REACT_APP_BACKEND_URI + '/api/user', {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-          token: token
-        }
-      });
-      const data1 = await res1.json();
-      let obj = {
-        name: document.getElementById('name').value,
-        email: document.getElementById('email').value,
-        phone: document.getElementById('phone').value,
-        userID: data1,
-        amount: paymentAmount,
-        transactionID: document.getElementById('ref').value,
-        cartItems: cartItems
-      };
-      console.log(obj);
+    let obj = {
+      name: document.getElementById('name').value,
+      email: document.getElementById('email').value,
+      phone: document.getElementById('phone').value,
+      amount: paymentAmount,
+      transactionID: document.getElementById('ref').value
+    };
 
-      const res = await fetch(process.env.REACT_APP_BACKEND_URI + '/api/pa', {
-        method: 'POST',
-        body: JSON.stringify(obj),
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      });
-      // console.log({ obj });
-      const data = await res.json();
-      console.log(data);
-    } catch (e) {
-      console.log(e);
-      alert('Error with authentication, login again');
-    }
-
-    //ToDo: You just have to make an API request to /api/send-mail to send the email to the user with the details of the
-    // event they have booked and the total payment amount
-    // The body of the API request should contain: name, email, phone and paymentAmount of the user.
-    // The API request should be made in the checkoutHandler function and you should use the register-form to get the email of user.
     const mailData = await fetch(process.env.REACT_APP_BACKEND_URI + '/api/send-mail', {
       method: 'POST',
       body: JSON.stringify(obj),
@@ -128,9 +98,21 @@ function Cart(props) {
         'Content-Type': 'application/json'
       }
     });
-    console.log({ obj });
-    const userData = await mailData.json();
-    console.log(userData);
+
+    window.setTimeout(function () {
+      location.reload();
+    }, 1000);
+    toast.warn('Event added to cart successfully!', {
+      position: 'top-center',
+      autoClose: 3000,
+      draggable: true,
+      icon: false
+    });
+
+    //ToDo: You just have to make an API request to /api/send-mail to send the email to the user with the details of the
+    // event they have booked and the total payment amount
+    // The body of the API request should contain: name, email, phone and paymentAmount of the user.
+    // The API request should be made in the checkoutHandler function and you should use the register-form to get the email of user.
   }
   let paymentAmount = 0;
   for (const item of cartItems) {
@@ -415,7 +397,7 @@ function Cart(props) {
           className="payment-modal">
           <Box>
             <div className="back"></div>
-            <div className="container">
+            <form className="container">
               <h2>Checkout</h2>
               <p>
                 Just one more step to go. Complete your transaction and be part of FMC Weekend’23.
@@ -475,13 +457,14 @@ function Cart(props) {
                 </label>
               </div>
               <button
+                type="submit"
                 onClick={checkoutHandler}
                 name="registor-button"
                 className="register-btn submit">
                 Submit
               </button>
               <img src="Cube.svg" className="cube1" />
-            </div>
+            </form>
             {/* <Typography id="modal-modal-title" variant="h6" component="h2">
               <h1>Payment Details</h1>
             </Typography>
