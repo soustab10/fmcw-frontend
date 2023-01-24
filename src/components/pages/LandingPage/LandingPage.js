@@ -83,7 +83,7 @@ function landingPage() {
             <h2>HUES IN HARMONY</h2>
             <h2>9TH EDITION</h2>
             <h2>IIT (BHU) VARANASI</h2>
-            <h2>VISTA</h2>
+            <h2>10TH-12TH FEBRUARY</h2>
           </Marquee>
         </div>
         <div className={Classes.div2}>

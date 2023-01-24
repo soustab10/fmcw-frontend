@@ -98,7 +98,7 @@ function DashBoardNew() {
       setIsLoading(false);
     };
     isTokenValid();
-    // window.location.reload();
+    window.location.reload();
 
     // console.log(isTokenValid());
   }, []);
