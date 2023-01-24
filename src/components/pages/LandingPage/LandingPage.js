@@ -167,7 +167,7 @@ function landingPage() {
           </div>
         </div>
         {/* FOR DYNAMIC DIGITS ON SCROLLING */}
-        <ScrollTrigger onEnter={() => setCounterOn(true)} onExit={() => setCounterOn(false)}>
+        
           <div className={Classes.eventBox}>
             <div className={Classes.div5}>
               <div className={Classes.banner3}>
@@ -204,6 +204,7 @@ function landingPage() {
               </Fade>
             </div>
           </div>
+          <ScrollTrigger onEnter={() => setCounterOn(true)} onExit={() => setCounterOn(false)}>
           <div className={Classes.div7}>
             <Fade right>
               <h1>{counterOn && <CountUp start={70000} end={75269} duration={2} delay={0} />}+</h1>;
