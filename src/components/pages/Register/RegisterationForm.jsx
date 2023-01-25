@@ -25,7 +25,7 @@ function RegisterationForm() {
     console.log({ obj });
     const data = await res.json();
     console.log(data);
-    
+
     if (data.message === 'success') {
       window.location.href = '/dashboard';
     } else {
@@ -33,8 +33,7 @@ function RegisterationForm() {
       alert(data.message);
       // window.location.href = "/register";
     }
-    
-      
+
     window.location.reload();
   }
   const authCtx = useContext(AuthContext);
@@ -43,7 +42,10 @@ function RegisterationForm() {
       <div className={Classes.container}>
         <img src="Star.png" className={Classes.star} />
         <p className={Classes.main_title}>Register</p>
-        <p className={Classes.top}> Let's get to know you a bit. We are a step closer to the world of FMC Weekend. </p>
+        <p className={Classes.top}>
+          {' '}
+          Let's get to know you a bit. We are a step closer to the world of FMC Weekend.{' '}
+        </p>
         <input
           type="text"
           name="name"
@@ -84,16 +86,23 @@ function RegisterationForm() {
           <b>Phone Number (+91)</b>
         </label>
         <input type="tel" name="phone" placeholder="" required pattern="^[0-9]{10,10}$" />
-        <label htmlFor="year" className={Classes.title}>
-          <b>Year of Study</b>
-        </label>
-        <select name="year">
-          <option value="1">I</option>
-          <option value="2">II</option>
-          <option value="3">III</option>
-          <option value="4">IV</option>
-          <option value="5">V</option>
-        </select>
+        {sessionStorage.getItem('email').endsWith('@iitbhu.ac.in') ||
+        sessionStorage.getItem('email').endsWith('@itbhu.ac.in') ? (
+          <>
+            <label htmlFor="year" className={Classes.title}>
+              <b>Year of Study</b>
+            </label>
+            <select name="year">
+              <option value="1">I</option>
+              <option value="2">II</option>
+              <option value="3">III</option>
+              <option value="4">IV</option>
+              <option value="5">V</option>
+            </select>
+          </>
+        ) : (
+          ''
+        )}
         <label htmlFor="redeem" className={Classes.title}>
           <b>Referral Code</b>
         </label>
