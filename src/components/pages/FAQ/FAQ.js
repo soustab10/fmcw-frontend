@@ -160,7 +160,7 @@ function Accordion() {
                         fontStyle: 'normal',
                         color: 'black',
                         fontWeight: '500',
-                        fontSize: '36px',
+                        fontSize: '22px',
                         lineHeight: '44px'
                       }}>
                       {item.question}
@@ -179,7 +179,7 @@ function Accordion() {
                           fontFamily: 'Montserrat',
                           fontStyle: 'normal',
                           fontWeight: '400',
-                          fontSize: '24px',
+                          fontSize: '18px',
                           lineHeight: '145.9%'
                         }}>
                         {item.answer}

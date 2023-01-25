@@ -2,7 +2,7 @@ export const Data = [
   {
     question: 'When is FMC Weekend?',
     answer:
-      'FMC Weekend is set to be held from 11 February- 13 February 2022. You can register now and enroll yourself into various workshops and events.'
+      'FMC Weekend is set to be held from 10 February- 12 February 2023. You can register now and enroll yourself into various workshops and events.'
   },
   {
     question: 'Is the participation in events and workshops paid?',
@@ -24,7 +24,7 @@ export const Data = [
     question: 'How does the referral code work?',
     answer:
       "Each participant will be provided with a referral code, which they may distribute among their acquaintances, who would receive a 10% discount on their pass prices. The leaderboard will display the number of times a referral code has been used and rank the participants accordingly. Whosoever's referral code is used the maximum number of times will receive cash prizes worth 3k!"
-  },
+  }
 
   // {
   //   question: 'How does the leaderboard work?',
