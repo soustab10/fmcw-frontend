@@ -189,7 +189,7 @@ const data = {
   designData: [
     {
       id: 13,
-      img: process.env.REACT_APP_AWS_S3_URI + '/cine.svg',
+      img: process.env.REACT_APP_AWS_S3_URI + '/designgrp.svg',
       genre: 'design',
       type: 'Contest',
       title: 'Design The Tunes',
@@ -204,7 +204,7 @@ const data = {
     },
     {
       id: 14,
-      img: process.env.REACT_APP_AWS_S3_URI + '/cine.svg',
+      img: process.env.REACT_APP_AWS_S3_URI + '/designgrp.svg',
       genre: 'design',
       type: 'Contest',
       title: 'Design-a-thon',
@@ -219,7 +219,7 @@ const data = {
     },
     {
       id: 15,
-      img: process.env.REACT_APP_AWS_S3_URI + '/cine.svg',
+      img: process.env.REACT_APP_AWS_S3_URI + '/designgrp.svg',
       genre: 'design',
       type: 'Contest',
       title: 'FrameX',
