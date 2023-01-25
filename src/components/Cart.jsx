@@ -397,6 +397,7 @@ function Cart(props) {
           className="payment-modal">
           <Box>
             <div className="back"></div>
+
             <form className="container">
               <h2>Checkout</h2>
               <p>
@@ -453,16 +454,27 @@ function Cart(props) {
                 />
                 <br></br>
                 <label htmlFor="cart-amount">
-                  <h3 className="price-info">Total Price = ₹ {paymentAmount} </h3>
+                  <h3 className="price-info">
+                    Total Price = ₹{' '}
+                    {sessionStorage.getItem('email').endsWith('@iitbhu.ac.in') ||
+                    sessionStorage.getItem('email').endsWith('@itbhu.ac.in')
+                      ? 0
+                      : paymentAmount.toFixed(2)}{' '}
+                  </h3>
                 </label>
               </div>
-              <button
-                type="submit"
-                onClick={checkoutHandler}
-                name="registor-button"
-                className="register-btn submit">
-                Submit
-              </button>
+              {sessionStorage.getItem('email').endsWith('@iitbhu.ac.in') ||
+              sessionStorage.getItem('email').endsWith('@itbhu.ac.in') ? (
+                ''
+              ) : (
+                <button
+                  type="submit"
+                  onClick={checkoutHandler}
+                  name="registor-button"
+                  className="register-btn submit">
+                  Submit
+                </button>
+              )}
               <img src="Cube.svg" className="cube1" />
             </form>
             {/* <Typography id="modal-modal-title" variant="h6" component="h2">
@@ -512,14 +524,27 @@ function Cart(props) {
         <div className="purchase_details">
           <div className="checkout_button2">
             {/* <CheckoutButton onClick={handleOpen}>CHECKOUT</CheckoutButton>*/}
-            <button className="checkoutBtn" onClick={handleOpen}>
-              <p>CHECKOUT</p>
-            </button>
+            {sessionStorage.getItem('email').endsWith('@iitbhu.ac.in') ||
+            sessionStorage.getItem('email').endsWith('@itbhu.ac.in') ? (
+              ''
+            ) : (
+              <button className="checkoutBtn" onClick={handleOpen}>
+                <p>CHECKOUT</p>
+              </button>
+            )}
           </div>
           {/* <h3>Total Items: ({cartItems.length})</h3> */}
           <div className="cost">
-            <span className="checkoutCost">Total Cost</span>
-            <span className="checkoutCost"> Rs {paymentAmount.toFixed(2)} </span>
+            <span className="checkoutCost">Total Cost :</span>
+
+            <span className="checkoutCost">
+              {' '}
+              Rs{' '}
+              {sessionStorage.getItem('email').endsWith('@iitbhu.ac.in') ||
+              sessionStorage.getItem('email').endsWith('@itbhu.ac.in')
+                ? 0
+                : paymentAmount.toFixed(2)}{' '}
+            </span>
           </div>
         </div>
       </section>
