@@ -93,10 +93,10 @@ const Wrap = styled.div`
     margin-right: 1.5rem;
   }
   @media (max-width: 400px) {
-    h1{
-      font-weight : 400;
-      font-size : 25px;
-      line-height : 33px;
+    h1 {
+      font-weight: 400;
+      font-size: 25px;
+      line-height: 33px;
     }
   }
 `;
@@ -131,21 +131,20 @@ function Accordion() {
   };
 
   return (
-    <div className="HEADER" style={{overflow: "hidden"}}>
-      
+    <div className="HEADER" style={{ overflow: 'hidden' }}>
       <Heading>
-      <Fade right >
-        {/* <img src='Group_7167.svg' /> */}
-        <div>
-        <img className="star1" src={leftStar}></img>
-        </div>
-        <div>
-        <span className="heading">FAQ</span>
-        </div>
-        <div>
-        <img className="star2" src={rightStar}></img>
-        </div>
-      </Fade>
+        <Fade right>
+          {/* <img src='Group_7167.svg' /> */}
+          <div>
+            <img className="star1" src={leftStar}></img>
+          </div>
+          <div>
+            <span className="heading">FAQ</span>
+          </div>
+          <div>
+            <img className="star2" src={rightStar}></img>
+          </div>
+        </Fade>
       </Heading>
       <IconContext.Provider value={{ color: 'black', size: '47px' }}>
         <AccordionSection className="accordion">
@@ -154,18 +153,18 @@ function Accordion() {
               <>
                 <Wrap onClick={() => toggle(index)} key={index}>
                   <div>
-                  <h1
-                    style={{
-                      padding: "15px",
-                      fontFamily: 'Montserrat',
-                      fontStyle: 'normal',
-                      color: 'black',
-                      fontWeight: '500',
-                      fontSize: '36px',
-                      lineHeight: '44px'
-                    }}>
-                    {item.question}
-                  </h1>
+                    <h1
+                      style={{
+                        padding: '15px',
+                        fontFamily: 'Montserrat',
+                        fontStyle: 'normal',
+                        color: 'black',
+                        fontWeight: '500',
+                        fontSize: '36px',
+                        lineHeight: '44px'
+                      }}>
+                      {item.question}
+                    </h1>
                   </div>
                   <span style={{ fontFamily: 'Montserrat', fontStyle: 'normal' }}>
                     {clicked === index ? <TiArrowUpThick /> : <TiArrowDownThick />}
@@ -174,20 +173,18 @@ function Accordion() {
                 <hr style={{ color: 'black', border: '0.25px solid #000000' }}></hr>
                 {clicked === index ? (
                   <Fade bottom>
-                  <Dropdown>
-                    
-                    <p
-                      style={{
-                        fontFamily: 'Montserrat',
-                        fontStyle: 'normal',
-                        fontWeight: '400',
-                        fontSize: '24px',
-                        lineHeight: '145.9%'
-                      }}>
-                      {item.answer}
-                    </p>
-                  </Dropdown>
-                  
+                    <Dropdown>
+                      <p
+                        style={{
+                          fontFamily: 'Montserrat',
+                          fontStyle: 'normal',
+                          fontWeight: '400',
+                          fontSize: '24px',
+                          lineHeight: '145.9%'
+                        }}>
+                        {item.answer}
+                      </p>
+                    </Dropdown>
                   </Fade>
                 ) : null}
               </>

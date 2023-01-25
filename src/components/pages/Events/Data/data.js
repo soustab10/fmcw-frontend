@@ -44,7 +44,7 @@ const data = {
       color2: '#2ED9FC',
       mode: 'ONLINE',
       content:
-        'A blank canvas provides one with endless possibilities to create magnificent artworks. Your submissions should belong to any of the given themes. Long exposure Minimalism Architecture Colors of India Winter Conceptual portraits Monochrome'
+        'Creativity and Composition being the essential parameters, the submissions should belong to any of the given themes and winners will be declared for each theme separately.'
     },
     {
       id: 4,
@@ -84,14 +84,14 @@ const data = {
       genre: 'outreach',
       type: 'Contest',
       title: 'Vlogoholic',
-      link: 'https://drive.google.com/file/d/1-Gkljr7BAEYODfOm1l3sS-xiDE5XK6lT/view?usp=share_link',
+      link: 'https://drive.google.com/file/d/1PGRNDRLW6iwltSZZ1wlijhJ_RW5pWP09/view?usp=sharing',
       price: 179,
       prize: 'Prizes Worth- 10K',
       color: '#FFC900',
       color2: '#FFDC5A',
       mode: 'ONLINE',
       content:
-        'You have to make a video log in the range of 60-600 seconds. It can be about anything- visiting nearby attractions, indulging in festive activities, pulling pranks on people, etc. - as long as it is exciting and in which you can show the theme “COLOUR OF MY CITY”.'
+        'Make a exciting video log of 60-600 sec span, for the theme “COLOUR OF MY CITY”. It can be about anything- visiting nearby scenes, indulging in festive stuff, etc.-as long as it aligns with the theme.'
     },
     {
       id: 7,
@@ -138,7 +138,7 @@ const data = {
       color2: '#62FFD8',
       mode: 'ONLINE',
       content:
-        'For this event, however, you’ve got to aim those lenses inwards and tell an interesting story about yourself; hence the theme - “I, Me and My Things – A Story”. Weave a tale involving your personal effects and belongings and make everyone and their friends turn their heads.'
+        'You’ve got to aim the lenses inwards and tell an interesting story about yourself; hence the theme - “I, Me and My Things – A Story”. Turn heads by weaving a tale involving your personal effects and goods.'
     },
     {
       id: 10,
@@ -153,7 +153,7 @@ const data = {
       color2: '#62FFD8',
       mode: 'ONLINE',
       content:
-        'Frame by Frame is an Open-theme Online Stop motion making event, and stop-motion entries are to be submitted in due time. The participants need to create a stop-motion movie using only inanimate objects.'
+        'Frame by Frame is an Open-theme Online Stop motion making event, and stop-motion entries are to be submitted in due time. The entries need to be created by using only inanimate objects.'
     },
     {
       id: 11,
@@ -200,7 +200,7 @@ const data = {
       color2: '#9990FF',
       mode: 'ONLINE',
       content:
-        'It’s an Online design challenge to design the cover page of a song or an album.You can also use the elements of the songs or album for the cover.'
+        'Ever thought of blending your design skills & music taste? This design challenge focuses to design the cover page of any song or an album. Usage of the elements of the songs or album can be done.'
     },
     {
       id: 14,
@@ -230,7 +230,7 @@ const data = {
       color2: '#9990FF',
       mode: 'ONLINE',
       content:
-        "FrameX is a 7 days long design challenge, in which you'll have to submit an app wireframe and Ui of given PS."
+        "Passionate about building UI styles and designs? FrameX is a 7 days long design challenge, in which you'll have to submit an app wireframe and UI for the given PS."
     }
   ],
   mediaData: [
@@ -247,7 +247,7 @@ const data = {
       color2: '#FFC8F4',
       mode: 'OFFLINE',
       content:
-        'The participants will be provided with a set of "scenes" and will have to observe them and consolidate their thoughts, after which they would\'ve have to deliver a report just like an on-site reporter by connecting two of those scenes and forming a coherent plot.'
+        'The participants will be provided with a set of "scenes". You\'ve to analyze the situation and consolidate your thoughts to deliver a report just like an on-site reporter by forming a coherent plot.'
     },
     {
       id: 17,
