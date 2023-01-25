@@ -1,5 +1,5 @@
 .section {
-  background-color: #FE6263;
+  background-color: #fe6263;
   position: relative;
   height: 100%;
   overflow: hidden;
@@ -9,7 +9,7 @@
   padding-top: 100px;
 }
 
-.main_title{
+.main_title {
   width: 358px;
   height: 58px;
   font-family: 'Montserrat';
@@ -31,13 +31,12 @@
   position: relative;
   top: 50%;
   margin-bottom: 10vh;
-  background: #00CCF5;
+  background: #00ccf5;
   border: 2px solid #000000;
   box-shadow: 4px 6px 0px #000000;
   border-radius: 4px;
   align-items: center;
 }
-
 
 /* Full-width input fields */
 
@@ -65,7 +64,7 @@
   font-size: 16px;
   font-family: Montserrat, Arial, Helvetica, sans-serif;
   width: 20%;
-  background: #F2FF00;
+  background: #f2ff00;
   border: 2px solid #000000;
   box-shadow: 4px 6px 0px #000000;
   border-radius: 4px;
@@ -83,7 +82,7 @@
   outline: none;
 }
 
-.top{
+.top {
   margin-left: 102px;
   margin-bottom: 28px;
   font-family: 'Montserrat';
@@ -104,7 +103,6 @@
   color: #000000;
   width: 70%;
 }
-
 
 .star {
   width: 200px;
@@ -131,7 +129,6 @@
   box-shadow: 0px 0px 0px;
 }
 
-
 @media only screen and (max-width: 1035px) {
   .container {
     width: 90vw;
@@ -142,6 +139,17 @@
   .star,
   .cube {
     display: none;
+  }
+  .main_title {
+    font-weight: 400;
+    font-size: 30px;
+  }
+  .top {
+    margin-left: 20px;
+    font-size: 24px;
+  }
+  .title {
+    font-size: 15px;
   }
 }
 
@@ -155,5 +163,11 @@
   .form-class option {
     padding: 6px;
   }
-
+  .main_title {
+    font-weight: 400;
+    font-size: 30px;
+  }
+  .top {
+    margin-left: 20px;
+  }
 }

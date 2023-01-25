@@ -90,8 +90,8 @@
   background: #0a66c2;
 }
 .twitter {
-  background: #00acee;
-  padding: 7px;
+  background: #ff90e8;
+  padding: 5px;
   margin: 10px;
 }
 .twitter:hover {
@@ -253,6 +253,10 @@ textarea::placeholder {
     padding: 8px;
   }
   .linkedin {
+    padding: 8px;
+    /* padding-top: -1px; */
+  }
+  .twitter {
     padding: 8px;
     /* padding-top: -1px; */
   }

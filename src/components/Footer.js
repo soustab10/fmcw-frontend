@@ -77,7 +77,7 @@ function Footer() {
               target="_blank"
               aria-label="Twitter"
               rel="noreferrer">
-             <i class="fab fa-twitter" />
+              <i class="fab fa-twitter" />
             </a>
           </div>
         </div>

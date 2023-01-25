@@ -70,7 +70,9 @@ function Authentication() {
 
       <img src={process.env.REACT_APP_AWS_S3_URI + '/Group_7265.svg'} />
       <div className={Classes.top}>Let's sign you in</div>
-      <div className={Classes.top2}>Register to become a part of India's Largest Digital Art Fest</div>
+      <div className={Classes.top2}>
+        Register to become a part of India's Largest Digital Art Fest
+      </div>
       <div className={Classes.authenticateButton}>
         <GoogleLogin
           clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}
