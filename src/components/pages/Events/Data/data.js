@@ -330,7 +330,7 @@ const data = {
       img: process.env.REACT_APP_AWS_S3_URI + '/anim.svg',
       genre: 'animation',
       type: 'Contest',
-      title: 'Artspcape',
+      title: 'Artscape',
       link: 'https://drive.google.com/file/d/125YOCPabo-UTDNW4Hbxz3zqCpkq_qglL/view?usp=share_link',
       price: 249,
       prize: 'Prizes Worth- 15K',
