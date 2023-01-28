@@ -347,11 +347,11 @@ const data = {
       type: 'Contest',
       title: 'VFXorama',
       link: 'https://drive.google.com/file/d/1wNTOZplAN5uAVFuRF6DsLjFB9zUNRCgk/view?usp=share_link',
-      price: 249,
+      price: 179,
       prize: 'Prizes Worth- 15K',
       color: '#FE6263',
       color2: '#FD8A8B',
-      mode: 'OFFLINE',
+      mode: 'ONLINE',
       content:
         'Participants have to create a VFX based video. The scene must be placed in Varanasi.'
     },
