@@ -2,31 +2,31 @@ const data = {
   marketingData: [
     {
       id: 3,
-      img: process.env.REACT_APP_AWS_S3_URI_2 + '/Marketing/Nagender.jpg',
+      img: process.env.REACT_APP_AWS_S3_URI + '/Marketing/Nagender.jpg',
       position: 'Marketing Head',
       name: 'Nagender'
     },
     {
       id: 4,
-      img: process.env.REACT_APP_AWS_S3_URI_2 + '/Marketing/SnehalSingh.jpg',
+      img: process.env.REACT_APP_AWS_S3_URI + '/Marketing/SnehalSingh.jpg',
       position: 'Marketing Head',
       name: 'Snehal Singh'
     },
     {
       id: 5,
-      img: process.env.REACT_APP_AWS_S3_URI_2 + '/Marketing/SarikiMohan.jpg',
+      img: process.env.REACT_APP_AWS_S3_URI + '/Marketing/SarikiMohan.jpg',
       position: 'Marketing Head',
       name: 'Sariki Mohan'
     },
     {
       id: 6,
-      img: process.env.REACT_APP_AWS_S3_URI_2 + '/Marketing/GirirajGupta.jpg',
+      img: process.env.REACT_APP_AWS_S3_URI + '/Marketing/GirirajGupta.jpg',
       position: 'Marketing Head',
       name: 'Giriraj Gupta'
     },
     {
       id: 6,
-      img: process.env.REACT_APP_AWS_S3_URI_2 + '/Marketing/SanskarSingh.jpg',
+      img: process.env.REACT_APP_AWS_S3_URI + '/Marketing/SanskarSingh.jpg',
       position: 'Marketing Head',
       name: 'Sanskar Singh'
     }
@@ -34,37 +34,37 @@ const data = {
   publiData: [
     {
       id: 6,
-      img: process.env.REACT_APP_AWS_S3_URI_2 + '/Publicity/AdityaSurana.webp',
+      img: process.env.REACT_APP_AWS_S3_URI + '/Publicity/AdityaSurana.webp',
       position: 'Publicity Head',
       name: 'Aditya Surana'
     },
     {
       id: 7,
-      img: process.env.REACT_APP_AWS_S3_URI_2 + '/Publicity/Chhayaumbarkar_.jpg',
+      img: process.env.REACT_APP_AWS_S3_URI + '/Publicity/Chhayaumbarkar_.jpg',
       position: 'Publicity Head',
       name: 'Chhaya Umbarkar'
     },
     {
       id: 8,
-      img: process.env.REACT_APP_AWS_S3_URI_2 + '/Publicity/Karthik_.jpg',
+      img: process.env.REACT_APP_AWS_S3_URI + '/Publicity/Karthik_.jpg',
       position: 'Publicity Head',
       name: 'Sai Karthik'
     },
     {
       id: 9,
-      img: process.env.REACT_APP_AWS_S3_URI_2 + '/Publicity/SarikiMohan.jpg',
+      img: process.env.REACT_APP_AWS_S3_URI + '/Publicity/SarikiMohan.jpg',
       position: 'Publicity Head',
       name: 'Sariki Mohan'
     },
     {
       id: 10,
-      img: process.env.REACT_APP_AWS_S3_URI_2 + '/Publicity/AnantSingh.jpg',
+      img: process.env.REACT_APP_AWS_S3_URI + '/Publicity/AnantSingh.jpg',
       position: 'Publicity Head',
       name: 'Anant Singh'
     },
     {
       id: 11,
-      img: process.env.REACT_APP_AWS_S3_URI_2 + '/Publicity/Gowtham_.jpg',
+      img: process.env.REACT_APP_AWS_S3_URI + '/Publicity/Gowtham_.jpg',
       position: 'Publicity Head',
       name: 'Gowtham'
     }
@@ -72,43 +72,43 @@ const data = {
   prData: [
     {
       id: 12,
-      img: process.env.REACT_APP_AWS_S3_URI_2 + '/PR/LeeteshKumarPathak.jpg',
+      img: process.env.REACT_APP_AWS_S3_URI + '/PR/LeeteshKumarPathak.jpg',
       position: 'Public Relations Head',
       name: 'Leetesh Pathak'
     },
     {
       id: 8,
-      img: process.env.REACT_APP_AWS_S3_URI_2 + '/PR/SatyamKumarSinha.jpg',
+      img: process.env.REACT_APP_AWS_S3_URI + '/PR/SatyamKumarSinha.jpg',
       position: 'Public Relations Head',
       name: 'Satyam Sinha'
     },
     {
       id: 8,
-      img: process.env.REACT_APP_AWS_S3_URI_2 + '/PR/ShreyaJain.jpg',
+      img: process.env.REACT_APP_AWS_S3_URI + '/PR/ShreyaJain.jpg',
       position: 'Public Relations Head',
       name: 'Shreya Jain'
     },
     {
       id: 8,
-      img: process.env.REACT_APP_AWS_S3_URI_2 + '/PR/AditiRaj.jpg',
+      img: process.env.REACT_APP_AWS_S3_URI + '/PR/AditiRaj.jpg',
       position: 'Public Relations Head',
       name: 'Aditi Raj'
     },
     {
       id: 8,
-      img: process.env.REACT_APP_AWS_S3_URI_2 + '/PR/Rishav.jpg',
+      img: process.env.REACT_APP_AWS_S3_URI + '/PR/Rishav.jpg',
       position: 'Public Relations Head',
       name: 'Rishav'
     },
     {
       id: 8,
-      img: process.env.REACT_APP_AWS_S3_URI_2 + '/PR/GoyirKoyu.jpg',
+      img: process.env.REACT_APP_AWS_S3_URI + '/PR/GoyirKoyu.jpg',
       position: 'Public Relations Head',
       name: 'Goyir Koyu'
     },
     {
       id: 8,
-      img: process.env.REACT_APP_AWS_S3_URI_2 + '/PR/YASHDESHPANDE.png',
+      img: process.env.REACT_APP_AWS_S3_URI + '/PR/YASHDESHPANDE.png',
       position: 'Public Relations Head',
       name: 'Yash Deshpande'
     }
@@ -116,13 +116,13 @@ const data = {
   socialMediaData: [
     {
       id: 9,
-      img: process.env.REACT_APP_AWS_S3_URI_2 + '/SocialMedia/Khushi.jpg',
+      img: process.env.REACT_APP_AWS_S3_URI + '/SocialMedia/Khushi.jpg',
       position: 'Social Media Head',
       name: 'Khushi Kapoor'
     },
     {
       id: 10,
-      img: process.env.REACT_APP_AWS_S3_URI_2 + '/SocialMedia/Rishav.jpg',
+      img: process.env.REACT_APP_AWS_S3_URI + '/SocialMedia/Rishav.jpg',
       position: 'Social Media Head',
       name: 'Rishav Singh'
     }
@@ -130,19 +130,19 @@ const data = {
   techData: [
     {
       id: 14,
-      img: process.env.REACT_APP_AWS_S3_URI_2 + '/Tech/sanskriti.jpg',
+      img: process.env.REACT_APP_AWS_S3_URI + '/Tech/sanskriti.jpg',
       position: 'Tech Head',
       name: 'Sanskriti Srivastav'
     },
     {
       id: 15,
-      img: process.env.REACT_APP_AWS_S3_URI_2 + '/Tech/somesh.jpg',
+      img: process.env.REACT_APP_AWS_S3_URI + '/Tech/somesh.jpg',
       position: 'Tech Head',
       name: 'Somesh Ranjan'
     },
     {
       id: 16,
-      img: process.env.REACT_APP_AWS_S3_URI_2 + '/Tech/sneha.jpg',
+      img: process.env.REACT_APP_AWS_S3_URI + '/Tech/sneha.jpg',
       position: 'Tech Head',
       name: 'Sneha Agrawal'
     }
@@ -150,7 +150,7 @@ const data = {
   designData: [
     {
       id: 17,
-      img: process.env.REACT_APP_AWS_S3_URI_2 + '/Design/IMG20221002163315.jpg',
+      img: process.env.REACT_APP_AWS_S3_URI + '/Design/IMG20221002163315.jpg',
       position: 'Design Head',
       name: 'Deepti Gupta'
     },
@@ -158,13 +158,13 @@ const data = {
   eventData: [
     {
       id: 19,
-      img: process.env.REACT_APP_AWS_S3_URI_2 + '/Events/IMG_20220919_211624.jpg',
+      img: process.env.REACT_APP_AWS_S3_URI + '/Events/IMG_20220919_211624.jpg',
       position: 'Event Head',
       name: 'Arpit Tiwari'
     },
     {
       id: 27,
-      img: process.env.REACT_APP_AWS_S3_URI_2 + '/Events/PrathamMittal.jpg',
+      img: process.env.REACT_APP_AWS_S3_URI + '/Events/PrathamMittal.jpg',
       position: 'Event Head',
       name: 'Pratham Mittal'
     }
@@ -172,7 +172,7 @@ const data = {
   convenorData: [
     {
       id: 20,
-      img: process.env.REACT_APP_AWS_S3_URI_2,
+      img: process.env.REACT_APP_AWS_S3_URI,
       position: 'Convenor',
       name: 'Nilesh Prem Prakash'
     },
@@ -184,7 +184,7 @@ const data = {
     },
     {
       id: 22,
-      img: process.env.REACT_APP_AWS_S3_URI_2,
+      img: process.env.REACT_APP_AWS_S3_URI,
       position: 'Co-Convenor',
       name: 'Siddhart Verma'
     }
@@ -192,19 +192,19 @@ const data = {
   genSecData: [
     {
       id: 23,
-      img: process.env.REACT_APP_AWS_S3_URI_2 + '/GenSec/Manhar.jpeg',
+      img: process.env.REACT_APP_AWS_S3_URI + '/GenSec/Manhar.jpeg',
       position: 'General Secretary',
       name: 'Manhar Joshi'
     },
     {
       id: 24,
-      img: process.env.REACT_APP_AWS_S3_URI_2 + '/GenSec/manasy.jpg',
+      img: process.env.REACT_APP_AWS_S3_URI + '/GenSec/manasy.jpg',
       position: 'Jt. General Secretary',
       name: 'Manasy Panicker'
     },
     {
       id: 25,
-      img: process.env.REACT_APP_AWS_S3_URI_2 + '/GenSec/Atul.jpg',
+      img: process.env.REACT_APP_AWS_S3_URI + '/GenSec/Atul.jpg',
       position: 'Jt. General Secretary',
       name: 'Atul Tyagi'
     }
@@ -212,31 +212,31 @@ const data = {
   secretariesData: [
     {
       id: 26,
-      img: process.env.REACT_APP_AWS_S3_URI_2 + '/ClubSecretaries/Kartik_.jpg',
+      img: process.env.REACT_APP_AWS_S3_URI + '/ClubSecretaries/Kartik_.jpg',
       position: 'Photography Club Secretary',
       name: 'Kartik Agrawal'
     },
     {
       id: 27,
-      img: process.env.REACT_APP_AWS_S3_URI_2 + '/ClubSecretaries/Lokesh.jpg',
+      img: process.env.REACT_APP_AWS_S3_URI + '/ClubSecretaries/Lokesh.jpg',
       position: 'Cine Club Secretary',
       name: 'Lokesh'
     },
     {
       id: 28,
-      img: process.env.REACT_APP_AWS_S3_URI_2 + '/ClubSecretaries/Aish.jpg',
+      img: process.env.REACT_APP_AWS_S3_URI + '/ClubSecretaries/Aish.jpg',
       position: 'Outreach Club Secretary',
       name: 'Aishwarya Pathe'
     },
     {
       id: 29,
-      img: process.env.REACT_APP_AWS_S3_URI_2 + '/ClubSecretaries/GauravKumar_Animation.jpg',
+      img: process.env.REACT_APP_AWS_S3_URI + '/ClubSecretaries/GauravKumar_Animation.jpg',
       position: 'Animation Club Secretary',
       name: 'Gaurav Kumar'
     },
     {
       id: 31,
-      img: process.env.REACT_APP_AWS_S3_URI_2 + '/ClubSecretaries/Deepti.jpg',
+      img: process.env.REACT_APP_AWS_S3_URI + '/ClubSecretaries/Deepti.jpg',
       position: 'Design Club Secretary',
       name: 'Deepti Gupta'
     }
