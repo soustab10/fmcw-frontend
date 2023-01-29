@@ -169,6 +169,14 @@ const data = {
       name: 'Pratham Mittal'
     }
   ],
+  animationData: [
+    {
+      id: 28,
+      img: process.env.REACT_APP_AWS_S3_URI + '/ClubSecretaries/GauravKumar_Animation.jpg',
+      position: 'Animation Head',
+      name: 'Gaurav Kumar'
+    }
+  ],
   convenorData: [
     {
       id: 20,
