@@ -1,8 +1,11 @@
 import Card from './TeamCard';
+import Loading from '../../../Loading';
 import classes from './SponsorSection.module.css';
 import data from '../TeamData';
-import Fade from 'react-reveal/Reveal';
+import Fade from 'react-reveal/Fade';
+import { useState } from 'react';
 function SponsorSection(props) {
+  const [isLoading, setIsLoading] = useState(true);
   return (
     // <div style={{ backgroundColor: "#bbb", display: "flex", flexWrap: "wrap", marginLeft: "3vw" }}>
     <div className={classes.sponsor_section}>
@@ -27,7 +30,6 @@ function SponsorSection(props) {
       <Fade right>
         <div className={classes.sponsor_title} id="sponsor_2">
           <h1>General Secretary</h1>
-
           <div className={classes.cards}>
             {data.genSecData.map((item, index) => (
               <Card img={item.img} position={item.position} name={item.name} key={index} />
@@ -38,7 +40,6 @@ function SponsorSection(props) {
       <Fade right>
         <div className={classes.sponsor_title} id="sponsor_3">
           <h1>Design Team</h1>
-
           <div className={classes.cards}>
             {data.designData.map((item, index) => (
               <Card img={item.img} position={item.position} name={item.name} key={index} />
@@ -49,7 +50,6 @@ function SponsorSection(props) {
       <Fade right>
         <div className={classes.sponsor_title} id="sponsor_4">
           <h1>Event Team</h1>
-
           <div className={classes.cards}>
             {data.eventData.map((item, index) => (
               <Card img={item.img} position={item.position} name={item.name} key={index} />
@@ -60,7 +60,6 @@ function SponsorSection(props) {
       <Fade right>
         <div className={classes.sponsor_title} id="sponsor_5">
           <h1>Marketing Team</h1>
-
           <div className={classes.cards}>
             {data.marketingData.map((item, index) => (
               <Card img={item.img} position={item.position} name={item.name} key={index} />
@@ -91,6 +90,7 @@ function SponsorSection(props) {
       <Fade right>
         <div className={classes.sponsor_title} id="sponsor_8">
           <h1>Social Media Team</h1>
+
           <div className={classes.cards}>
             {data.socialMediaData.map((item, index) => (
               <Card img={item.img} position={item.position} name={item.name} key={index} />
@@ -111,7 +111,6 @@ function SponsorSection(props) {
       <Fade right>
         <div className={classes.sponsor_title} id="sponsor_10">
           <h1>Club Secretaries</h1>
-
           <div className={classes.cards}>
             {data.secretariesData.map((item, index) => (
               <Card img={item.img} position={item.position} name={item.name} key={index} />
