@@ -137,13 +137,13 @@ function Accordion() {
         <Fade right>
           {/* <img src='Group_7167.svg' /> */}
           <div>
-            <img className="star1" src={leftStar}></img>
+            <img className="star1" alt="" src={leftStar}></img>
           </div>
           <div>
             <span className="heading">FAQ</span>
           </div>
           <div>
-            <img className="star2" src={rightStar}></img>
+            <img className="star2" alt="" src={rightStar}></img>
           </div>
         </Fade>
       </Heading>
