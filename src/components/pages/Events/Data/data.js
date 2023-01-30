@@ -371,37 +371,39 @@ const data = {
         'You need to create a 3D scene. There is no theme. Premade 3D models and textures from the internet can be used. A single image will be sent to the judges.'
     }
   ],
+  // Workshops Data starts here
   photographyWorkshopData: [
     {
       id: 1,
-      img: process.env.REACT_APP_AWS_S3_URI + '/rathika.jpeg',
+      img: "/workshopimgs/deomanish.webp" ,
       color: '#00CCF5',
       color2: '#2ED9FC',
       genre: 'photography',
       type: 'Workshop',
-      title: 'Photography Workshop',
+      title: 'Pursue Travel Photography as Profession',
       link: 'https://drive.google.com/file/d/1ypZkoyI1x3Es-zCTiT0jytmZTazSXmNp/view?usp=sharing',
-      price: 149,
-      name: 'Rathika Ramasamy',
-      date: '30th January',
+      price: 249,
+      name: 'Manish Deo',
+      date: '10th January',
       time: '5:00 p.m. - 6:00 p.m.',
-      desc: 'Rathika Ramasay captures the beauty in nature in unbeleivbaly beautiful shots! Unparallelled experience behind the lense and unrivalled skills in the field proudly adorn her.'
+      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '
     },
     {
       id: 2,
-      img: process.env.REACT_APP_AWS_S3_URI + '/navin.jpeg',
+      img: "/workshopimgs/shubham_sharma.png" ,
       color: '#00CCF5',
       color2: '#2ED9FC',
       genre: 'photography',
       type: 'Workshop',
-      title: 'Photography Workshop',
-      link: 'https://drive.google.com/file/d/1YyKAYn-PBXPoKSB1Z1iU6fa6wjaVGULL/view?usp=sharing',
-      price: 199,
-      name: 'Navin Vatsa',
-      date: '13th February',
-      time: '2:00 p.m. - 3:00 p.m.',
-      desc: 'A Contributer to National Geographic Your Shot and a Mentor at Tamron India, Navin Vatsa caputes unbelievably beautiful photographs in search of soul!'
-    }
+      title: 'Street Photography',
+      link: 'https://drive.google.com/file/d/1ypZkoyI1x3Es-zCTiT0jytmZTazSXmNp/view?usp=sharing',
+      price: 249,
+      name: 'Shubham Sharma',
+      date: '10th January',
+      time: '5:00 p.m. - 6:00 p.m.',
+      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '
+    },
+
     // {
     //   id: 3,
     //   img: 'https://drive.google.com/uc?export=view&id=10GSj5pAbMYv_Pb36iJO7US4Tg6AIsRjv',
@@ -415,53 +417,70 @@ const data = {
     // }
   ],
   outreachWorkshopData: [
-    {
-      id: 4,
-      img: process.env.REACT_APP_AWS_S3_URI + '/priyankaoutreach.png',
-      color: '#FFC900',
-      color2: '#FFDC5A',
-      genre: 'outreach',
-      type: 'Workshop',
-      title: 'Travel Vlogging',
-      link: 'https://drive.google.com/file/d/1qTdAlnarcZ47eOS-R7O_ImNfsZPnvnBZ/view?usp=sharing',
-      price: 149,
-      name: 'Priyanka Chandola',
-      date: '11th February',
-      time: '4:00 p.m. - 5:00 p.m.',
-      desc: 'From a software engineer to a YouTuber, Priyanka Chandola is going places with her ‘Desi Girl Traveller’ channel on social media platforms. She creates prize on travel in the digital space with the aim to break societal norms. Here’s a look at her journey.'
-    },
-    {
-      id: 5,
-      img: process.env.REACT_APP_AWS_S3_URI + '/csvenketaram.jpeg',
-      color: '#FFC900',
-      color2: '#FFDC5A',
-      genre: 'outreach',
-      type: 'Workshop',
-      title: 'Documentary Filmmaking workshop',
-      link: 'https://drive.google.com/file/d/1-j7QXOXQpBTioe3S7jrTeydKBLGPkcZe/view?usp=sharing',
-      price: 149,
-      name: 'C.S. Venkateswaran',
-      date: '11th February',
-      time: '2:00 p.m. - 3:00 p.m.',
-      desc: 'He is a National-award winning film critic, professor, documentary filmmaker and writer.'
-    }
+    // {
+    //   id: 4,
+    //   img: process.env.REACT_APP_AWS_S3_URI + '/priyankaoutreach.png',
+    //   color: '#FFC900',
+    //   color2: '#FFDC5A',
+    //   genre: 'outreach',
+    //   type: 'Workshop',
+    //   mode: 'ONLINE',
+    //   title: 'Travel Vlogging',
+    //   link: 'https://drive.google.com/file/d/1qTdAlnarcZ47eOS-R7O_ImNfsZPnvnBZ/view?usp=sharing',
+    //   price: 149,
+    //   name: 'Priyanka Chandola',
+    //   date: '11th February',
+    //   time: '4:00 p.m. - 5:00 p.m.',
+    //   desc: 'From a software engineer to a YouTuber, Priyanka Chandola is going places with her ‘Desi Girl Traveller’ channel on social media platforms. She creates prize on travel in the digital space with the aim to break societal norms. Here’s a look at her journey.'
+    // },
+    // {
+    //   id: 5,
+    //   img: process.env.REACT_APP_AWS_S3_URI + '/csvenketaram.jpeg',
+    //   color: '#FFC900',
+    //   color2: '#FFDC5A',
+    //   genre: 'outreach',
+    //   type: 'Workshop',
+    //   mode: 'ONLINE',
+    //   title: 'Documentary Filmmaking workshop',
+    //   link: 'https://drive.google.com/file/d/1-j7QXOXQpBTioe3S7jrTeydKBLGPkcZe/view?usp=sharing',
+    //   price: 149,
+    //   name: 'C.S. Venkateswaran',
+    //   date: '11th February',
+    //   time: '2:00 p.m. - 3:00 p.m.',
+    //   desc: 'He is a National-award winning film critic, professor, documentary filmmaker and writer.'
+    // }
   ],
   cineWorkshopData: [
     {
-      id: 7,
-      img: process.env.REACT_APP_AWS_S3_URI + '/sanjayf.png',
+      id: 3,
+      img: "/workshopimgs/abhijeet.webp" ,
       color: '#14F0B9',
       color2: '#62FFD8',
       genre: 'cine',
       type: 'Workshop',
-      title: 'Filmmaking workshop ',
-      link: 'https://drive.google.com/file/d/1pQMLQD-NpXDh26tlTystzPNsU9Mcxzge/view?usp=sharing',
-      price: 149,
-      name: 'Sanjay F. Gupta',
-      date: '12th February',
-      time: '5:00p.m. - 6:00 p.m',
-      desc: 'Film Director, Cinematographer, and Photographer Sanjay F Gupta brings energy, creativity and professionalism to each and every production! The tale of his incredivle career and journey is one to applaud!'
-    }
+      title: 'Filmmaking Workshop',
+      link: 'https://drive.google.com/file/d/1ypZkoyI1x3Es-zCTiT0jytmZTazSXmNp/view?usp=sharing',
+      price: 249,
+      name: 'Abhijeet Singh Parmar',
+      date: '10th January',
+      time: '5:00 p.m. - 6:00 p.m.',
+      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '
+    },
+    {
+      id: 4,
+      img: "/workshopimgs/rashmi_chadha.png" ,
+      color: '#14F0B9',
+      color2: '#62FFD8',
+      genre: 'cine',
+      type: 'Workshop',
+      title: 'Storytelling: The Art of Binding Audience Together',
+      link: 'https://drive.google.com/file/d/1ypZkoyI1x3Es-zCTiT0jytmZTazSXmNp/view?usp=sharing',
+      price: 249,
+      name: 'Rashmi Chadha',
+      date: '10th January',
+      time: '5:00 p.m. - 6:00 p.m.',
+      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '
+    },
     // {
     //   id: 8,
     //   img: 'https://drive.google.com/uc?export=view&id=10GSj5pAbMYv_Pb36iJO7US4Tg6AIsRjv',
@@ -478,84 +497,71 @@ const data = {
   ],
   designWorkshopData: [
     {
-      id: 11,
-      img: process.env.REACT_APP_AWS_S3_URI + '/annada.png',
+      id: 4,
+      img: "/workshopimgs/raheja.webp" ,
       color: '#685EDA',
       color2: '#9990FF',
       genre: 'design',
       type: 'Workshop',
-      title: 'Design Workshop',
-      link: 'https://drive.google.com/file/d/1-VApwFFzYsxfs5Kc8vGfzK5YowaJ7DYP/view?usp=sharing',
-      price: 149,
-      name: 'Annada Menon',
-      date: '4th February',
-      time: '11:00a.m. - 12:00 p.m.',
-      desc: 'Creating illustrations with the silver lining of nostalgia is an astounding skill and Annada Menon has it all! Having illustration featured in the cosmopolitan Annada is a going places!'
+      title: 'NFT and Digital 3D Workshop',
+      link: 'https://drive.google.com/file/d/1ypZkoyI1x3Es-zCTiT0jytmZTazSXmNp/view?usp=sharing',
+      price: 249,
+      name: 'Shubhangi Raheja',
+      date: '10th January',
+      time: '5:00 p.m. - 6:00 p.m.',
+      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '
     },
-    {
-      id: 12,
-      img: process.env.REACT_APP_AWS_S3_URI + '/rishabh.jpeg',
-      color: '#685EDA',
-      color2: '#9990FF',
-      genre: 'design',
-      type: 'Workshop',
-      title: 'Product design',
-      link: 'https://drive.google.com/file/d/1miS5p8eaeN-ZaLiip4ApnatmpnoVVMqj/view?usp=sharing',
-      price: 149,
-      name: 'Rishabh Jain',
-      date: '11th February',
-      time: '6:00 p.m. - 7:00 p.m.',
-      desc: "Rishabh Jain's Journey as a product designer and as the founder of confetti studios, is admirable and one known to encompass learnings from multiple UI/UX projects impacting millions of users!"
-    }
+
   ],
   mediaWorkshopData: [
     {
-      id: 14,
-      img: process.env.REACT_APP_AWS_S3_URI + '/nikita.jpeg',
+      id: 4,
+      img: "/workshopimgs/priyanka_deo_jain.png" ,
       color: '#FF90E8',
       color2: '#FFC8F4',
       genre: 'media',
       type: 'Workshop',
-      title: 'Creative Writing workshop',
-      link: 'https://drive.google.com/file/d/1L4xS562Rld4_j7Lr1xv7iU0L4cu7gHPW/view?usp=sharing',
-      price: 199,
-      name: 'Nikita Singh',
-      date: '13th February',
-      time: '10:00 a.m. - 11:00 a.m.',
-      desc: 'Having written a number of best selling novels, Nikita Singh is impacting and influencing numersous minds and lives. Having spoken on the Tedx platform on multiple occasions, this indian author is winning hearts!'
+      title: 'Panel Discussion',
+      link: 'https://drive.google.com/file/d/1ypZkoyI1x3Es-zCTiT0jytmZTazSXmNp/view?usp=sharing',
+      price: 249,
+      name: 'Priyanka Deo Jain and Sarvpriya Sangeaan',
+      date: '10th January',
+      time: '5:00 p.m. - 6:00 p.m.',
+      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '
     },
-    {
-      id: 15,
-      img: process.env.REACT_APP_AWS_S3_URI + '/ankitmedia.png',
-      color: '#FF90E8',
-      color2: '#FFC8F4',
-      genre: 'media',
-      type: 'Workshop',
-      title: 'Tech Journalism Workshop',
-      link: 'https://drive.google.com/file/d/1w-fj86xTKa9X0jQjhH4UFLNu5HRpRvdO/view?usp=sharing',
-      price: 149,
-      date: '',
-      time: '',
-      desc: 'He has worked with renowned news channels and has received numerous awards for his outstanding works including “India’s Best Gadget Show” by ENBA India for his show- Tech it out.',
-      namee: 'Ankit Tuteja'
-    }
+    // {
+    //   id: 15,
+    //   img: process.env.REACT_APP_AWS_S3_URI + '/ankitmedia.png',
+    //   color: '#FF90E8',
+    //   color2: '#FFC8F4',
+    //   genre: 'media',
+    //   type: 'Workshop',
+    //   mode: 'ONLINE',
+    //   title: 'Tech Journalism Workshop',
+    //   link: 'https://drive.google.com/file/d/1w-fj86xTKa9X0jQjhH4UFLNu5HRpRvdO/view?usp=sharing',
+    //   price: 149,
+    //   date: '',
+    //   time: '',
+    //   desc: 'He has worked with renowned news channels and has received numerous awards for his outstanding works including “India’s Best Gadget Show” by ENBA India for his show- Tech it out.',
+    //   namee: 'Ankit Tuteja'
+    // }
   ],
   animationWorkshopData: [
     {
-      id: 17,
-      img: process.env.REACT_APP_AWS_S3_URI + '/sandeepvfx.png',
+      id: 4,
+      img: "/workshopimgs/vfxaman.webp" ,
       color: '#FE6263',
       color2: '#FD8A8B',
       genre: 'animation',
       type: 'Workshop',
       title: 'VFX Workshop',
-      link: 'https://drive.google.com/file/d/1jRpV-ZjKNNTm8RFOGktaaZfCz73uQfAx/view?usp=sharing',
-      price: 199,
-      name: 'Sandeep Kamal',
-      date: '12th February',
-      time: '11:00 a.m.- 12:00 p.m.',
-      desc: "Having contributed to critically acclaimed films such as Jal, Panipat, Badla, and Barfi, VFX designer and digitla nomad, Sandeep kamal's career is admired greatly"
-    }
+      link: 'https://drive.google.com/file/d/1ypZkoyI1x3Es-zCTiT0jytmZTazSXmNp/view?usp=sharing',
+      price: 249,
+      name: 'Aman',
+      date: '10th January',
+      time: '5:00 p.m. - 6:00 p.m.',
+      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '
+    },
   ]
 };
 
