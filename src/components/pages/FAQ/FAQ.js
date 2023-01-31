@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState , useEffect , useRef } from 'react';
 import styled from 'styled-components';
 import { IconContext } from 'react-icons';
 import UpArrow from '../../UpArrowFaq.svg';
@@ -123,6 +123,11 @@ const Dropdown = styled.div`
 `;
 
 function Accordion() {
+  const ref_container = useRef();
+  useEffect(() => {
+    const scrollDiv = document.getElementById("header").offsetTop;
+    window.scrollTo({top : scrollDiv-200 , behavior : "smooth"});
+  }, [])
   const [clicked, setClicked] = useState(false);
 
   const toggle = (index) => {
@@ -135,7 +140,7 @@ function Accordion() {
   };
 
   return (
-    <div className="HEADER" style={{ overflow: 'hidden' }}>
+    <div className="HEADER" style={{ overflow: 'hidden' }} id="header" ref_container={useRef}>
       <Heading>
         <Fade right>
           {/* <img src='Group_7167.svg' /> */}
