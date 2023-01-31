@@ -134,14 +134,7 @@ function CartCard_2(props) {
           )}
         </div> */}
       </div>
-      <div
-        className="remove-btn"
-        style={{ background: props.color2, cursor: 'pointer', fontFamily: 'Manrope' }}
-        onClick={() => {
-          onDelete(props.mongooseId);
-        }}>
-        Delete
-      </div>
+
       <br></br>
       <br></br>
       <div type="submit" value="Remove" className="cart-remove-btn" onClick={() => {

@@ -374,7 +374,7 @@ const data = {
   // Workshops Data starts here
   photographyWorkshopData: [
     {
-      id: 1,
+      id: 31,
       img: "/workshopimgs/deomanish.webp" ,
       color: '#00CCF5',
       color2: '#2ED9FC',
@@ -389,7 +389,7 @@ const data = {
       desc: `Chasing wanderlust, one frame at a time Manish Deo has made a career out of capturing life's adventures through his lens. His work tells a story and evokes emotion. Pack your bags and your camera! Explore the world and turn your passion for travel photography into a profession. Join us on a workshop on how to pursue travel photography as your profession in FMC Weekend’23 and take your skills to the next level. `,
     },
     {
-      id: 2,
+      id: 32,
       img: "/workshopimgs/shubham_sharma.png" ,
       color: '#00CCF5',
       color2: '#2ED9FC',
@@ -452,7 +452,7 @@ const data = {
   ],
   cineWorkshopData: [
     {
-      id: 3,
+      id: 33,
       img: "/workshopimgs/abhijeet.webp" ,
       color: '#14F0B9',
       color2: '#62FFD8',
@@ -467,7 +467,7 @@ const data = {
       desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '
     },
     {
-      id: 4,
+      id: 34,
       img: "/workshopimgs/rashmi_chadha.png" ,
       color: '#14F0B9',
       color2: '#62FFD8',
@@ -515,7 +515,7 @@ const data = {
   ],
   mediaWorkshopData: [
     {
-      id: 4,
+      id: 35,
       img: "/workshopimgs/priyanka_deo_jain.png" ,
       color: '#FF90E8',
       color2: '#FFC8F4',
