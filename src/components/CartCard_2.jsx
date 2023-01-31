@@ -54,6 +54,7 @@ function CartCard_2(props) {
     scale: 1.06
   };
   return (
+    <div>
     <div
       className="card card-flip"
       style={{
@@ -129,7 +130,14 @@ function CartCard_2(props) {
           </button>
         )}
       </div>
+      
     </div>
+    <div className='remove-btn' style={{ background: props.color2, cursor: 'pointer', fontFamily: 'Manrope' }}
+            onClick={() => {
+              onDelete(props.mongooseId);
+            }}>Delete</div>
+    </div>
+    
   );
 }
 CartCard_2.defaultProps = {

@@ -21,7 +21,7 @@ import Fade from 'react-reveal/Fade';
 const CardTitle = styled.h2`
   transform: translateZ(55px);
 `;
-
+const [disable, setDisable] = React.useState(false);
 function EventCard(props) {
   const { isEmpty, items, totalItems, cartTotal, removeItem, emptyCart, updateItemQuantity } =
     useCart();
@@ -136,19 +136,20 @@ function EventCard(props) {
             {props.ps}
           </a>
           {sessionStorage.getItem('isLoggedIn') == 'true' ? (
-            <div
+            <button
               className="addToCart"
+              // disabled={disable}
               style={{ background: props.color2, cursor: 'pointer', fontFamily: 'Manrope' }}
               onClick={() => {
                 // send post request to database
-
+                // disable = true;
                 addItemToCart(props.item);
                 // addItem(props.item);
 
                 // change();
               }}>
               {props.ps2}
-            </div>
+            </button>
           ) : (
             <a
               className="addToCart"

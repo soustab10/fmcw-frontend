@@ -382,10 +382,10 @@ const data = {
       type: 'Workshop',
       title: 'Pursue Travel Photography as Profession',
       link: 'https://drive.google.com/file/d/1ypZkoyI1x3Es-zCTiT0jytmZTazSXmNp/view?usp=sharing',
-      price: 249,
+      price: 399,
       name: 'Manish Deo',
-      date: '10th January',
-      time: '5:00 p.m. - 6:00 p.m.',
+      date: '10th February',
+      time: '4:00 p.m. - 5:00 p.m.',
       desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '
     },
     {
@@ -397,10 +397,10 @@ const data = {
       type: 'Workshop',
       title: 'Street Photography',
       link: 'https://drive.google.com/file/d/1ypZkoyI1x3Es-zCTiT0jytmZTazSXmNp/view?usp=sharing',
-      price: 249,
+      price: 399,
       name: 'Shubham Sharma',
-      date: '10th January',
-      time: '5:00 p.m. - 6:00 p.m.',
+      date: '12th February',
+      time: '11:00 a.m. - 12:00 p.m.',
       desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '
     },
 
@@ -460,10 +460,10 @@ const data = {
       type: 'Workshop',
       title: 'Filmmaking Workshop',
       link: 'https://drive.google.com/file/d/1ypZkoyI1x3Es-zCTiT0jytmZTazSXmNp/view?usp=sharing',
-      price: 249,
+      price: 399,
       name: 'Abhijeet Singh Parmar',
-      date: '10th January',
-      time: '5:00 p.m. - 6:00 p.m.',
+      date: '10th February',
+      time: '11:00 a.m. - 12:00 p.m.',
       desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '
     },
     {
@@ -475,10 +475,10 @@ const data = {
       type: 'Workshop',
       title: 'Storytelling: The Art of Binding Audience Together',
       link: 'https://drive.google.com/file/d/1ypZkoyI1x3Es-zCTiT0jytmZTazSXmNp/view?usp=sharing',
-      price: 249,
+      price: 399,
       name: 'Rashmi Chadha',
-      date: '10th January',
-      time: '5:00 p.m. - 6:00 p.m.',
+      date: '12th January',
+      time: '4:00 p.m. - 5:00 p.m.',
       desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '
     },
     // {
@@ -496,21 +496,21 @@ const data = {
     // }
   ],
   designWorkshopData: [
-    {
-      id: 4,
-      img: "/workshopimgs/raheja.webp" ,
-      color: '#685EDA',
-      color2: '#9990FF',
-      genre: 'design',
-      type: 'Workshop',
-      title: 'NFT and Digital 3D Workshop',
-      link: 'https://drive.google.com/file/d/1ypZkoyI1x3Es-zCTiT0jytmZTazSXmNp/view?usp=sharing',
-      price: 249,
-      name: 'Shubhangi Raheja',
-      date: '10th January',
-      time: '5:00 p.m. - 6:00 p.m.',
-      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '
-    },
+    // {
+    //   id: 4,
+    //   img: "/workshopimgs/raheja.webp" ,
+    //   color: '#685EDA',
+    //   color2: '#9990FF',
+    //   genre: 'design',
+    //   type: 'Workshop',
+    //   title: 'NFT and Digital 3D Workshop',
+    //   link: 'https://drive.google.com/file/d/1ypZkoyI1x3Es-zCTiT0jytmZTazSXmNp/view?usp=sharing',
+    //   price: 249,
+    //   name: 'Shubhangi Raheja',
+    //   date: '10th January',
+    //   time: '5:00 p.m. - 6:00 p.m.',
+    //   desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '
+    // },
 
   ],
   mediaWorkshopData: [
@@ -523,10 +523,10 @@ const data = {
       type: 'Workshop',
       title: 'Panel Discussion',
       link: 'https://drive.google.com/file/d/1ypZkoyI1x3Es-zCTiT0jytmZTazSXmNp/view?usp=sharing',
-      price: 249,
+      price: 399,
       name: 'Priyanka Deo Jain and Sarvpriya Sangeaan',
-      date: '10th January',
-      time: '5:00 p.m. - 6:00 p.m.',
+      date: '11th February',
+      time: '4:00 p.m. - 5:00 p.m.',
       desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '
     },
     // {
@@ -547,21 +547,21 @@ const data = {
     // }
   ],
   animationWorkshopData: [
-    {
-      id: 4,
-      img: "/workshopimgs/vfxaman.webp" ,
-      color: '#FE6263',
-      color2: '#FD8A8B',
-      genre: 'animation',
-      type: 'Workshop',
-      title: 'VFX Workshop',
-      link: 'https://drive.google.com/file/d/1ypZkoyI1x3Es-zCTiT0jytmZTazSXmNp/view?usp=sharing',
-      price: 249,
-      name: 'Aman',
-      date: '10th January',
-      time: '5:00 p.m. - 6:00 p.m.',
-      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '
-    },
+    // {
+    //   id: 4,
+    //   img: "/workshopimgs/vfxaman.webp" ,
+    //   color: '#FE6263',
+    //   color2: '#FD8A8B',
+    //   genre: 'animation',
+    //   type: 'Workshop',
+    //   title: 'VFX Workshop',
+    //   link: 'https://drive.google.com/file/d/1ypZkoyI1x3Es-zCTiT0jytmZTazSXmNp/view?usp=sharing',
+    //   price: 249,
+    //   name: 'Aman',
+    //   date: '10th January',
+    //   time: '5:00 p.m. - 6:00 p.m.',
+    //   desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '
+    // },
   ]
 };
 

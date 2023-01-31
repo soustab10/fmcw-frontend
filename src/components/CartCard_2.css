@@ -275,6 +275,25 @@ text-align: center;
   letter-spacing: 0em;
   text-align: center;
 }
+.remove-btn {
+  display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 8px 24px;
+gap: 4px;
+
+position: absolute;
+width: 151px;
+height: 49px;
+left: 645px;
+top: 2541px;
+
+background: #F2FF00;
+border: 2px solid #000000;
+box-shadow: 4px 6px 0px #000000;
+border-radius: 4px;
+}
 
 .MuiSlider-root {
   color: #fcc907;
