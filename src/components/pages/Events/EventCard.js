@@ -126,7 +126,7 @@ function EventCard(props) {
             }}>
             <b>{props.content}</b>
           </div>
-          <img className="viewProbImg" alt="problem img" src={viewProbImg} style={{ left: props.imgLeft }}></img>
+          <img className="viewProbImg" alt="problem" src={viewProbImg} style={{ left: props.imgLeft }}></img>
           <a
             href={props.link}
             target="_blank"
