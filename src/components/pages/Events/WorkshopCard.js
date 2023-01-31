@@ -188,13 +188,14 @@ function WorkshopCard(props) {
           marginLeft: props.margin,
           marginRight: props.margin,
           left: props.left
-        }}>
+        }}
+        onClick={handleOpen}>
         <div>
 
           <CardTitle className="positionWorkshopType">{props.price == 249 ? 'ONLINE' : 'OFFLINE'} {props.type}</CardTitle>
           <CardTitle className="positionWorkshopPrice">Rs.{props.price}</CardTitle>
           <div className="workshopCardImg">
-            <img src={props.img} alt="" onClick={handleOpen} />
+            <img src={props.img} alt=""  />
           </div>
 
           <CardTitle className="positionWorkshop">{props.title}</CardTitle>
