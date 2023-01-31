@@ -330,7 +330,7 @@ flip card
 .front-arrow {
   position: absolute;
   height: 60px;
-  left: 310px;
+  left: 300px;
   top: 17px;
 }
 .front-img {
@@ -774,7 +774,24 @@ flip card
   color: #121212;
 }
 @media screen and (max-width: 1006px) {
-  .addToCart {
+  .front-arrow {
+    display: block !important;
+    position: absolute;
+    height: 50px;
+    left: 180px;
+    top: 30px;
+  }
+  .front-price {
+    margin-top: 60px;
+  }
+  .front-title{
+    margin-top: 25px;
+  }
+  .front-img{
+    margin-left: 151px;
+    margin-top: -40px;
+  }
+  .addToCart{
     height: 50px;
   }
   .btnView {
@@ -801,7 +818,7 @@ flip card
   .front-price {
     font-size: 22px;
   }
-  .front-img {
+  .front-img{
     margin-left: 151px;
   }
   body {
