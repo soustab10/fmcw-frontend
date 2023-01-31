@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect , useRef} from 'react';
 import Section from './Section/Section';
 import Classes from './LandingPage.module.css';
 import Footer from '../../Footer';
@@ -34,9 +34,12 @@ function landingPage() {
     }
   };
 
+  const ref_container = useRef();
   useEffect(() => {
+    const scrollDiv = document.getElementById("header").offsetTop;
+    window.scrollTo({top : scrollDiv-200 , behavior : "smooth"});
     showButton();
-  }, []);
+  }, [])
 
   const logoutHandler = () => {
     sessionStorage.clear();
@@ -46,7 +49,7 @@ function landingPage() {
 
   return (
     <>
-      <div>
+      <div id="header" ref_container={useRef}>
         <div className={Classes.div1}>
           <Fade bottom>
           <img src="fmctextlogo.png" alt="logo" className={Classes.div1_logo} />
