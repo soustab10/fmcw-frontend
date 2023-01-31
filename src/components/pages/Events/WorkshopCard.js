@@ -69,9 +69,9 @@ function WorkshopCard(props) {
       body: JSON.stringify(obj),
       headers: {
         'Content-Type': 'application/json'
-      }
-    });
-    console.log({ obj });
+      }  
+    });  
+    // console.log({ obj });
 
     // alert('Item added to cart successfully!');/
     window.setTimeout(function () {
@@ -195,7 +195,7 @@ function WorkshopCard(props) {
           <CardTitle className="positionWorkshopType">{props.price == 249 ? 'ONLINE' : 'OFFLINE'} {props.type}</CardTitle>
           <CardTitle className="positionWorkshopPrice">Rs.{props.price}</CardTitle>
           <div className="workshopCardImg">
-            <img src={props.img} alt="" />
+            <img src={props.img} alt="" onClick={handleOpen} />
           </div>
 
           <CardTitle className="positionWorkshop">{props.title}</CardTitle>

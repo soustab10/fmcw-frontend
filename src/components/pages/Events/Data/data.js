@@ -390,7 +390,7 @@ const data = {
     },
     {
       id: 32,
-      img: "/workshopimgs/shubham_sharma.png" ,
+      img: "/workshopimgs/shubham.webp" ,
       color: '#00CCF5',
       color2: '#2ED9FC',
       genre: 'photography',
@@ -417,6 +417,40 @@ const data = {
     // }
   ],
   outreachWorkshopData: [
+    // {
+    //   id: 4,
+    //   img: process.env.REACT_APP_AWS_S3_URI + '/priyankaoutreach.png',
+    //   color: '#FFC900',
+    //   color2: '#FFDC5A',
+    //   genre: 'outreach',
+    //   type: 'Workshop',
+    //   mode: 'ONLINE',
+    //   title: 'Travel Vlogging',
+    //   link: 'https://drive.google.com/file/d/1qTdAlnarcZ47eOS-R7O_ImNfsZPnvnBZ/view?usp=sharing',
+    //   price: 149,
+    //   name: 'Priyanka Chandola',
+    //   date: '11th February',
+    //   time: '4:00 p.m. - 5:00 p.m.',
+    //   desc: 'From a software engineer to a YouTuber, Priyanka Chandola is going places with her ‘Desi Girl Traveller’ channel on social media platforms. She creates prize on travel in the digital space with the aim to break societal norms. Here’s a look at her journey.'
+    // },
+    // {
+    //   id: 5,
+    //   img: process.env.REACT_APP_AWS_S3_URI + '/csvenketaram.jpeg',
+    //   color: '#FFC900',
+    //   color2: '#FFDC5A',
+    //   genre: 'outreach',
+    //   type: 'Workshop',
+    //   mode: 'ONLINE',
+    //   title: 'Documentary Filmmaking workshop',
+    //   link: 'https://drive.google.com/file/d/1-j7QXOXQpBTioe3S7jrTeydKBLGPkcZe/view?usp=sharing',
+    //   price: 149,
+    //   name: 'C.S. Venkateswaran',
+    //   date: '11th February',
+    //   time: '2:00 p.m. - 3:00 p.m.',
+    //   desc: 'He is a National-award winning film critic, professor, documentary filmmaker and writer.'
+    // }
+  ],
+  cineWorkshopData: [
     // {
     //   id: 4,
     //   img: process.env.REACT_APP_AWS_S3_URI + '/priyankaoutreach.png',
@@ -496,6 +530,22 @@ const data = {
     // }
   ],
   designWorkshopData: [
+    // {
+    //   id: 4,
+    //   img: "/workshopimgs/raheja.webp" ,
+    //   color: '#685EDA',
+    //   color2: '#9990FF',
+    //   genre: 'design',
+    //   type: 'Workshop',
+    //   title: 'NFT and Digital 3D Workshop',
+    //   link: 'https://drive.google.com/file/d/1ypZkoyI1x3Es-zCTiT0jytmZTazSXmNp/view?usp=sharing',
+    //   price: 249,
+    //   name: 'Shubhangi Raheja',
+    //   date: '10th January',
+    //   time: '5:00 p.m. - 6:00 p.m.',
+    //   desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '
+    // },
+
     // {
     //   id: 4,
     //   img: "/workshopimgs/raheja.webp" ,

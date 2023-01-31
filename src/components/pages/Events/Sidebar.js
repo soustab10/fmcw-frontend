@@ -177,7 +177,7 @@ export default function VerticalTabs() {
         </div>
 
         <div className="workshop-cards">
-          {/* {data.cineWorkshopData.map((item, index) => {
+          {data.cineWorkshopData.map((item, index) => {
             return (
               <WorkshopCard
                 img={item.img}
@@ -193,7 +193,7 @@ export default function VerticalTabs() {
                 time={item.time}
               />
             );
-          })} */}
+          })}
         </div>
       </TabPanel>
       <Divider />
