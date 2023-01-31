@@ -386,7 +386,7 @@ const data = {
       name: 'Manish Deo',
       date: '10th February',
       time: '4:00 p.m. - 5:00 p.m.',
-      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '
+      desc: `Chasing wanderlust, one frame at a time Manish Deo has made a career out of capturing life's adventures through his lens. His work tells a story and evokes emotion. Pack your bags and your camera! Explore the world and turn your passion for travel photography into a profession. Join us on a workshop on how to pursue travel photography as your profession in FMC Weekend’23 and take your skills to the next level. `,
     },
     {
       id: 2,
@@ -527,7 +527,8 @@ const data = {
       name: 'Priyanka Deo Jain and Sarvpriya Sangeaan',
       date: '11th February',
       time: '4:00 p.m. - 5:00 p.m.',
-      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '
+      desc: `"Breaking news! 📰 Experience the Power of the Pen: A Panel Discussion on Modern Journalism  with the Acclaimed Journalist , Sarvapriya Sangwan in India’s largest Digital Arts festival , FMC Weekend'23 !!
+      Don't miss this chance to hear from one of the brightest minds in modern journalism!"`
     },
     // {
     //   id: 15,
@@ -542,7 +543,9 @@ const data = {
     //   price: 149,
     //   date: '',
     //   time: '',
-    //   desc: 'He has worked with renowned news channels and has received numerous awards for his outstanding works including “India’s Best Gadget Show” by ENBA India for his show- Tech it out.',
+    //   desc: `"Breaking news! 📰 
+    //   Experience the Power of the Pen: A Panel Discussion on Modern Journalism  with the Acclaimed Journalist , Sarvapriya Sangwan in India’s largest Digital Arts festival , FMC Weekend'23 !!
+    //   Don't miss this chance to hear from one of the brightest minds in modern journalism!"`,
     //   namee: 'Ankit Tuteja'
     // }
   ],
@@ -560,7 +563,7 @@ const data = {
     //   name: 'Aman',
     //   date: '10th January',
     //   time: '5:00 p.m. - 6:00 p.m.',
-    //   desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '
+    //   desc: `Animation, vfx and videography could be an uphill task, but following one's passion and determined to do big in it is one's choice and decision. A big name in Animation and Vfx, Aman Bhatia has followed his heart and has become a highly popular Youtuber, thanks to his witty humor and animating skills.Want to unravel the mysteries behind a great animation and unbelievable vfx? Just join his workshop on VFX at FMC Weekend 23 and learn new crazy stuff from him!`
     // },
   ]
 };

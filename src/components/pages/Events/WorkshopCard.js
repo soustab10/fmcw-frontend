@@ -235,7 +235,8 @@ function WorkshopCard(props) {
               </h3>
               <br></br>
               <h3 style={{ bottom: '70px', fontSize: '1.5em' }}>Price: ₹ {props.price}</h3>
-              {sessionStorage.getItem('isLoggedIn') == 'true' && (
+
+              {sessionStorage.getItem('isLoggedIn') == 'true' ? (
                 <button
                   className="cart-btn w-cart"
                   style={{ background: props.color, border: `1px solid ${props.color}` }}
@@ -250,7 +251,11 @@ function WorkshopCard(props) {
                   Add{' '}
                   <useCart></useCart>
                 </button>
-              )}
+              ) : (
+              <div>
+              Login To Add
+            </div>
+            )}
             </div>
           </Typography>
         </Box>
