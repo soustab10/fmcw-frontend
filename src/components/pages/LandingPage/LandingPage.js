@@ -1,13 +1,10 @@
 /* eslint-disable prettier/prettier */
-import React, { useState, useEffect } from 'react';
-import Banner from './Banner/Banner';
-import Image from './merchandise.png';
+import React, { useState, useEffect , useRef} from 'react';
 import Section from './Section/Section';
 import Classes from './LandingPage.module.css';
 import Footer from '../../Footer';
 import { Button } from '../../Button';
 import closeMobileMenu from '../../Navbar';
-import HeroAnimNew from './HeroAnimNew.gif';
 import winner1 from './winner.svg';
 import briefing from './briefing.svg';
 import redcarpet from './red-carpet.svg';
@@ -37,9 +34,12 @@ function landingPage() {
     }
   };
 
+  const ref_container = useRef();
   useEffect(() => {
+    const scrollDiv = document.getElementById("header").offsetTop;
+    window.scrollTo({top : scrollDiv-200 , behavior : "smooth"});
     showButton();
-  }, []);
+  }, [])
 
   const logoutHandler = () => {
     sessionStorage.clear();
@@ -49,10 +49,10 @@ function landingPage() {
 
   return (
     <>
-      <div>
+      <div id="header" ref_container={useRef}>
         <div className={Classes.div1}>
           <Fade bottom>
-          <img src="fmctextlogo.png" className={Classes.div1_logo} />
+          <img src="fmctextlogo.png" alt="logo" className={Classes.div1_logo} />
             <h1 className={Classes.div1_heading}>A Fest for </h1>
             <h1 className={Classes.div1_headanime}>
               <Typewriter
@@ -72,7 +72,7 @@ function landingPage() {
               </button>
             </a>
             {/* </Link> */}
-            <img src={process.env.REACT_APP_AWS_S3_URI + '/HeroAnim1.gif'} className={Classes.div1_img} />;
+            <img src={process.env.REACT_APP_AWS_S3_URI + '/HeroAnim1.gif'} className={Classes.div1_img} alt="hero animation"/>;
             {/* <img src="0001-0210.gif" className={Classes.div1_img} /> */}
           </Fade>
         </div>
@@ -111,7 +111,7 @@ function landingPage() {
             <section className={Classes.button_2}>
             <a href="/events/#vertical-tab-1">
               <button className={Classes.cine}>
-                <p>Cine</p>
+                <p>Cinematography</p>
               </button>
               </a>
               <a href="/events/#vertical-tab-5">
@@ -130,7 +130,7 @@ function landingPage() {
         <div className={Classes.eventBox}>
           <div className={Classes.div3}>
             <div className={Classes.banner1}>
-              <img src={winner1} />
+              <img src={winner1} alt=""/>
             </div>
             <Fade bottom>
               <h1 className={Classes.events}>COMPETITIONS</h1>
@@ -149,7 +149,7 @@ function landingPage() {
           </div>
           <div className={Classes.div4}>
             <div className={Classes.banner2}>
-              <img src={briefing} />
+              <img src={briefing} alt="" />
             </div>
             <Fade bottom>
               <h1 className={Classes.events}>WORKSHOPS</h1>
@@ -171,7 +171,7 @@ function landingPage() {
           <div className={Classes.eventBox}>
             <div className={Classes.div5}>
               <div className={Classes.banner3}>
-                <img src={redcarpet} />
+                <img src={redcarpet}  alt="" />
               </div>
 
               <Fade bottom>
@@ -188,7 +188,7 @@ function landingPage() {
             </div>
             <div className={Classes.div6}>
               <div className={Classes.banner4}>
-                <img src={banner4} />
+                <img src={banner4}  alt="" />
               </div>
               <Fade bottom>
                 <h1 className={Classes.events}>OPEN AIR THEATRES</h1>

@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { IconContext } from 'react-icons';
-import { TiArrowUpThick, TiArrowDownThick } from 'react-icons/ti';
+import UpArrow from '../../UpArrowFaq.svg';
+import DownArrow from '../../downArrowFaq.svg';
 import { Data } from './Data';
 import Footer from '../../Footer';
 import { Fade } from 'react-reveal';
@@ -15,12 +16,15 @@ const AccordionSection = styled.div`
   align-items: center;
   justify-content: center;
   position: relative;
-  height: 100vh;
+  height: 220vh;
   width: 100%;
   overflow-x: hidden;
   background: #fff;
   @media (max-width: 768px) {
-    height: 80vh;
+    height: 320vh;
+  }
+  @media (max-width: 500px) {
+    height: 400vh;
   }
 `;
 
@@ -44,7 +48,7 @@ const Heading = styled.div`
   border: 3px solid #000000;
   display: flex;
   justify-content: center;
-  h1
+  h1 {
     padding: 15px;
     font-size: 60px;
     text-align: center;
@@ -62,20 +66,20 @@ const Heading = styled.div`
     position: relative;
     top: 30%;
   }
-  span{
-    top : 13%;
+  span {
+    top: 13%;
   }
   @media (max-width: 1330px) {
-      height: 15vh;
-      span {
-        font-size: 50px;
-        top :-37%;
-        text-shadow: 3px 4px 0px #000000;
-      }
-      img {
-        max-width : 70px;
-        top: 23%; 
-      }
+    height: 15vh;
+    span {
+      font-size: 50px;
+      top: -37%;
+      text-shadow: 3px 4px 0px #000000;
+    }
+    img {
+      max-width: 70px;
+      top: 23%;
+    }
   }
 `;
 
@@ -119,6 +123,11 @@ const Dropdown = styled.div`
 `;
 
 function Accordion() {
+  const ref_container = useRef();
+  useEffect(() => {
+    const scrollDiv = document.getElementById('header').offsetTop;
+    window.scrollTo({ top: scrollDiv - 200, behavior: 'smooth' });
+  }, []);
   const [clicked, setClicked] = useState(false);
 
   const toggle = (index) => {
@@ -131,18 +140,18 @@ function Accordion() {
   };
 
   return (
-    <div className="HEADER" style={{ overflow: 'hidden' }}>
+    <div className="HEADER" style={{ overflow: 'hidden' }} id="header" ref_container={useRef}>
       <Heading>
         <Fade right>
           {/* <img src='Group_7167.svg' /> */}
           <div>
-            <img className="star1" src={leftStar}></img>
+            <img className="star1" alt="" src={leftStar}></img>
           </div>
           <div>
             <span className="heading">FAQ</span>
           </div>
           <div>
-            <img className="star2" src={rightStar}></img>
+            <img className="star2" alt="" src={rightStar}></img>
           </div>
         </Fade>
       </Heading>
@@ -160,17 +169,28 @@ function Accordion() {
                         fontStyle: 'normal',
                         color: 'black',
                         fontWeight: '500',
-                        fontSize: '36px',
+                        fontSize: '22px',
                         lineHeight: '44px'
                       }}>
                       {item.question}
                     </h1>
                   </div>
-                  <span style={{ fontFamily: 'Montserrat', fontStyle: 'normal' }}>
-                    {clicked === index ? <TiArrowUpThick /> : <TiArrowDownThick />}
-                  </span>
+                  <Fade bottom>
+                    <span style={{ fontFamily: 'Montserrat', fontStyle: 'normal' }}>
+                      {clicked === index ? (
+                        <img src={UpArrow} style={{ maxWidth: 'max-content' }} />
+                      ) : (
+                        <img style={{ maxWidth: 'max-content' }} src={DownArrow} />
+                      )}
+                    </span>
+                  </Fade>
                 </Wrap>
-                <hr style={{ color: 'black', border: '0.25px solid #000000' }}></hr>
+                <hr
+                  style={{
+                    color: 'black',
+                    marginTop: '30px',
+                    border: '0.25px solid #000000'
+                  }}></hr>
                 {clicked === index ? (
                   <Fade bottom>
                     <Dropdown>
@@ -179,7 +199,7 @@ function Accordion() {
                           fontFamily: 'Montserrat',
                           fontStyle: 'normal',
                           fontWeight: '400',
-                          fontSize: '24px',
+                          fontSize: '18px',
                           lineHeight: '145.9%'
                         }}>
                         {item.answer}
