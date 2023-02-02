@@ -98,7 +98,8 @@
     }
 }
 
-@media screen and (max-width: 400px) {
+
+@media screen and (max-width: 500px) {
     .error {
         background-color: #fff;
     }
@@ -114,7 +115,7 @@
         height: 30vh;
         position: absolute;
         left: 20%;
-        top: 30%;
+        top: 40%;
     }
 
     .Error3{
@@ -126,14 +127,14 @@
         width: 20vw;
         position: absolute;
         left: 72%;
-        top: 65%;
+        top: 80%;
     }
     .register_button {
         position: fixed;
         width: 10vw;
-        height: 30px;
+        height: 25px;
         left: 33%;
-        top: 50%;
+        top: 59%;
       }
       .register_button p {
         width: 97px;
