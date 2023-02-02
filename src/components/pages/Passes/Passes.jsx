@@ -17,6 +17,7 @@ import leftStar from '../../leftStar.png';
 import data from '../Events/Data/data';
 import rightStar from '../../rightStar.png';
 import PassCard from './PassCard';
+import Accomodation from './Pass.svg';
 const style = {
   position: 'absolute',
   top: '50%',
@@ -84,15 +85,15 @@ function Pass(props) {
         </div>
         <section className="accomodation">
           <div className="passes-content-2">
+            <div>
             <h1>Do you want accommodation provided by us? </h1>
             <p>
               We will provide you our great hospitality including food at our college hostels along
               with our cool FMC Weekend ‘23 merchandise as a souvenir at minimal price of Rs.800.
               Stay and explore the fest with us and leave your minds in wonder.
             </p>
-          </div>
-          <div className="pass-img-1">
-            <img src="Group7320.svg" alt="" />
+            </div>
+            <img src={Accomodation}/>
           </div>
           <div className="check">
             <input
