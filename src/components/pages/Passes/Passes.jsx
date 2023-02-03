@@ -81,7 +81,7 @@ function Pass(props) {
           </p>
         </div>
         <div className="pass-img">
-          <img src={process.env.REACT_APP_AWS_S3_URI + '/Group_7256.svg'} alt="" />
+          <img src="passesimgmain.svg" alt="" />
         </div>
         <section className="accomodation">
           <div className="passes-content-2">
@@ -96,15 +96,6 @@ function Pass(props) {
             <img src={Accomodation}/>
           </div>
           <div className="check">
-            <input
-              type="checkbox"
-              id="accodCheck"
-              className="checkbox"
-              name="check"
-              autoComplete="off"
-              onChange={handleChange}
-            />
-            <span>Yes, I'm interested</span>
           </div>
         </section>
         <div className="headingk">
@@ -112,7 +103,6 @@ function Pass(props) {
           OFFLINE
           <img src="/images/greenStar.svg" className="headingImg" />
         </div>
-
         <div className="pass-cards">
           {/*
              <img

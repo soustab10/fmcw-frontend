@@ -2,6 +2,8 @@ import './Passes.css';
 import { useCart } from 'react-use-cart';
 import * as React from 'react';
 import Box from '@mui/material/Box';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 // import CheckoutButton from './CheckoutButton/CheckoutButton';
 // import CartCard_2 from './CartCard_2';
 import { useState, useEffect } from 'react';
@@ -16,6 +18,12 @@ function PassCard(props) {
   };
 
   async function addItemToCart(item) {
+    toast.warn('Pass added to cart successfully!', {
+      position: 'top-center',
+      autoClose: 3000,
+      draggable: true,
+      icon: false
+    });
     // console.log('yash');
     const userID = sessionStorage.getItem('userID');
     // e.preventDefault();
@@ -37,12 +45,7 @@ function PassCard(props) {
     window.setTimeout(function () {
       location.reload();
     }, 1000);
-    toast.warn('Pass added to cart successfully!', {
-      position: 'top-center',
-      autoClose: 3000,
-      draggable: true,
-      icon: false
-    });
+    
 
     // post not working because status isn't upadated in data.js;
 
@@ -69,6 +72,7 @@ function PassCard(props) {
         </div>
       </section>
     </Fade>
+
     //   );
     // }
     // TeamCard.defaultProps = {
