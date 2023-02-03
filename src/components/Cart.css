@@ -239,7 +239,7 @@
   top: 30%;
 }
 .cartInfo{
-  max-height: 585px;
+  max-height: 685px;
   min-height: 494px;
   background: #685EDA;
 }
@@ -420,6 +420,11 @@ hr {
   transform: scale(2);
 }
 @media screen and (max-width: 768px) {
+  .cartInfo{
+    max-height: 685px;
+    min-height: 580px;
+    background: #685EDA;
+  }
   .heading{
     font-family: 'Montserrat';
 font-style: normal;
@@ -451,7 +456,7 @@ padding: 0 2vw;
     display: grid;
     justify-content: center;
     position: relative;
-    top: auto;
+    top: 100px;
     left: 2vw;
     width: 100vw;
   }
@@ -464,11 +469,11 @@ padding: 0 2vw;
   }
   .cartImg1{
         transform: rotate(-266.81deg);
-    top: 148px;
-    left: 32px;
+    top: 100px;
+    left: 26px;
     max-width: 205.31px;
     max-height: 114.67px;
-    margin-top: 20px;
+    margin-top: 10px;
   }
   .knowMoreBtn{
     left: auto;
