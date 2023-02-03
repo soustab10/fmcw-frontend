@@ -81,7 +81,7 @@ function Pass(props) {
           </p>
         </div>
         <div className="pass-img">
-          <img src={process.env.REACT_APP_AWS_S3_URI + '/Group_7256.svg'} alt="" />
+          <img src="passesimgmain.svg" alt="" />
         </div>
         <section className="accomodation">
           <div className="passes-content-2">
