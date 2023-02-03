@@ -96,15 +96,6 @@ function Pass(props) {
             <img src={Accomodation}/>
           </div>
           <div className="check">
-            <input
-              type="checkbox"
-              id="accodCheck"
-              className="checkbox"
-              name="check"
-              autoComplete="off"
-              onChange={handleChange}
-            />
-            <span>Yes, I'm interested</span>
           </div>
         </section>
         <div className="headingk">
@@ -112,7 +103,6 @@ function Pass(props) {
           OFFLINE
           <img src="/images/greenStar.svg" className="headingImg" />
         </div>
-
         <div className="pass-cards">
           {/*
              <img

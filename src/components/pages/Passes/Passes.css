@@ -57,6 +57,7 @@
   font-family: Nunito Sans;
   margin-top: 20px;
   font-weight: 400;
+  margin-bottom: 20px;
 }
 .accomodation {
   background: #685EDA;
@@ -107,7 +108,7 @@
   height: 110px;
   margin: 0px;
   margin-bottom: 68px;
-  margin-top: 42px;
+  margin-top: 0px;
   color: #ffffff;
   display: flex;
   justify-content: center;
@@ -123,6 +124,7 @@
   width: 95vw;
   margin-top: 10px;
   margin-left: 40px;
+  margin-bottom: 80px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -323,6 +325,7 @@ hr {
       border: 1px solid #000000;
       box-shadow: 4px 6px 0px #000000;
       border-radius: 4px;
+      margin-bottom: 50px;
   }
   .pass-btn:hover {
     transform: translate(4px, 6px);
