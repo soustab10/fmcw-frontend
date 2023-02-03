@@ -2,12 +2,19 @@
  .img {
     object-fit: contain;
     padding: 1rem;
-    width: 241px;
+    width: 280px;
     height: 280px;
     transition: all 0.5s ease;
+    margin-right: 5%;
   }
   
   .img:hover {
     transform: scale(1.08);
     opacity: 0.8;
+  }
+
+  @media screen and (max-width: 700px) {
+    .img{
+      margin-right: 0%;
+    }
   }
