@@ -90,6 +90,12 @@ const data = {
     },
     {
       id: 8,
+      img: process.env.REACT_APP_AWS_S3_URI + '/PR/AbhigyanAgarwal.jpg',
+      position: 'Public Relations Head',
+      name: 'Abhigyan Agarwal'
+    },
+    {
+      id: 8,
       img: process.env.REACT_APP_AWS_S3_URI + '/PR/AditiRaj.jpg',
       position: 'Public Relations Head',
       name: 'Aditi Raj'
@@ -172,9 +178,15 @@ const data = {
   animationData: [
     {
       id: 28,
-      img: process.env.REACT_APP_AWS_S3_URI + '/ClubSecretaries/GauravKumar_Animation.jpg',
+      img: process.env.REACT_APP_AWS_S3_URI + '/AnimationTeam/UtkarshJain.jpg',
       position: 'Animation Head',
-      name: 'Gaurav Kumar'
+      name: 'Utkarsh Jain'
+    },
+    {
+      id: 28,
+      img: process.env.REACT_APP_AWS_S3_URI + '/AnimationTeam/KalpitAdhao.jpg',
+      position: 'Animation Head',
+      name: 'Kalpit Adhao'
     }
   ],
   convenorData: [

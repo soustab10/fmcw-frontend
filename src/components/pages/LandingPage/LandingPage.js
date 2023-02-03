@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect , useRef} from 'react';
 import Section from './Section/Section';
 import Classes from './LandingPage.module.css';
 import Footer from '../../Footer';
@@ -21,10 +21,26 @@ import ScrollTrigger from 'react-scroll-trigger';
 import Typewriter from 'typewriter-effect';
 import fmclogogroup from './fmclogogroup.svg';
 import { margin } from '@mui/system';
+import countapi from 'countapi-js';
+
+countapi.visits().then((result) => {
+  document.getElementById('visits').innerText = `${response.value}`;
+});
 
 function landingPage() {
   const [counterOn, setCounterOn] = useState(false);
   const [button, setButton] = useState(true);
+  const [visits, setVisits] = useState(0);
+
+
+
+  var xhr = new XMLHttpRequest();
+xhr.open("GET", "https://api.countapi.xyz/hit/www.fmcweekend.in/visits");
+xhr.responseType = "json";
+xhr.onload = function() {
+    document.getElementById('visits').innerText = this.response.value;
+}
+xhr.send();
 
   const showButton = () => {
     if (window.innerWidth > 960) {
@@ -34,9 +50,12 @@ function landingPage() {
     }
   };
 
+  const ref_container = useRef();
   useEffect(() => {
+    const scrollDiv = document.getElementById("header").offsetTop;
+    window.scrollTo({top : scrollDiv-200 , behavior : "smooth"});
     showButton();
-  }, []);
+  }, [])
 
   const logoutHandler = () => {
     sessionStorage.clear();
@@ -46,7 +65,7 @@ function landingPage() {
 
   return (
     <>
-      <div>
+      <div id="header" ref_container={useRef}>
         <div className={Classes.div1}>
           <Fade bottom>
           <img src="fmctextlogo.png" alt="logo" className={Classes.div1_logo} />
@@ -204,7 +223,10 @@ function landingPage() {
           <ScrollTrigger onEnter={() => setCounterOn(true)} onExit={() => setCounterOn(false)}>
           <div className={Classes.div7}>
             <Fade right>
-              <h1>{counterOn && <CountUp start={70000} end={75269} duration={2} delay={0} />}+</h1>;
+            <h3>
+                Over
+              </h3>
+             <h1 id='visits'></h1>
               <h2>
                 Creative enthusiasts visiting the fest, building a culture and community of digital
                 art
