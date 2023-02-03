@@ -413,7 +413,7 @@
     background-color: #1d033e;
   }
   body {
-    background: #1d033e;
+    background: white;
   }
   .event-cards {
     flex-wrap: wrap;
