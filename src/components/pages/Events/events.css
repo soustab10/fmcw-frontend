@@ -903,10 +903,12 @@ flip card
   .workshop-modal .guest-details p {
     color: #fff;
     margin: auto;
-    position: relative;
+    width: 100%;
     font-size: 1em;
     text-align: center;
+    left: 0px;
   }
+
   .workshop-modal .guest-details h2 {
     color: #000;
     font-size: 1.6em;
@@ -928,8 +930,7 @@ flip card
   .workshop-modal .guest-details .timing {
     flex-direction: column;
     display: flex;
-    margin-top: 60px;
-    position: relative;
+    margin-top: 100px;
   }
   .workshop-modal .guest-details span {
     color: #fff;
@@ -1057,10 +1058,12 @@ flip card
   .workshop-modal .guest-details p {
     color: #fff;
     margin: auto;
-    position: relative;
+    width: 100%;
     font-size: 0.9em;
     text-align: center;
+    left: 0px;
   }
+
   .workshopCard {
     /* max-width: calc(45% - 1em); */
     width: 280px;
@@ -1104,10 +1107,10 @@ flip card
   .workshop-modal .guest-details p {
     color: #fff;
     margin: auto;
-    position: relative;
     width: 100%;
     font-size: 0.9em;
     text-align: center;
+    left: 0px;
   }
 
   .workshop-modal .guest-details .timing {

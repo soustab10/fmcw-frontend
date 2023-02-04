@@ -17,6 +17,7 @@ import leftStar from '../../leftStar.png';
 import data from '../Events/Data/data';
 import rightStar from '../../rightStar.png';
 import PassCard from './PassCard';
+
 const style = {
   position: 'absolute',
   top: '50%',
@@ -80,7 +81,7 @@ function Pass(props) {
           </p>
         </div>
         <div className="pass-img">
-          <img src={process.env.REACT_APP_AWS_S3_URI + '/Group_7256.svg'} alt="" />
+          <img src="passesimgmain.svg" alt="" />
         </div>
         <section className="accomodation">
           <div className="passes-content-2">
@@ -111,7 +112,6 @@ function Pass(props) {
           OFFLINE
           <img src="/images/greenStar.svg" className="headingImg" />
         </div>
-
         <div className="pass-cards">
           {/*
              <img

@@ -1,22 +1,48 @@
 const sponsors = [
   {
     id: 1,
-    img: 'https://drive.google.com/uc?export=view&id=12A29XV2fD4rGtifwJopcc2GFFL6WcUWl'
+    img: process.env.REACT_APP_AWS_S3_URI + '/Picsarttitlesponsor.png'
   },
   {
     id: 2,
-    img: 'https://drive.google.com/uc?export=view&id=12A29XV2fD4rGtifwJopcc2GFFL6WcUWl'
+    img: process.env.REACT_APP_AWS_S3_URI + '/XPpenco-title.png'
   },
   {
     id: 3,
-    img: 'https://drive.google.com/uc?export=view&id=12A29XV2fD4rGtifwJopcc2GFFL6WcUWl'
+    img: process.env.REACT_APP_AWS_S3_URI + '/LAPCARE.png'
   },
   {
     id: 4,
-    img: 'https://drive.google.com/uc?export=view&id=12A29XV2fD4rGtifwJopcc2GFFL6WcUWl'
+    img: process.env.REACT_APP_AWS_S3_URI + '/Tickertape.png'
   },
   {
     id: 5,
-    img: 'https://drive.google.com/uc?export=view&id=12A29XV2fD4rGtifwJopcc2GFFL6WcUWl'
-  }
+    img: process.env.REACT_APP_AWS_S3_URI + '/Amarujala.png'
+  },
+  {
+    id: 6,
+    img: process.env.REACT_APP_AWS_S3_URI + '/Billionbooks.png'
+  },
+  {
+    id: 7,
+    img: process.env.REACT_APP_AWS_S3_URI + '/gfg.png'
+  },
+  {
+    id: 8,
+    img: process.env.REACT_APP_AWS_S3_URI + '/GIOTTUS.png'
+  },
+  {
+    id: 9,
+    img: process.env.REACT_APP_AWS_S3_URI + '/IMS.png'
+  },
+  {
+    id: 10,
+    img: process.env.REACT_APP_AWS_S3_URI + '/indiaeducation.png'
+  },
+  {
+    id: 11,
+    img: process.env.REACT_APP_AWS_S3_URI + '/NyuCrush.png'
+  },
 ];
+
+export default sponsors;

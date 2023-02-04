@@ -99,7 +99,7 @@ const data = {
       genre: 'outreach',
       type: 'Contest',
       title: 'Rant it',
-      link: 'https://drive.google.com/file/d/1fReZW22DIarbLKt-OJXqNLCfWJnNCle7/view?usp=share_link',
+      link: 'https://drive.google.com/file/d/1yK31dM76HLr2FnuvK9vkSYs7eJfU0hzC/view?usp=share_link',
       price: 249,
       prize: 'Prizes Worth- 6K',
       color: '#FFC900',
@@ -375,7 +375,7 @@ const data = {
   photographyWorkshopData: [
     {
       id: 25,
-      img: "/workshopimgs/manishdeo.png" ,
+      img: "/workshopimgs/deomanish.webp" ,
       color: '#00CCF5',
       color2: '#2ED9FC',
       genre: 'photography',
@@ -385,12 +385,12 @@ const data = {
       price: 399,
       name: 'Manish Deo',
       date: '10th February',
-      time: '4:00 p.m. - 5:00 p.m.',
+      time: '4:00 p.m. - 5:30 p.m.',
       desc: `Chasing wanderlust, one frame at a time Manish Deo has made a career out of capturing life's adventures through his lens. His work tells a story and evokes emotion. Pack your bags and your camera! Explore the world and turn your passion for travel photography into a profession. Join us on a workshop on how to pursue travel photography as your profession in FMC Weekend’23 and take your skills to the next level. `,
     },
     {
       id: 26,
-      img: "/workshopimgs/shoebum.png" ,
+      img: "/workshopimgs/shubham.webp" ,
       color: '#00CCF5',
       color2: '#2ED9FC',
       genre: 'photography',
@@ -400,8 +400,23 @@ const data = {
       price: 399,
       name: 'Shubham Sharma',
       date: '12th February',
-      time: '11:00 a.m. - 12:00 p.m.',
+      time: '10:00 a.m. - 11:00 p.m.',
       desc: 'Capturing the essence of the city, one frame at a time! 📷Presenting the talented Shubham Sharma , the street photographer who brings the streets to life through his lens 📸 From portraits to cityscapes, his work is a visual feast for the eyes 🌃 Dont miss out on his YouTube channel for even more photography inspiration 🎥 And dont forget to check out his captions - they are just as beautiful as his images 💬 ……. '
+    },
+    {
+      id: 45,
+      img: "/workshopimgs/arvind.webp" ,
+      color: '#00CCF5',
+      color2: '#2ED9FC',
+      genre: 'photography',
+      type: 'Workshop',
+      title: 'Pursue Travel Photography ',
+      link: 'https://drive.google.com/file/d/1ypZkoyI1x3Es-zCTiT0jytmZTazSXmNp/view?usp=sharing',
+      price: 399,
+      name: 'Arvind Patwal',
+      date: '10th February',
+      time: '4:00 p.m. - 5:30 p.m.',
+      desc: `Arvind Patwal has created a career out of photographing life's adventures and promoting spirituality. His work both conveys a tale and elicits emotion. Pack your belongings as well as your camera! Explore the world and convert your interest in travel photography into a career. Join us at FMC Weekend'23 for a workshop on how to pursue travel photography as a profession and take your abilities to the next level.`
     },
 
     // {
@@ -417,6 +432,21 @@ const data = {
     // }
   ],
   outreachWorkshopData: [
+    {
+      id: 28,
+      img: "/workshopimgs/rashmi_chadha.png" ,
+      color: '#FFC900',
+      color2: '#FFDC5A',
+      genre: 'outreach',
+      type: 'Workshop',
+      title: 'Storytelling: The Art of Binding Audience Together',
+      link: 'https://drive.google.com/file/d/1ypZkoyI1x3Es-zCTiT0jytmZTazSXmNp/view?usp=sharing',
+      price: 399,
+      name: 'Rashmi Chadha',
+      date: '12th January',
+      time: '4:00 p.m. - 5:00 p.m.',
+      desc: `Storytelling can help to make complex ideas more accessible and easy to understand and can be used to create a powerful emotional connection with an audience. It can also help to create a vision for the future and inspire people to take action. A compelling story from history can really grab people’s attention Learn from the pros and use these proven methods they use to share your own stories more compellingly.`
+    },
     // {
     //   id: 4,
     //   img: process.env.REACT_APP_AWS_S3_URI + '/priyankaoutreach.png',
@@ -453,7 +483,7 @@ const data = {
   cineWorkshopData: [
     {
       id: 27,
-      img: "/workshopimgs/abhijeet.webp" ,
+      img: "/workshopimgs/abhijeetpramar.svg" ,
       color: '#14F0B9',
       color2: '#62FFD8',
       genre: 'cine',
@@ -464,26 +494,13 @@ const data = {
       name: 'Abhijeet Singh Parmar',
       date: '10th February',
       time: '11:00 a.m. - 12:00 p.m.',
-      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '
+      desc: `“The purpose of life is to live it, to taste experience to the utmost, to reach out eagerly and without fear for a newer and richer experience.”
+      Have you ever wondered how popular media are created? What is the inspiration, thought process, and idea behind it? Get all of your questions answered in the Filmmaking workshop,guided by an IIT-BHU alumnus with vast experience, the producer of one of our most successful online series, and a co-founder of FEEL-GOOD FILMS.`
     },
-    {
-      id: 28,
-      img: "/workshopimgs/rashmi.png" ,
-      color: '#14F0B9',
-      color2: '#62FFD8',
-      genre: 'cine',
-      type: 'Workshop',
-      title: 'Storytelling: The Art of Binding Audience Together',
-      link: 'https://drive.google.com/file/d/1ypZkoyI1x3Es-zCTiT0jytmZTazSXmNp/view?usp=sharing',
-      price: 399,
-      name: 'Rashmi Chadha',
-      date: '12th January',
-      time: '4:00 p.m. - 5:00 p.m.',
-      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '
-    },
+    
     {
       id: 41,
-      img: "/workshopimgs/amitabha.png" ,
+      img: "/workshopimgs/amitabha.jpg" ,
       color: '#14F0B9',
       color2: '#62FFD8',
       genre: 'cine',
@@ -494,7 +511,7 @@ const data = {
       name: 'Amitabha Singh',
       date: '11th January',
       time: '11:00 a.m. - 12:00 p.m.',
-      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '
+      desc: `Amitabha Singh is a National Award Winning Cinematographer. The 2013 Gujarati Film-'The Good Road' in which he was the cinematographer also became the first Gujarat film to represent India at the Oscars! His social endeavour-Cinevidya conducts nationwide film festivals and workshops to cater children and individuals inclination to learn about the magical medium of films, by following his motto-"Cinema for Life".`
     },
     // {
     //   id: 8,
@@ -529,7 +546,7 @@ const data = {
 
     {
       id: 42,
-      img: "/workshopimgs/raheja.png" ,
+      img: "/workshopimgs/raheja.svg" ,
       color: '#685EDA',
       color2: '#9990FF',
       genre: 'design',
@@ -539,15 +556,17 @@ const data = {
       price: 399,
       name: 'Shubhangi Raheja',
       date: '10th January',
-      time: '3:00 p.m. - 4:00 p.m.',
-      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '
+      time: '2:30 p.m. - 3:30 p.m.',
+      desc: `NFTs are the new black and Digital 3D is the new dimension! Had a blast learning about the future of art and collectibles 🎨💻
+      Join the NFT revolution and unleash your digital creativity! 
+      Whether you're an artist, designer, or just curious, this workshop is a must-attend for anyone who wants to stay ahead of the curve ,in India’s Largest Digital Art Festival FMC Weekend’23`
     },
 
   ],
   mediaWorkshopData: [
     {
       id: 29,
-      img: "/workshopimgs/panelcopy.png" ,
+      img: "/workshopimgs/paneldiscuss.svg" ,
       color: '#FF90E8',
       color2: '#FFC8F4',
       genre: 'media',
@@ -557,7 +576,7 @@ const data = {
       price: 399,
       name: 'Priyanka Deo Jain and Sarvpriya Sangwan',
       date: '11th February',
-      time: '4:00 p.m. - 5:00 p.m.',
+      time: '4:00 p.m. - 5:30 p.m.',
       desc: `"Breaking news! 📰 Experience the Power of the Pen: A Panel Discussion on Modern Journalism  with the Acclaimed Journalist , Sarvapriya Sangwan and Priyanka Deo Jain in India’s largest Digital Arts festival , FMC Weekend'23 !!
       Don't miss this chance to hear from one of the brightest minds in modern journalism!"`
     },
@@ -581,21 +600,21 @@ const data = {
     // }
   ],
   animationWorkshopData: [
-    // {
-    //   id: 4,
-    //   img: "/workshopimgs/vfxaman.webp" ,
-    //   color: '#FE6263',
-    //   color2: '#FD8A8B',
-    //   genre: 'animation',
-    //   type: 'Workshop',
-    //   title: 'VFX Workshop',
-    //   link: 'https://drive.google.com/file/d/1ypZkoyI1x3Es-zCTiT0jytmZTazSXmNp/view?usp=sharing',
-    //   price: 249,
-    //   name: 'Aman',
-    //   date: '10th January',
-    //   time: '5:00 p.m. - 6:00 p.m.',
-    //   desc: `Animation, vfx and videography could be an uphill task, but following one's passion and determined to do big in it is one's choice and decision. A big name in Animation and Vfx, Aman Bhatia has followed his heart and has become a highly popular Youtuber, thanks to his witty humor and animating skills.Want to unravel the mysteries behind a great animation and unbelievable vfx? Just join his workshop on VFX at FMC Weekend 23 and learn new crazy stuff from him!`
-    // },
+    {
+      id: 4,
+      img: "/workshopimgs/amanbhatia.webp" ,
+      color: '#FE6263',
+      color2: '#FD8A8B',
+      genre: 'animation',
+      type: 'Workshop',
+      title: 'VFX Workshop',
+      link: 'https://drive.google.com/file/d/1ypZkoyI1x3Es-zCTiT0jytmZTazSXmNp/view?usp=sharing',
+      price: 249,
+      name: 'Aman Bhatia',
+      date: '12th January',
+      time: '2:03 p.m. - 3:30 p.m.',
+      desc: `Animation, vfx and videography could be an uphill task, but following one's passion and determined to do big in it is one's choice and decision. A big name in Animation and Vfx, Aman Bhatia has followed his heart and has become a highly popular Youtuber, thanks to his witty humor and animating skills.Want to unravel the mysteries behind a great animation and unbelievable vfx!`
+    },
   ],
   passesData: [
     {
