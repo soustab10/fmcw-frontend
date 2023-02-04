@@ -1,9 +1,9 @@
+/* eslint-disable prettier/prettier */
 import Loading from './Loading';
 import './Cart.css';
 import { useCart } from 'react-use-cart';
 import CartCard_2 from './CartCard_2';
 import CartWorkshopCard from './CartWorkshopCard';
-
 import { NavLink, Link } from 'react-router-dom';
 // import { Button } from '../components/Button';
 import * as React from 'react';
@@ -38,6 +38,7 @@ const style = {
   p: 4
 };
 function Cart(props) {
+  const [isChecked, setIsChecked] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => {
@@ -173,7 +174,7 @@ function Cart(props) {
             </div>
           </Fade>
         </div>
-
+        
         {/* <div className="purchase_details"> */}
         {/* <a href="/events">
           <div className="add-more-cards">
@@ -208,6 +209,31 @@ function Cart(props) {
           <Loading />
         ) : (
           <>
+          <section className="accomodation">
+          <div className="passes-content-2">
+            <div>
+            <h1>Do you want accommodation provided by us? </h1>
+            <p>
+              We will provide you our great hospitality including food at our college hostels along
+              with our cool FMC Weekend ‘23 merchandise as a souvenir at minimal price of Rs.800.
+              Stay and explore the fest with us and leave your minds in wonder.
+            </p>
+            </div>
+            <img src="Pass.svg"/>
+            
+          </div>
+          <div className="check">
+            <input
+              type="checkbox"
+              id="accodCheck"
+              className="checkbox"
+              checked={isChecked}
+              onChange={() => setIsChecked(!isChecked)}
+              name="check"
+            />
+            <span>Yes, I'm interested</span>
+          </div>
+        </section>
             <div className="section_top" style={{ marginTop: '0px' }}>
               <div className="registered_contest">
                 <h2>Contests</h2>
@@ -538,10 +564,8 @@ function Cart(props) {
                 <label htmlFor="cart-amount">
                   <h3 className="price-info">
                     Total Price = ₹{' '}
-                    {sessionStorage.getItem('email').endsWith('@iitbhu.ac.in') ||
-                    sessionStorage.getItem('email').endsWith('@itbhu.ac.in')
-                      ? 0
-                      : paymentAmount.toFixed(2)}{' '}
+                    if (sessionStorage.getItem('email').endsWith('@iitbhu.ac.in') ||
+                    sessionStorage.getItem('email').endsWith('@itbhu.ac.in')){0}else if (isChecked) {paymentAmount.toFixed(2) + 800}else{paymentAmount.toFixed(2)} {' '}
                   </h3>
                 </label>
               </div>
