@@ -38,17 +38,18 @@ const Heading = styled.div`
     top: 30%;
   }
   span {
-    top: 13%;
+    top: 8%;
   }
   @media (max-width: 768px) {
     height: 15vh;
     span {
       font-size: 50px;
       text-shadow: 3px 4px 0px #000000;
+      top : 15%
     }
     img {
       max-width: 70px;
-      top: 23%;
+      top: 32%;
     }
   }
 `;
@@ -83,32 +84,32 @@ const Sponsors1 = () => {
         })}
       </div> */}
       {/* {console.log(SponsorData.name)} */}
-      <div className="flex justify-center flex-col w-screen h-96">
-        <h1 className="text-3xl font-bold text-center mt-3 mb-6">Title Sponsor</h1>
+      <div className="flex justify-center flex-col w-screen h-96 max-[640px]:h-64">
+        <h1 className="text-4xl font-bold text-center mt-3 mb-6 uppercase max-[640px]:text-2xl">Title Sponsor</h1>
         <div className="lg:ml-96 lg:mr-96 sm:ml-10 sm:mr-10 flex justify-center">
-          <img src="fujifilm.svg" alt="" className="text-center pt-6 pb-0 h-60" />
+          <img src="fujifilm.svg" alt="" className="text-center pt-6 pb-0 h-60 max-[640px]:h-36" />
         </div>
       </div>
       {/* <hr className=" border border-black border-solid w-screen font-bold border-spacing-8" /> */}
       <div className=" border-solid border-2 mt-6 mb-1 w-screen border-black"></div>
-      <div className="flex justify-center flex-col w-screen h-96">
-        <h1 className="text-3xl font-bold text-center mt-3">Powered By</h1>
+      <div className="flex justify-center flex-col w-screen h-96 max-[640px]:h-64">
+        <h1 className="text-4xl font-bold text-center mt-3 uppercase max-[640px]:text-2xl">Powered By</h1>
         <div className="lg:ml-96 lg:mr-96 sm:ml-10 sm:mr-10 flex justify-center">
-          <img src="Kalakari.svg" alt="" className="text-center h-80 pt-6 pb-0" />
+          <img src="Kalakari.svg" alt="" className="text-center h-80 pt-6 pb-0 max-[640px]:h-52" />
         </div>
       </div>
       <div className=" border-solid border-2 mt-6 w-screen border-black"></div>
-      <div class="flex justify-center w-screen h-72">
+      <div class="flex justify-center w-screen h-72 max-[640px]:h-56">
         <div class="flex-1  border-r border-black">
-          <h1 className="text-3xl font-bold text-center mt-3">Co-Powered By</h1>
+          <h1 className="text-4xl font-bold text-center mt-3 uppercase max-[640px]:text-2xl">Co-Powered By</h1>
           <div className="object-contain flex justify-center align-middle">
-            <img src="Lapcare.svg" alt="" className="text-center p-10 h-64" />
+            <img src="Lapcare.svg" alt="" className="text-center p-10 h-64 max-[640px]:h-44" />
           </div>
         </div>
         <div class=" flex-1  border-l border-black">
-          <h1 className="text-3xl font-bold text-center mt-3">Co-Powered By</h1>
+          <h1 className="text-4xl font-bold text-center mt-3 uppercase max-[640px]:text-2xl">Co-Powered By</h1>
           <div className="object-contain flex justify-center align-middle">
-            <img src="quillbot.svg" alt="" className="text-center p-10 h-56" />
+            <img src="quillbot.svg" alt="" className="text-center p-10 h-56 max-[640px]:h-44" />
           </div>
         </div>
       </div>
@@ -125,7 +126,7 @@ const Sponsors1 = () => {
       </div>
       <div className=" border-solid border-2 w-screen border-black"></div>
       <div className="flex w-screen flex-wrap justify-center p-4">
-        <h1 className="text-3xl w-screen inline-block mb-6 font-bold text-center mt-3">
+        <h1 className="text-4xl w-screen inline-block mb-6 font-bold text-center mt-3">
           Previous Sponsors
         </h1>
         {SponsorsData.map((sponsor) => {
