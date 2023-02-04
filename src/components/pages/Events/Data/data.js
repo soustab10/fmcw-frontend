@@ -609,7 +609,7 @@ const data = {
       type: 'Workshop',
       title: 'VFX Workshop',
       link: 'https://drive.google.com/file/d/1ypZkoyI1x3Es-zCTiT0jytmZTazSXmNp/view?usp=sharing',
-      price: 249,
+      price: 399,
       name: 'Aman Bhatia',
       date: '12th January',
       time: '2:03 p.m. - 3:30 p.m.',
