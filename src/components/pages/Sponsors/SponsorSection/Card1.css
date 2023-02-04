@@ -1,6 +1,6 @@
 #sponsor-card {
   width: 300px;
-  height: 380px;
+  height: 300px;
   margin-right: 5%;
   margin-bottom: 5%;
   display: flex;
@@ -26,7 +26,7 @@
   font-family: 'Manrope';
   font-style: normal;
   font-weight: 600;
-  font-size: 2.2rem;
+  font-size: 2.25rem;
   line-height: 41px;
   width: 240px;
   color: #000;
@@ -43,6 +43,7 @@
     height: 400px;
     display: flex;
     margin-right: 0%;
+    margin-top: 40px;
   }
 
   .parent_wrapper {
