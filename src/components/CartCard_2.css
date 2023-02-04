@@ -564,6 +564,8 @@ border-radius: 4px;
   flex-wrap: wrap;
   position: relative;
   margin-left: 25px;
+  justify-content: space-evenly;
+  gap:50px;
 }
 .contest_cards {
   padding-left: 3.45vw;
@@ -579,7 +581,7 @@ border-radius: 4px;
 .registered_contest h2 {
   padding-top: 7vh;
   font-size: 28px;
-  padding-bottom: 0;
+  padding-bottom: 20px;
 }
 .registered_contest {
   display: contents;
