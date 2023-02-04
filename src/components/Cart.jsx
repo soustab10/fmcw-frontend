@@ -564,8 +564,10 @@ function Cart(props) {
                 <label htmlFor="cart-amount">
                   <h3 className="price-info">
                     Total Price = ₹{' '}
-                    if (sessionStorage.getItem('email').endsWith('@iitbhu.ac.in') ||
-                    sessionStorage.getItem('email').endsWith('@itbhu.ac.in')){0}else if (isChecked) {paymentAmount.toFixed(2) + 800}else{paymentAmount.toFixed(2)} {' '}
+                    {sessionStorage.getItem('email').endsWith('@iitbhu.ac.in') ||
+                    sessionStorage.getItem('email').endsWith('@itbhu.ac.in')
+                      ? 0
+                      : paymentAmount.toFixed(2)}{' '}
                   </h3>
                 </label>
               </div>
