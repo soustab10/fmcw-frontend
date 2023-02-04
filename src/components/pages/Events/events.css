@@ -1052,7 +1052,7 @@ flip card
 }
 @media screen and (max-width: 700px) {
   .workshop-modal {
-    height: 55vh;
+    height: 67.5vh;
   }
   .workshop-modal .guest-details p {
     color: #fff;
@@ -1105,6 +1105,7 @@ flip card
     color: #fff;
     margin: auto;
     position: relative;
+    width: 100%;
     font-size: 0.9em;
     text-align: center;
   }

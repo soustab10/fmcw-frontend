@@ -375,7 +375,7 @@ const data = {
   photographyWorkshopData: [
     {
       id: 25,
-      img: "/workshopimgs/deomanish.webp" ,
+      img: "/workshopimgs/manishdeo.png" ,
       color: '#00CCF5',
       color2: '#2ED9FC',
       genre: 'photography',
@@ -390,7 +390,7 @@ const data = {
     },
     {
       id: 26,
-      img: process.env.REACT_APP_AWS_S3_URI + "/shubham.jpg" ,
+      img: "/workshopimgs/shoebum.png" ,
       color: '#00CCF5',
       color2: '#2ED9FC',
       genre: 'photography',
@@ -451,36 +451,51 @@ const data = {
     // }
   ],
   cineWorkshopData: [
-    // {
-    //   id: 27,
-    //   img: "/workshopimgs/abhijeet.webp" ,
-    //   color: '#14F0B9',
-    //   color2: '#62FFD8',
-    //   genre: 'cine',
-    //   type: 'Workshop',
-    //   title: 'Filmmaking Workshop',
-    //   link: 'https://drive.google.com/file/d/1ypZkoyI1x3Es-zCTiT0jytmZTazSXmNp/view?usp=sharing',
-    //   price: 399,
-    //   name: 'Abhijeet Singh Parmar',
-    //   date: '10th February',
-    //   time: '11:00 a.m. - 12:00 p.m.',
-    //   desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '
-    // },
-    // {
-    //   id: 28,
-    //   img: "/workshopimgs/rashmi_chadha.png" ,
-    //   color: '#14F0B9',
-    //   color2: '#62FFD8',
-    //   genre: 'cine',
-    //   type: 'Workshop',
-    //   title: 'Storytelling: The Art of Binding Audience Together',
-    //   link: 'https://drive.google.com/file/d/1ypZkoyI1x3Es-zCTiT0jytmZTazSXmNp/view?usp=sharing',
-    //   price: 399,
-    //   name: 'Rashmi Chadha',
-    //   date: '12th January',
-    //   time: '4:00 p.m. - 5:00 p.m.',
-    //   desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '
-    // },
+    {
+      id: 27,
+      img: "/workshopimgs/abhijeet.webp" ,
+      color: '#14F0B9',
+      color2: '#62FFD8',
+      genre: 'cine',
+      type: 'Workshop',
+      title: 'Filmmaking Workshop',
+      link: 'https://drive.google.com/file/d/1ypZkoyI1x3Es-zCTiT0jytmZTazSXmNp/view?usp=sharing',
+      price: 399,
+      name: 'Abhijeet Singh Parmar',
+      date: '10th February',
+      time: '11:00 a.m. - 12:00 p.m.',
+      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '
+    },
+    {
+      id: 28,
+      img: "/workshopimgs/rashmi.png" ,
+      color: '#14F0B9',
+      color2: '#62FFD8',
+      genre: 'cine',
+      type: 'Workshop',
+      title: 'Storytelling: The Art of Binding Audience Together',
+      link: 'https://drive.google.com/file/d/1ypZkoyI1x3Es-zCTiT0jytmZTazSXmNp/view?usp=sharing',
+      price: 399,
+      name: 'Rashmi Chadha',
+      date: '12th January',
+      time: '4:00 p.m. - 5:00 p.m.',
+      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '
+    },
+    {
+      id: 41,
+      img: "/workshopimgs/amitabha.png" ,
+      color: '#14F0B9',
+      color2: '#62FFD8',
+      genre: 'cine',
+      type: 'Workshop',
+      title: 'Art of Cinematography',
+      link: 'https://drive.google.com/file/d/1ypZkoyI1x3Es-zCTiT0jytmZTazSXmNp/view?usp=sharing',
+      price: 399,
+      name: 'Amitabha Singh',
+      date: '11th January',
+      time: '11:00 a.m. - 12:00 p.m.',
+      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '
+    },
     // {
     //   id: 8,
     //   img: 'https://drive.google.com/uc?export=view&id=10GSj5pAbMYv_Pb36iJO7US4Tg6AIsRjv',
@@ -512,27 +527,27 @@ const data = {
     //   desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '
     // },
 
-    // {
-    //   id: 4,
-    //   img: "/workshopimgs/raheja.webp" ,
-    //   color: '#685EDA',
-    //   color2: '#9990FF',
-    //   genre: 'design',
-    //   type: 'Workshop',
-    //   title: 'NFT and Digital 3D Workshop',
-    //   link: 'https://drive.google.com/file/d/1ypZkoyI1x3Es-zCTiT0jytmZTazSXmNp/view?usp=sharing',
-    //   price: 249,
-    //   name: 'Shubhangi Raheja',
-    //   date: '10th January',
-    //   time: '5:00 p.m. - 6:00 p.m.',
-    //   desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '
-    // },
+    {
+      id: 42,
+      img: "/workshopimgs/raheja.png" ,
+      color: '#685EDA',
+      color2: '#9990FF',
+      genre: 'design',
+      type: 'Workshop',
+      title: 'NFT and Digital 3D Workshop',
+      link: 'https://drive.google.com/file/d/1ypZkoyI1x3Es-zCTiT0jytmZTazSXmNp/view?usp=sharing',
+      price: 399,
+      name: 'Shubhangi Raheja',
+      date: '10th January',
+      time: '3:00 p.m. - 4:00 p.m.',
+      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '
+    },
 
   ],
   mediaWorkshopData: [
     {
       id: 29,
-      img: "/workshopimgs/priyanka_deo_jain.png" ,
+      img: "/workshopimgs/panelcopy.png" ,
       color: '#FF90E8',
       color2: '#FFC8F4',
       genre: 'media',

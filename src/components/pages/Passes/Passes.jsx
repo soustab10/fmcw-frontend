@@ -84,7 +84,7 @@ function Pass(props) {
         </div>
         <section className="accomodation">
           <div className="passes-content-2">
-            <h1>Do you want accommodation provided by us? </h1>
+            <h1 className='passes-content-header'>Do you want accommodation provided by us? </h1>
             <p>
               We will provide you our great hospitality including food at our college hostels along
               with our cool FMC Weekend ‘23 merchandise as a souvenir at minimal price of Rs.800.

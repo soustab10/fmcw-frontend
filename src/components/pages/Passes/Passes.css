@@ -43,7 +43,7 @@
   margin: 30px;
 }
 .passes-content h1 {
-  font-family: Montserrat;
+  font-family: 'Montserrat';
   font-size: 3.5em;
   font-weight: 600;
   line-height: 51px;
@@ -54,7 +54,7 @@
   text-align: left;
   color: #000;
   font-size: 2em;
-  font-family: Nunito Sans;
+  font-family: 'Manrope';
   margin-top: 20px;
   font-weight: 400;
 }
@@ -68,7 +68,7 @@
   margin: 30px;
 }
 .passes-content-2 h1 {
-  font-family: Montserrat;
+  font-family: 'Montserrat';
   font-size: 3.5em;
   font-weight: 600;
   line-height: 51px;
@@ -79,7 +79,7 @@
   text-align: left;
   color: #000;
   font-size: 2em;
-  font-family: Nunito Sans;
+  font-family: 'Manrope';
   margin-top: 20px;
   font-weight: 400;
 }
@@ -167,7 +167,7 @@
   color: #FFEA00;
   font-weight: 600;
   font-size: 2em;
-  font-family: Montserrat;
+  font-family: 'Montserrat';
   padding: 30px 30px;
 }
 .check .checkbox {
@@ -193,7 +193,7 @@
 .price-data {
   position: absolute;
   color: #fcc907;
-  font-family: Nunito Sans;
+  font-family: 'Manrope';
   bottom: 5px;
   font-family: 2em;
   display: flex;
@@ -222,7 +222,7 @@
   position: absolute;
   top: 220px;
   right: 1%;
-  font-family: Marcellus;
+  font-family: 'Manrope';
 }
 .payment-modal {
   width: 90vw;
@@ -232,7 +232,7 @@
 .add-more-cards span {
   font-size: 4em;
   margin: 0 auto;
-  font-family: Marcellus;
+  font-family: 'Manrope';
   display: flex;
   justify-content: center;
   align-items: center;
@@ -240,7 +240,7 @@
 .add-more-cards h3 {
   display: flex;
 
-  font-family: Marcellus;
+  font-family: 'Manrope';
   justify-content: center;
   align-items: center;
 }
@@ -342,6 +342,16 @@ hr {
     padding: 0;
     margin: auto;
   }
+
+  .passes-content-2 h1 {
+    padding-top: 2.25rem;
+    line-height: 25px;
+    font-size: 2em;
+    text-align: left;
+  }
+  .passes-content-2 p {
+  font-size: 1.2em;
+  }
   .passes-page .pass-header {
     background: #ff8800;
     width: 100%;
@@ -377,7 +387,7 @@ hr {
     text-align: center;
     /* color: #fff; */
     font-size: 1.2em;
-    font-family: Marcellus;
+    font-family: 'Manrope';
     margin-top: 20px;
     width: 80vw;
     margin-bottom: 20px;
@@ -392,6 +402,18 @@ hr {
   }
   .pass-img img {
     width: 200px;
+  }
+  .check {
+    text-align: left;
+    font-size: 1.5em;
+    font-family: 'Montserrat';
+    padding: 30px 0px;
+  }
+  .check .checkbox {
+    background-color: #fcc907;
+    width: 40px;
+    height: 26px;
+    margin-left: 60px;
   }
   .checkout_button {
     display: flex;
