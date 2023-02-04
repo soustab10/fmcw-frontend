@@ -125,9 +125,9 @@ function Navbar() {
     getCartItems();
     // console.log(isTokenValid());
   }, []);
-  let length=0;
-  for(const item of cartItems) {
-    if(!item.verifyStatus) {
+  let length = 0;
+  for (const item of cartItems) {
+    if (!item.verifyStatus) {
       length += 1;
     }
   }
@@ -143,7 +143,7 @@ function Navbar() {
                 viewBox="0 0 114 53"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg">
-                 <title>Header Logo</title> 
+                <title>Header Logo</title>
                 <path
                   d="M35.4048 43.0654V0H0.5L6.05963 6.8595H28.617V13.3434H11.3155L16.8733 20.2029H28.617V34.6921L35.4048 43.0654Z"
                   fill="black"
@@ -189,15 +189,15 @@ function Navbar() {
               PRONITES
             </NavLink>
           </li> */}
-          {/* <li className="nav-item">
+          <li className="nav-item">
             <NavLink
-              to="/passes"
+              to="/sponsors"
               className="nav-links"
               activeClassName="target"
               onClick={closeMobileMenu}>
-              GLIMPSES
+              SPONSORS
             </NavLink>
-          </li> */}
+          </li>
           <li className="nav-item">
             <NavLink
               to="/FAQ"
@@ -218,12 +218,17 @@ function Navbar() {
           </li>
           <li className="nav-item">
             {sessionStorage.getItem('isLoggedIn') == 'true' && (
-              <NavLink to="/cart" activeClassName="target" onClick={closeMobileMenu}
+              <NavLink
+                to="/cart"
+                activeClassName="target"
+                onClick={closeMobileMenu}
                 className={length ? 'cartBtn nav-links' : 'cartBtn empty_cart nav-links'}>
                 <span id="quantity">
                   <p style={{ fontSize: '13px' }}>{length}</p>
                 </span>
-                <i className="fas fa-shopping-cart" style={{display: "flex"}}><p className='cartText'>CART</p></i>
+                <i className="fas fa-shopping-cart" style={{ display: 'flex' }}>
+                  <p className="cartText">CART</p>
+                </i>
               </NavLink>
             )}
           </li>

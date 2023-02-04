@@ -8,7 +8,7 @@ import Footer from '../../Footer';
 import { Fade } from 'react-reveal';
 import leftStar from '../../leftStar.png';
 import rightStar from '../../rightStar.png';
-// import './FAQ.css';
+import './FAQ.css';
 
 const AccordionSection = styled.div`
   display: flex;
@@ -69,11 +69,10 @@ const Heading = styled.div`
   span {
     top: 13%;
   }
-  @media (max-width: 1330px) {
+  @media (max-width: 768px) {
     height: 15vh;
     span {
       font-size: 50px;
-      top: -37%;
       text-shadow: 3px 4px 0px #000000;
     }
     img {

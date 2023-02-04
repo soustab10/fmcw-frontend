@@ -57,7 +57,9 @@
   font-family: Nunito Sans;
   margin-top: 20px;
   font-weight: 400;
+  margin-bottom: 20px;
 }
+
 .headerHeading {
   font-family: 'Montserrat';
   font-style: normal;
@@ -66,6 +68,9 @@
   line-height: 156px;
   color: #ffffff;
   text-shadow: 4px 8px 0px #000000;
+}
+.pass-img{
+  margin-top: 50px;
 }
 .headingk {
   font-family: 'Montserrat';
@@ -76,7 +81,7 @@
   height: 110px;
   margin: 0px;
   margin-bottom: 68px;
-  margin-top: 42px;
+  margin-top: 0px;
   color: #ffffff;
   display: flex;
   justify-content: center;
@@ -92,6 +97,7 @@
   width: 95vw;
   margin-top: 10px;
   margin-left: 40px;
+  margin-bottom: 80px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -112,6 +118,29 @@
   width: 40vw;
   right: 40px;
 }
+.pass-btn {
+  display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 36px;
+    gap: 4px;
+    position: relative;
+    width: 200px;
+    font-weight: 700;
+    top: 20px;
+    height: 57px;
+    margin: auto;
+    background: #F2FF00;
+    border: 1px solid #000000;
+    box-shadow: 4px 6px 0px #000000;
+    border-radius: 4px;
+}
+.pass-btn:hover {
+  transform: translate(4px, 6px);
+  box-shadow: 0px 0px 0px;
+}
+
 .cart-card {
   width: 300px;
 }
@@ -225,6 +254,29 @@ hr {
   transform: scale(2);
 }
 @media screen and (max-width: 900px) {
+  .pass-btn {
+    display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 12px 36px;
+      gap: 4px;
+      position: relative;
+      width: 200px;
+      font-weight: 700;
+      top: -5px;
+      height: 57px;
+      margin: auto;
+      background: #F2FF00;
+      border: 1px solid #000000;
+      box-shadow: 4px 6px 0px #000000;
+      border-radius: 4px;
+      margin-bottom: 50px;
+  }
+  .pass-btn:hover {
+    transform: translate(4px, 6px);
+    box-shadow: 0px 0px 0px;
+  }
   .cart-container {
     width: 260px;
   }
@@ -333,6 +385,10 @@ hr {
   }
   .headerImg{
     width: 10%;
+  }
+  
+  .check {
+    padding-left:  0px !important;
   }
 }
 
