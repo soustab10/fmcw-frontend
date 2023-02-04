@@ -1,12 +1,12 @@
 const Sponsors = [
   {
     title: 'Design partner',
-    img: 'Huion.svg',
+    img: process.env.REACT_APP_AWS_S3_URI + '/Huion.svg',
     name: 'Huion',
   },
   {
     title: 'Bath and Body partner',
-    img: 'plum_bodylovin.webp',
+    img: process.env.REACT_APP_AWS_S3_URI + '/plum_bodylovin.webp',
     name: 'Plum BodyLovin'
   }
   // {
