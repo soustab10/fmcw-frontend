@@ -39,7 +39,6 @@ function PassCard(props) {
         'Content-Type': 'application/json'
       }
     });
-    // console.log({ obj });
 
     // alert('Item added to cart successfully!');
     window.setTimeout(function () {
