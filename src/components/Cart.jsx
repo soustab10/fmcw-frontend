@@ -516,7 +516,7 @@ function Cart(props) {
                 <><p>
                     Just one more step to go. Complete your transaction and be part of FMC Weekend’23.
                     Fill out the form and get yourself registred for the events.
-                  </p><a href="https://forms.gle/tWiE4X1NjajsYMMEA" target='_blank' className='form-link'>Google Form</a></>
+                  </p><a href="http://shorturl.at/bsyLV" target='_blank' className='form-link'>Google Form</a></>
               ) : (
                 
               
