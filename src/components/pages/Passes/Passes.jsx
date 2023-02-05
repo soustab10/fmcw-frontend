@@ -83,30 +83,7 @@ function Pass(props) {
         <div className="pass-img">
           <img src="passesimgmain.svg" alt="" />
         </div>
-        <section className="accomodation">
-          <div className="passes-content-2">
-            <h1 className='passes-content-header'>Do you want accommodation provided by us? </h1>
-            <p>
-              We will provide you our great hospitality including food at our college hostels along
-              with our cool FMC Weekend ‘23 merchandise as a souvenir at minimal price of Rs.800.
-              Stay and explore the fest with us and leave your minds in wonder.
-            </p>
-          </div>
-          <div className="pass-img-1">
-            <img src="Group7320.svg" alt="" />
-          </div>
-          <div className="check">
-            <input
-              type="checkbox"
-              id="accodCheck"
-              className="checkbox"
-              name="check"
-              autoComplete="off"
-              onChange={handleChange}
-            />
-            <span>Yes, I'm interested</span>
-          </div>
-        </section>
+
         <div className="headingk">
           <img src="/images/yellowStar.svg" className="headingImg" />
           OFFLINE
