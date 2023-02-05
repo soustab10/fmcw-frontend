@@ -45,7 +45,7 @@ const Heading = styled.div`
     span {
       font-size: 50px;
       text-shadow: 3px 4px 0px #000000;
-      top : 15%
+      top: 15%;
     }
     img {
       max-width: 70px;
@@ -85,8 +85,10 @@ const Sponsors1 = () => {
       </div> */}
       {/* {console.log(SponsorData.name)} */}
       <div className="flex justify-center flex-col w-screen h-96 max-[640px]:h-64">
+
         <h1 className="text-4xl font-bold text-center mt-3 mb-6 uppercase max-[640px]:text-2xl">Title Sponsor</h1>
         <div className="lg:ml-96 lg:mr-96 sm:ml-10 sm:mr-10 flex justify-center ">
+
           <Fade left>
             <img
               src={process.env.REACT_APP_AWS_S3_URI + '/fujifilm.svg'}
@@ -99,13 +101,15 @@ const Sponsors1 = () => {
       {/* <hr className=" border border-black border-solid w-screen font-bold border-spacing-8" /> */}
       <div className=" border-solid border-2 mt-6 mb-1 w-screen border-black"></div>
       <div className="flex justify-center flex-col w-screen h-96 max-[640px]:h-64">
-        <h1 className="text-4xl font-bold text-center mt-3 uppercase max-[640px]:text-2xl">Powered By</h1>
+        <h1 className="text-4xl font-bold text-center mt-3 uppercase max-[640px]:text-2xl">
+          Co-Title Sponsor
+        </h1>
         <div className="lg:ml-96 lg:mr-96 sm:ml-10 sm:mr-10 flex justify-center">
           <Fade left>
             <img
-              src={process.env.REACT_APP_AWS_S3_URI + '/Kalakari.svg'}
+              src={process.env.REACT_APP_AWS_S3_URI + '/Lapcare.svg'}
               alt=""
-              className="text-center h-80 pt-6 pb-0"
+              className="text-center p-10 h-64"
             />
           </Fade>
         </div>
@@ -113,26 +117,30 @@ const Sponsors1 = () => {
       <div className=" border-solid border-2 mt-6 w-screen border-black"></div>
       <div class="flex justify-center w-screen h-72 max-[640px]:h-56">
         <div class="flex-1  border-r border-black">
-          <h1 className="text-4xl font-bold text-center mt-3 uppercase max-[640px]:text-2xl">Co-Powered By</h1>
+          <h1 className="text-4xl font-bold text-center mt-3 uppercase max-[640px]:text-2xl">
+            Powered By
+          </h1>
           <div className="object-contain flex justify-center align-middle">
             <Fade left>
               <img
-                src={process.env.REACT_APP_AWS_S3_URI + '/Lapcare.svg'}
+                src={process.env.REACT_APP_AWS_S3_URI + '/Kalakari.svg'}
                 alt=""
-                className="text-center p-10 h-64"
+                className="text-center p-6 h-56"
               />
             </Fade>
           </div>
         </div>
         <div class=" flex-1  border-l border-black">
-          <h1 className="text-4xl font-bold text-center mt-3 uppercase max-[640px]:text-2xl">Co-Powered By</h1>
+          <h1 className="text-4xl font-bold text-center mt-3 uppercase max-[640px]:text-2xl">
+            Co-Powered By
+          </h1>
           <div className="object-contain flex justify-center align-middle">
             <Fade left>
-            <img
-              src={process.env.REACT_APP_AWS_S3_URI + '/quillbot.svg'}
-              alt=""
-              className="text-center p-10 h-56"
-            />
+              <img
+                src={process.env.REACT_APP_AWS_S3_URI + '/quillbot.svg'}
+                alt=""
+                className="text-center p-10 h-56"
+              />
             </Fade>
           </div>
         </div>

@@ -44,22 +44,18 @@ function PassCard(props) {
     window.setTimeout(function () {
       location.reload();
     }, 1000);
-    
 
     // post not working because status isn't upadated in data.js;
 
     //only for show purposed
     // window.location.href = "/register";
   }
-    const checkbox = document.getElementById('accodCheck');
-    // if()
+  const checkbox = document.getElementById('accodCheck');
+  // if()
   return (
     <Fade left>
       <section className="pass-card">
-        <img
-          src={sessionStorage.getItem('checked') ? props.img1 : props.img2}
-          className="pass_card"
-        />
+        <img src={props.img2} className="pass_card" />
 
         <div
           className="pass-btn"
