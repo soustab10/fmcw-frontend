@@ -94,7 +94,7 @@ function Cart(props) {
       amount: paymentAmount,
       transactionID: document.getElementById('ref').value
     };
-
+    try {
     const mailData = await fetch(process.env.REACT_APP_BACKEND_URI + '/api/send-mail', {
       method: 'POST',
       body: JSON.stringify(obj),
@@ -102,16 +102,21 @@ function Cart(props) {
         'Content-Type': 'application/json'
       }
     });
-
-    window.setTimeout(function () {
-      location.reload();
-    }, 1000);
-    toast.warn('Event added to cart successfully!', {
-      position: 'top-center',
-      autoClose: 3000,
-      draggable: true,
-      icon: false
-    });
+    const data = await mailData.json();
+  }
+  catch (e) {
+    console.log(e);
+    alert('Error with authentication, login again');
+  }
+    // window.setTimeout(function () {
+    //   location.reload();
+    // }, 1000);
+    // toast.warn('Event added to cart successfully!', {
+    //   position: 'top-center',
+    //   autoClose: 3000,
+    //   draggable: true,
+    //   icon: false
+    // });
 
     //ToDo: You just have to make an API request to /api/send-mail to send the email to the user with the details of the
     // event they have booked and the total payment amount
@@ -502,83 +507,85 @@ function Cart(props) {
           className="payment-modal">
           <Box>
             <div className="back"></div>
-
+            
             <form className="container">
               <h2>Checkout</h2>
-              <p>
-                Just one more step to go. Complete your transaction and be part of FMC Weekend’23.
-              </p>
-              <img src="Star.png" className="star3" />
-              <img src="qr_fmc.jpeg" className="qr" />
-              <div className="text">
-                <label htmlFor="name" className="input-title">
-                  <b>Name</b>
-                </label>
-                <input
-                  className="register-input"
-                  value={sessionStorage.getItem('name')}
-                  type="text"
-                  id="name"
-                  placeholder="Name"
-                  required
-                />
-                <hr />
-                <label htmlFor="email" className="input-title">
-                  <b>Email ID</b>
-                </label>
-                <input
-                  className="register-input"
-                  value={sessionStorage.getItem('email')}
-                  type="email"
-                  id="email"
-                  placeholder="Email"
-                  required
-                />
-                <hr />
-                <label htmlFor="phone" className="input-title">
-                  <b>Phone No</b>
-                </label>
-                <input
-                  className="register-input"
-                  type="tel"
-                  id="phone"
-                  placeholder="Contact Number"
-                  required
-                  pattern="^[0-9]{10,10}$"
-                />
-                <label htmlFor="transactionID" className="input-title">
-                  <b>Transaction ID</b>
-                </label>
-                <input
-                  className="register-input"
-                  type="text"
-                  id="ref"
-                  placeholder="Transaction ID/Ref No"
-                  required
-                  pattern="^[0-9]{12,12}$"
-                />
-                <br></br>
-                <label htmlFor="cart-amount">
-                  <h3 className="price-info">
-                    Total Price = ₹{' '}
-                    {sessionStorage.getItem('email').endsWith('@iitbhu.ac.in') ||
-                    sessionStorage.getItem('email').endsWith('@itbhu.ac.in')
-                      ? 0
-                      : paymentAmount.toFixed(2)}{' '}
-                  </h3>
-                </label>
-              </div>
+              
               {sessionStorage.getItem('email').endsWith('@iitbhu.ac.in') ||
               sessionStorage.getItem('email').endsWith('@itbhu.ac.in') ? (
-                ''
+                <><p>
+                    Just one more step to go. Complete your transaction and be part of FMC Weekend’23.
+                    Fill out the form and get yourself registred for the events.
+                  </p><a href="https://forms.gle/tWiE4X1NjajsYMMEA" target='_blank' className='form-link'>Google Form</a></>
               ) : (
-                <button
-                  type="submit"
-                  onClick={checkoutHandler}
-                  name="registor-button"
-                  className="register-btn submit">
-                  Submit
-                </button>
+                
+              
+              <><p>
+                    Just one more step to go. Complete your transaction and be part of FMC Weekend’23.
+                  </p><img src="Star.png" className="star3" /><img src="qr_fmc.jpeg" className="qr" /><div className="text">
+                      <label htmlFor="name" className="input-title">
+                        <b>Name</b>
+                      </label>
+                      <input
+                        className="register-input"
+                        value={sessionStorage.getItem('name')}
+                        type="text"
+                        id="name"
+                        placeholder="Name"
+                        required />
+                      <hr />
+                      <label htmlFor="email" className="input-title">
+                        <b>Email ID</b>
+                      </label>
+                      <input
+                        className="register-input"
+                        value={sessionStorage.getItem('email')}
+                        type="email"
+                        id="email"
+                        placeholder="Email"
+                        required />
+                      <hr />
+                      <label htmlFor="phone" className="input-title">
+                        <b>Phone No</b>
+                      </label>
+                      <input
+                        className="register-input"
+                        type="tel"
+                        id="phone"
+                        placeholder="Contact Number"
+                        required
+                        pattern="^[0-9]{10,10}$" />
+                      {sessionStorage.getItem('email').endsWith('@iitbhu.ac.in') ||
+                        sessionStorage.getItem('email').endsWith('@itbhu.ac.in') ? (
+                        ''
+                      ) : (
+                        <><label htmlFor="transactionID" className="input-title">
+                          <b>UTR No.</b>
+                        </label><input
+                            className="register-input"
+                            type="text"
+                            id="ref"
+                            placeholder="UTR No."
+                            required
+                            pattern="^[0-9]{12,12}$" /></>
+                      )}
+                      <br></br>
+                      <label htmlFor="cart-amount">
+                        <h3 className="price-info">
+                          Total Price = ₹{' '}
+                          {sessionStorage.getItem('email').endsWith('@iitbhu.ac.in') ||
+                            sessionStorage.getItem('email').endsWith('@itbhu.ac.in')
+                            ? 0
+                            : paymentAmount.toFixed(2)}{' '}
+                        </h3>
+                      </label>
+                    </div><button
+                      type="submit"
+                      onClick={checkoutHandler}
+                      name="registor-button"
+                      className="register-btn submit">
+                      Submit
+                    </button></>
               )}
               <img src="Cube.svg" className="cube1" />
             </form>
@@ -629,14 +636,10 @@ function Cart(props) {
         <div className="purchase_details">
           <div className="checkout_button2">
             {/* <CheckoutButton onClick={handleOpen}>CHECKOUT</CheckoutButton>*/}
-            {sessionStorage.getItem('email').endsWith('@iitbhu.ac.in') ||
-            sessionStorage.getItem('email').endsWith('@itbhu.ac.in') ? (
-              ''
-            ) : (
+            
               <button className="checkoutBtn" onClick={handleOpen}>
                 <p>CHECKOUT</p>
               </button>
-            )}
           </div>
           {/* <h3>Total Items: ({cartItems.length})</h3> */}
           <div className="cost">
