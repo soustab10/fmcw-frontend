@@ -18,9 +18,11 @@ function SponsorCard(props) {
       <div id="sponsor-card" options={options}>
         {/* {console.log(props)} */}
         <h3 id="cardTitle">{props.title}</h3>
+        <a href={props.link} target="_blank">
           <div className="cardImg">
             <img src={props.img} alt="" />
           </div>
+        </a>
       </div>
     </Fade>
   );

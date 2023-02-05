@@ -29,11 +29,14 @@ function Glimps() {
       <section className={styles.section1}>
       
       <div className={styles.line}></div>
+      
+    <Fade bottom>
       {data.glimpsesData.map((item, index) => {
         return (
-        <GlimpsesCard key={index} year={item.year} img={item.img} content={item.content} marginTop={item.marginTop} float={item.float} yearCol={item.yearCol} />
+        <GlimpsesCard key={index} year={item.year} img={item.img} imgfloat={item.imgfloat} content={item.content} marginTop={item.marginTop} float={item.float} yearCol={item.yearCol} />
         )
       })}
+      </Fade>
       </section>
       <Footer className={styles.footer1} />
     </>

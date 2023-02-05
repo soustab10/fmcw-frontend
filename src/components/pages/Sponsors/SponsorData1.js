@@ -3,11 +3,13 @@ const Sponsors = [
     title: 'Design partner',
     img: process.env.REACT_APP_AWS_S3_URI + '/Huion.svg',
     name: 'Huion',
+    link: 'https://www.huion.com'
   },
   {
     title: 'Bath and Body partner',
     img: process.env.REACT_APP_AWS_S3_URI + '/plum_bodylovin.webp',
-    name: 'Plum BodyLovin'
+    name: 'Plum BodyLovin',
+    link: 'https://plumgoodness.com/pages/bodylovin'
   }
   // {
   //   title: 'Crypto Trading  Partner',

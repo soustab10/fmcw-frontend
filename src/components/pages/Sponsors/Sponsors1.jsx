@@ -90,11 +90,13 @@ const Sponsors1 = () => {
         <div className="lg:ml-96 lg:mr-96 sm:ml-10 sm:mr-10 flex justify-center ">
 
           <Fade left>
+            <a href="https://www.instax.in/" target="_blank">
             <img
               src={process.env.REACT_APP_AWS_S3_URI + '/fujifilm.svg'}
               alt=""
               className="text-center pt-6 pb-0 h-60 p-4"
             />
+            </a>
           </Fade>
         </div>
       </div>
@@ -106,11 +108,13 @@ const Sponsors1 = () => {
         </h1>
         <div className="lg:ml-96 lg:mr-96 sm:ml-10 sm:mr-10 flex justify-center">
           <Fade left>
+            <a href="https://www.lapcare.com" target="_blank">
             <img
               src={process.env.REACT_APP_AWS_S3_URI + '/Lapcare.svg'}
               alt=""
               className="text-center p-10 h-64"
             />
+            </a>
           </Fade>
         </div>
       </div>
@@ -122,11 +126,13 @@ const Sponsors1 = () => {
           </h1>
           <div className="object-contain flex justify-center align-middle">
             <Fade left>
+              <a href="https://www.rishinikam-kalakari.com/" target="_blank">
               <img
                 src={process.env.REACT_APP_AWS_S3_URI + '/Kalakari.svg'}
                 alt=""
                 className="text-center p-6 h-56"
               />
+              </a>
             </Fade>
           </div>
         </div>
@@ -136,11 +142,13 @@ const Sponsors1 = () => {
           </h1>
           <div className="object-contain flex justify-center align-middle">
             <Fade left>
+              <a href="https://quillbot.com/" target="_blank">
               <img
                 src={process.env.REACT_APP_AWS_S3_URI + '/quillbot.svg'}
                 alt=""
                 className="text-center p-10 h-56"
               />
+              </a>
             </Fade>
           </div>
         </div>
@@ -148,7 +156,7 @@ const Sponsors1 = () => {
       <div className=" border-solid border-2 w-screen border-black"></div>
       <div className="flex w-screen flex-wrap justify-center p-4">
         {SponsorData.map((sponsor) => {
-          return <Card img={sponsor.img} title={sponsor.title} />;
+          return <Card img={sponsor.img} title={sponsor.title} link={sponsor.link} />;
         })}
       </div>
       <div className=" border-solid border-2 w-screen border-black"></div>
