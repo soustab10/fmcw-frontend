@@ -560,12 +560,12 @@ function Cart(props) {
                         ''
                       ) : (
                         <><label htmlFor="transactionID" className="input-title">
-                          <b>UTR No.</b>
+                          <b>Transaction ID/UTR No.</b>
                         </label><input
                             className="register-input"
                             type="text"
                             id="ref"
-                            placeholder="UTR No."
+                            placeholder="Transaction ID/UTR No."
                             required
                             pattern="^[0-9]{12,12}$" /></>
                       )}
