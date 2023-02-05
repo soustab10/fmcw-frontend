@@ -1,4 +1,4 @@
-import React, { useState , useEffect , useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { IconContext } from 'react-icons';
 import UpArrow from '../../UpArrowFaq.svg';
@@ -23,7 +23,6 @@ const AccordionSection = styled.div`
   @media (max-width: 768px) {
     height: 320vh;
   }
-
 `;
 
 const Container = styled.div`
@@ -46,7 +45,7 @@ const Heading = styled.div`
   border: 3px solid #000000;
   display: flex;
   justify-content: center;
-  h1{
+  h1 {
     padding: 15px;
     font-size: 60px;
     text-align: center;
@@ -64,19 +63,19 @@ const Heading = styled.div`
     position: relative;
     top: 30%;
   }
-  span{
-    top : 13%;
+  span {
+    top: 13%;
   }
   @media (max-width: 768px) {
-      height: 15vh;
-      span {
-        font-size: 50px;
-        text-shadow: 3px 4px 0px #000000;
-      }
-      img {
-        max-width : 70px;
-        top: 23%; 
-      }
+    height: 15vh;
+    span {
+      font-size: 50px;
+      text-shadow: 3px 4px 0px #000000;
+    }
+    img {
+      max-width: 70px;
+      top: 23%;
+    }
   }
 `;
 
@@ -122,9 +121,9 @@ const Dropdown = styled.div`
 function Accordion() {
   const ref_container = useRef();
   useEffect(() => {
-    const scrollDiv = document.getElementById("header").offsetTop;
-    window.scrollTo({top : scrollDiv-200 , behavior : "smooth"});
-  }, [])
+    const scrollDiv = document.getElementById('header').offsetTop;
+    window.scrollTo({ top: scrollDiv - 200, behavior: 'smooth' });
+  }, []);
   const [clicked, setClicked] = useState(false);
 
   const toggle = (index) => {
@@ -172,12 +171,22 @@ function Accordion() {
                       {item.question}
                     </h1>
                   </div>
-                  <Fade bottom><span style={{ fontFamily: 'Montserrat', fontStyle: 'normal' }}>
-                    {clicked === index ? <img src={UpArrow} style={{maxWidth: "max-content"}} /> : <img style={{maxWidth: "max-content"}} src={DownArrow} />}
-                  </span>
+                  <Fade bottom>
+                    <span style={{ fontFamily: 'Montserrat', fontStyle: 'normal' }}>
+                      {clicked === index ? (
+                        <img src={UpArrow} style={{ maxWidth: 'max-content' }} />
+                      ) : (
+                        <img style={{ maxWidth: 'max-content' }} src={DownArrow} />
+                      )}
+                    </span>
                   </Fade>
                 </Wrap>
-                <hr style={{ color: 'black',  marginTop: '30px', border: '0.25px solid #000000' }}></hr>
+                <hr
+                  style={{
+                    color: 'black',
+                    marginTop: '30px',
+                    border: '0.25px solid #000000'
+                  }}></hr>
                 {clicked === index ? (
                   <Fade bottom>
                     <Dropdown>
