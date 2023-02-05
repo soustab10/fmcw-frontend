@@ -9,11 +9,6 @@ export const Data = [
     answer:
       'FMC Weekend offers a variety of pocket-friendly passes for attending stimulating workshops and participating in exciting events!'
   },
-  {
-    question: 'Is it possible to take part in events from different genres?',
-    answer:
-      'Yes, you can take part in all the events that you want. If you are interested in multiple events, we would suggest you to make a total purchase higher than 699, which gives you access to the entire fest, including all the events and workshops. And also makes you eligible for 10% off on your entire bill'
-  },
 
   {
     question: 'Who will be taking the workshop?',
