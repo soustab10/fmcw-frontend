@@ -443,7 +443,7 @@ const data = {
       link: 'https://drive.google.com/file/d/1ypZkoyI1x3Es-zCTiT0jytmZTazSXmNp/view?usp=sharing',
       price: 399,
       name: 'Rashmi Chadha',
-      date: '12th January',
+      date: '12th February',
       time: '4:00 p.m. - 5:00 p.m.',
       desc: `Storytelling can help to make complex ideas more accessible and easy to understand and can be used to create a powerful emotional connection with an audience. It can also help to create a vision for the future and inspire people to take action. A compelling story from history can really grab people’s attention Learn from the pros and use these proven methods they use to share your own stories more compellingly.`
     },
@@ -509,7 +509,7 @@ const data = {
       link: 'https://drive.google.com/file/d/1ypZkoyI1x3Es-zCTiT0jytmZTazSXmNp/view?usp=sharing',
       price: 399,
       name: 'Amitabha Singh',
-      date: '11th January',
+      date: '11th February',
       time: '11:00 a.m. - 12:00 p.m.',
       desc: `Amitabha Singh is a National Award Winning Cinematographer. The 2013 Gujarati Film-'The Good Road' in which he was the cinematographer also became the first Gujarat film to represent India at the Oscars! His social endeavour-Cinevidya conducts nationwide film festivals and workshops to cater children and individuals inclination to learn about the magical medium of films, by following his motto-"Cinema for Life".`
     },
@@ -539,7 +539,7 @@ const data = {
     //   link: 'https://drive.google.com/file/d/1ypZkoyI1x3Es-zCTiT0jytmZTazSXmNp/view?usp=sharing',
     //   price: 249,
     //   name: 'Shubhangi Raheja',
-    //   date: '10th January',
+    //   date: '10th February',
     //   time: '5:00 p.m. - 6:00 p.m.',
     //   desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. '
     // },
@@ -555,7 +555,7 @@ const data = {
       link: 'https://drive.google.com/file/d/1ypZkoyI1x3Es-zCTiT0jytmZTazSXmNp/view?usp=sharing',
       price: 399,
       name: 'Shubhangi Raheja',
-      date: '10th January',
+      date: '10th February',
       time: '2:30 p.m. - 3:30 p.m.',
       desc: `NFTs are the new black and Digital 3D is the new dimension! Had a blast learning about the future of art and collectibles 🎨💻
       Join the NFT revolution and unleash your digital creativity! 
@@ -611,7 +611,7 @@ const data = {
       link: 'https://drive.google.com/file/d/1ypZkoyI1x3Es-zCTiT0jytmZTazSXmNp/view?usp=sharing',
       price: 399,
       name: 'Aman Bhatia',
-      date: '12th January',
+      date: '12th February',
       time: '2:03 p.m. - 3:30 p.m.',
       desc: `Animation, vfx and videography could be an uphill task, but following one's passion and determined to do big in it is one's choice and decision. A big name in Animation and Vfx, Aman Bhatia has followed his heart and has become a highly popular Youtuber, thanks to his witty humor and animating skills.Want to unravel the mysteries behind a great animation and unbelievable vfx!`
     },
