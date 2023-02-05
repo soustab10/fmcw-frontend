@@ -43,7 +43,7 @@
   margin: 30px;
 }
 .passes-content h1 {
-  font-family: Montserrat;
+  font-family: 'Montserrat';
   font-size: 3.5em;
   font-weight: 600;
   line-height: 51px;
@@ -54,12 +54,36 @@
   text-align: left;
   color: #000;
   font-size: 2em;
-  font-family: Nunito Sans;
+  font-family: 'Manrope';
   margin-top: 20px;
   font-weight: 400;
   margin-bottom: 20px;
 }
-
+.accomodation {
+  background: #685EDA;
+}
+.passes-content-2 {
+  text-align: left;
+  width: 60vw;
+  padding: 100px;
+  margin: 30px;
+}
+.passes-content-2 h1 {
+  font-family: 'Montserrat';
+  font-size: 3.5em;
+  font-weight: 600;
+  line-height: 51px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.passes-content-2 p {
+  text-align: left;
+  color: #000;
+  font-size: 2em;
+  font-family: 'Manrope';
+  margin-top: 20px;
+  font-weight: 400;
+}
 .headerHeading {
   font-family: 'Montserrat';
   font-style: normal;
@@ -140,14 +164,41 @@
   transform: translate(4px, 6px);
   box-shadow: 0px 0px 0px;
 }
-
+.check {
+  margin: auto;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  color: #FFEA00;
+  font-weight: 600;
+  font-size: 2em;
+  font-family: 'Montserrat';
+  padding: 30px 30px;
+}
+.check .checkbox {
+  background-color: #fcc907;
+  width: 50px;
+  height: 26px;
+  margin-left: 90px;
+  position: relative;
+}
+.accomodation .pass-img-1 {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  position: absolute;
+  padding: 30px;
+  top: 1000px;
+  width: 40vw;
+  right: 20px;
+}
 .cart-card {
   width: 300px;
 }
 .price-data {
   position: absolute;
   color: #fcc907;
-  font-family: Nunito Sans;
+  font-family: 'Manrope';
   bottom: 5px;
   font-family: 2em;
   display: flex;
@@ -176,7 +227,7 @@
   position: absolute;
   top: 220px;
   right: 1%;
-  font-family: Marcellus;
+  font-family: 'Manrope';
 }
 .payment-modal {
   width: 90vw;
@@ -186,7 +237,7 @@
 .add-more-cards span {
   font-size: 4em;
   margin: 0 auto;
-  font-family: Marcellus;
+  font-family: 'Manrope';
   display: flex;
   justify-content: center;
   align-items: center;
@@ -194,7 +245,7 @@
 .add-more-cards h3 {
   display: flex;
 
-  font-family: Marcellus;
+  font-family: 'Manrope';
   justify-content: center;
   align-items: center;
 }
@@ -313,6 +364,22 @@ hr {
     padding: 0;
     margin: auto;
   }
+  .passes-content-2 {
+    text-align: center;
+    width: 80vw;
+    padding: 0;
+    margin: auto;
+  }
+
+  .passes-content-2 h1 {
+    padding-top: 2.25rem;
+    line-height: 25px;
+    font-size: 2em;
+    text-align: left;
+  }
+  .passes-content-2 p {
+  font-size: 1.2em;
+  }
   .passes-page .pass-header {
     background: #ff8800;
     width: 100%;
@@ -348,7 +415,7 @@ hr {
     text-align: center;
     /* color: #fff; */
     font-size: 1.2em;
-    font-family: Marcellus;
+    font-family: 'Manrope';
     margin-top: 20px;
     width: 80vw;
     margin-bottom: 20px;
@@ -363,6 +430,18 @@ hr {
   }
   .pass-img img {
     width: 200px;
+  }
+  .check {
+    text-align: left;
+    font-size: 1.5em;
+    font-family: 'Montserrat';
+    padding: 30px 0px;
+  }
+  .check .checkbox {
+    background-color: #fcc907;
+    width: 40px;
+    height: 26px;
+    margin-left: 60px;
   }
   .checkout_button {
     display: flex;

@@ -375,7 +375,7 @@ border-radius: 4px;
 }
 .cart-btn:hover {
   /* border-color:#fcc907; */
-  box-shadow: 0px 0px 24px 0px rgba(255, 212, 48, 0.7);
+  /* box-shadow: 0px 0px 24px 0px rgba(255, 212, 48, 0.7); */
 }
 .fees {
   color: #fcc907;
@@ -479,6 +479,10 @@ border-radius: 4px;
   left: 0;
   top: -19px;
   margin-right: 50px;
+}
+.w-cart-2 {
+  margin-right: auto;
+  margin-left: auto;
 }
 #modal-modal-description p {
   font-family: Marcellus;

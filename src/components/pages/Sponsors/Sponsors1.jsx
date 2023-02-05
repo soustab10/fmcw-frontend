@@ -85,15 +85,15 @@ const Sponsors1 = () => {
       </div> */}
       {/* {console.log(SponsorData.name)} */}
       <div className="flex justify-center flex-col w-screen h-96 max-[640px]:h-64">
-        <h1 className="text-4xl font-bold text-center mt-3 mb-6 uppercase max-[640px]:text-2xl">
-          Title Sponsor
-        </h1>
-        <div className="lg:ml-96 lg:mr-96 sm:ml-10 sm:mr-10 flex justify-center">
+
+        <h1 className="text-4xl font-bold text-center mt-3 mb-6 uppercase max-[640px]:text-2xl">Title Sponsor</h1>
+        <div className="lg:ml-96 lg:mr-96 sm:ml-10 sm:mr-10 flex justify-center ">
+
           <Fade left>
             <img
               src={process.env.REACT_APP_AWS_S3_URI + '/fujifilm.svg'}
               alt=""
-              className="text-center pt-6 pb-0 h-60"
+              className="text-center pt-6 pb-0 h-60 p-4"
             />
           </Fade>
         </div>
