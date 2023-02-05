@@ -23,9 +23,6 @@ const AccordionSection = styled.div`
   @media (max-width: 768px) {
     height: 320vh;
   }
-  @media (max-width: 500px) {
-    height: 400vh;
-  }
 `;
 
 const Container = styled.div`

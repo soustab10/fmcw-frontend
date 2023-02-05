@@ -225,7 +225,7 @@ export default function VerticalTabs() {
             </Fade>
           </div>
           <div className="workshop-cards">
-            {/* {data.outreachWorkshopData.map((item, index) => {
+            {data.outreachWorkshopData.map((item, index) => {
               return (
                 <WorkshopCard
                   img={item.img}
@@ -241,7 +241,7 @@ export default function VerticalTabs() {
                   time={item.time}
                 />
               );
-            })} */}
+            })}
           </div>
         </div>
       </TabPanel>
@@ -323,7 +323,7 @@ export default function VerticalTabs() {
           </div>
 
           <div className="workshop-cards">
-            {/* {data.designWorkshopData.map((item, index) => {
+            {data.designWorkshopData.map((item, index) => {
               return (
                 <WorkshopCard
                   img={item.img}
@@ -340,7 +340,7 @@ export default function VerticalTabs() {
                   time={item.time}
                 />
               );
-            })} */}
+            })}
           </div>
         </div>
       </TabPanel>

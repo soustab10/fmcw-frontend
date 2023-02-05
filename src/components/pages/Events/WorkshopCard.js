@@ -250,7 +250,17 @@ function WorkshopCard(props) {
                   Add
                 </button>
               ) : (
-                <div>Login To Add</div>
+                <a
+                target="_blank"
+                href="/authentication"
+                rel="noreferrer">
+                <button
+                className="cart-btn-2"
+                style={{ background: props.color, border: `1px solid ${props.color}`, width: `fit-content` }}
+                >
+                  Login to Add
+              </button>
+              </a>
               )}
             </div>
           </Typography>

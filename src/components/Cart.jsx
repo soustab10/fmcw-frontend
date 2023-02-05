@@ -121,19 +121,16 @@ function Cart(props) {
   let paymentAmount = 0;
   for (const item of cartItems) {
     if (item.verifyStatus == false) {
-      if (item.Type === 'Pass' && localStorage.getItem('checked')) {
+      if (item.Type === 'Pass' && isChecked) {
         paymentAmount += item.price2;
-      } else if (item.Type === 'Pass' && !localStorage.getItem('checked')) {
-        paymentAmount += item.price2;
+      } else if (item.Type === 'Pass' && !isChecked) {
+        paymentAmount += item.price1;
       }
       else {
       paymentAmount += item.price;
       }
     } else if (item.verifyStatus == true) {
       checkoutHandler();
-    }
-    if (paymentAmount >= 699) {
-      paymentAmount = paymentAmount * 0.9;
     }
   }
 
