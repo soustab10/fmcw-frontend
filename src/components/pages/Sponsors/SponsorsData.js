@@ -4,20 +4,8 @@ const sponsors = [
     img: process.env.REACT_APP_AWS_S3_URI + '/Picsarttitlesponsor.png'
   },
   {
-    id: 3,
-    img: process.env.REACT_APP_AWS_S3_URI + '/LAPCARE.png'
-  },
-  {
     id: 4,
     img: process.env.REACT_APP_AWS_S3_URI + '/Tickertape.png'
-  },
-  {
-    id: 5,
-    img: process.env.REACT_APP_AWS_S3_URI + '/Amarujala.png'
-  },
-  {
-    id: 6,
-    img: process.env.REACT_APP_AWS_S3_URI + '/Billionbooks.png'
   },
   {
     id: 7,
