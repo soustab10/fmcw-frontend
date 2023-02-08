@@ -6,7 +6,9 @@ import rightStar from '../../rightStar.png';
 import Footer from '../../Footer';
 import first from './1.svg';
 import second from './2.svg';
+import GlimpsesCard from './GlimpsesCard';
 import third from './3.svg';
+import data from './GlimpsesData'
 
 function Glimps() {
   return (
@@ -24,24 +26,19 @@ function Glimps() {
           </Fade>
         </div>
       </div>
-      <div>
-        <div>
-          <Fade left>
-            <img className={styles.line} src={first}></img>
-          </Fade>
-        </div>
-        <div>
-          <Fade right>
-            <img className={styles.line} src={second}></img>
-          </Fade>
-        </div>
-        <div>
-          <Fade left>
-            <img className={styles.line} src={third}></img>
-          </Fade>
-        </div>
-      </div>
-      <Footer />
+      <section className={styles.section1}>
+      
+      <div className={styles.line}></div>
+      
+    <Fade bottom>
+      {data.glimpsesData.map((item, index) => {
+        return (
+        <GlimpsesCard key={index} year={item.year} img={item.img} imgfloat={item.imgfloat} content={item.content} marginTop={item.marginTop} float={item.float} yearCol={item.yearCol} />
+        )
+      })}
+      </Fade>
+      </section>
+      <Footer className={styles.footer1} />
     </>
   );
 }
