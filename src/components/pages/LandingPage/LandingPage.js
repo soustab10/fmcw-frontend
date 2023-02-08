@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import React, { useState, useEffect , useRef} from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Section from './Section/Section';
 import Classes from './LandingPage.module.css';
 import Footer from '../../Footer';
@@ -31,16 +31,23 @@ function landingPage() {
   const [counterOn, setCounterOn] = useState(false);
   const [button, setButton] = useState(true);
   const [visits, setVisits] = useState(0);
+  const [isShown, setIsShown] = useState(false);
+  const [isShown2, setIsShown2] = useState(false);
 
-
+  const modalState = () => {
+    setIsShown((current) => !current);
+  };
+  const modalState2 = () => {
+    setIsShown2((current) => !current);
+  };
 
   var xhr = new XMLHttpRequest();
-xhr.open("GET", "https://api.countapi.xyz/hit/www.fmcweekend.in/visits");
-xhr.responseType = "json";
-xhr.onload = function() {
+  xhr.open('GET', 'https://api.countapi.xyz/hit/www.fmcweekend.in/visits');
+  xhr.responseType = 'json';
+  xhr.onload = function () {
     document.getElementById('visits').innerText = this.response.value;
-}
-xhr.send();
+  };
+  xhr.send();
 
   const showButton = () => {
     if (window.innerWidth > 960) {
@@ -52,10 +59,10 @@ xhr.send();
 
   const ref_container = useRef();
   useEffect(() => {
-    const scrollDiv = document.getElementById("header").offsetTop;
-    window.scrollTo({top : scrollDiv-200 , behavior : "smooth"});
+    const scrollDiv = document.getElementById('header').offsetTop;
+    window.scrollTo({ top: scrollDiv - 200, behavior: 'smooth' });
     showButton();
-  }, [])
+  }, []);
 
   const logoutHandler = () => {
     sessionStorage.clear();
@@ -68,7 +75,7 @@ xhr.send();
       <div id="header" ref_container={useRef}>
         <div className={Classes.div1}>
           <Fade bottom>
-          <img src="fmctextlogo.png" alt="logo" className={Classes.div1_logo} />
+            <img src="fmctextlogo.png" alt="logo" className={Classes.div1_logo} />
             <h1 className={Classes.div1_heading}>A Fest for </h1>
             <h1 className={Classes.div1_headanime}>
               <Typewriter
@@ -88,8 +95,12 @@ xhr.send();
               </button>
             </a>
             {/* </Link> */}
-            <img src={process.env.REACT_APP_AWS_S3_URI + '/HeroAnim1.gif'} className={Classes.div1_img} alt="hero animation"/>;
-            {/* <img src="0001-0210.gif" className={Classes.div1_img} /> */}
+            <img
+              src={process.env.REACT_APP_AWS_S3_URI + '/HeroAnim1.gif'}
+              className={Classes.div1_img}
+              alt="hero animation"
+            />
+            ;{/* <img src="0001-0210.gif" className={Classes.div1_img} /> */}
           </Fade>
         </div>
 
@@ -108,37 +119,36 @@ xhr.send();
             <h2>FROM FIELDS OF</h2>
             <section className={Classes.button_1}>
               <a href="/events/#vertical-tabpanel-4">
-              <button className={Classes.design}>
-                <p>Design</p>
-              </button>
-            </a>
-            <a href="/events/#photog">
-              <button className={Classes.photography}>
-                
-                <p>Photography</p>
-              </button>
+                <button className={Classes.design}>
+                  <p>Design</p>
+                </button>
+              </a>
+              <a href="/events/#photog">
+                <button className={Classes.photography}>
+                  <p>Photography</p>
+                </button>
               </a>
               <a href="/events/#vertical-tab-3">
-              <button className={Classes.media}>
-                <p>Media</p>
-              </button>
+                <button className={Classes.media}>
+                  <p>Media</p>
+                </button>
               </a>
             </section>
             <section className={Classes.button_2}>
-            <a href="/events/#vertical-tab-1">
-              <button className={Classes.cine}>
-                <p>Cinematography</p>
-              </button>
+              <a href="/events/#vertical-tab-1">
+                <button className={Classes.cine}>
+                  <p>Cinematography</p>
+                </button>
               </a>
               <a href="/events/#vertical-tab-5">
-              <button className={Classes.animation}>
-                <p>Animation</p>
-              </button>
+                <button className={Classes.animation}>
+                  <p>Animation</p>
+                </button>
               </a>
               <a href="/events/#vertical-tab-2">
-              <button className={Classes.outreach}>
-                <p>Outreach</p>
-              </button>
+                <button className={Classes.outreach}>
+                  <p>Outreach</p>
+                </button>
               </a>
             </section>
           </Fade>
@@ -146,7 +156,7 @@ xhr.send();
         <div className={Classes.eventBox}>
           <div className={Classes.div3}>
             <div className={Classes.banner1}>
-              <img src={winner1} alt=""/>
+              <img src={winner1} alt="" />
             </div>
             <Fade bottom>
               <h1 className={Classes.events}>COMPETITIONS</h1>
@@ -183,50 +193,61 @@ xhr.send();
           </div>
         </div>
         {/* FOR DYNAMIC DIGITS ON SCROLLING */}
-        
-          <div className={Classes.eventBox}>
-            <div className={Classes.div5}>
-              <div className={Classes.banner3}>
-                <img src={redcarpet}  alt="" />
-              </div>
 
-              <Fade bottom>
-                <h1 className={Classes.events}>PRONITES</h1>
-                <p className={Classes.events}>
-                  We present to you the most entertaining of nights, pronite! Where music meets the
-                  romantic, jokes meet the humour-lover, and entertainment meets all! Hold on to
-                  your seats as world-famous performers come to amuse you, and leave your minds in
-                  wonder in your very own FMC Weekend’s Pronite!{' '}
-                </p>
-
-                <button place>Coming soon</button>
-              </Fade>
+        <div className={Classes.eventBox}>
+          <div className={Classes.div5}>
+            <div className={Classes.banner3}>
+              <img src={redcarpet} alt="" />
             </div>
-            <div className={Classes.div6}>
-              <div className={Classes.banner4}>
-                <img src={banner4}  alt="" />
-              </div>
-              <Fade bottom>
-                <h1 className={Classes.events}>OPEN AIR THEATRES</h1>
-                <p className={Classes.events}>
-                  Gone are the days when the cinema would be just confined to 4 walls.
-                  Unconventional ways or Open-Air Theatres have made their way to us under the
-                  stars, cool breezes, and an undefined sense of freedom. Bringing you a step closer
-                  to these unconventional experiences, FMC Weekend presents to you a blockbuster
-                  screening event beneath the night sky.{' '}
-                </p>
 
-                <button place>Coming soon</button>
-              </Fade>
-            </div>
+            <Fade bottom>
+              <h1 className={Classes.events}>COMIC EVE</h1>
+              <p className={Classes.events}>
+              We present to you our most entertaining reprieve, Comic eve! Where jokes meet the humour-lover, and entertainment meets all! Hold on to your seats as world-famous performers come to amuse you, and leave your minds in wonder in your very own FMC Weekend’s Comic Eve!{' '}
+              </p>
+
+              <button place id="myBtn" onClick={modalState}>
+                Explore
+              </button>
+
+              <div className={Classes.modal} onClick={modalState} style={{ display: isShown ? 'block' : 'none' }}>
+                <div className={Classes.modalContent} >
+                  <img className={Classes.modalImage} src="comiceve.webp" />
+                </div>
+              </div>
+            </Fade>
           </div>
-          <ScrollTrigger onEnter={() => setCounterOn(true)} onExit={() => setCounterOn(false)}>
+          <div className={Classes.div6}>
+            <div className={Classes.banner4}>
+              <img src={banner4} alt="" />
+            </div>
+            <Fade bottom>
+              <h1 className={Classes.events}>OPEN AIR THEATRES</h1>
+              <p className={Classes.events}>
+                Gone are the days when the cinema would be just confined to 4 walls. Unconventional
+                ways or Open-Air Theatres have made their way to us under the stars, cool breezes,
+                and an undefined sense of freedom. Bringing you a step closer to these
+                unconventional experiences, FMC Weekend presents to you a blockbuster screening
+                event beneath the night sky.{' '}
+              </p>
+
+              <button place id="myBtn" onClick={modalState2}>
+                Explore
+              </button>
+
+              <div className={Classes.modal2} onClick={modalState2} style={{ display: isShown2 ? 'block' : 'none' }}>
+                <div className={Classes.modalContent2} >
+                  <img className={Classes.modalImage2} src="oat.webp" />
+                </div>
+              </div>
+            </Fade>
+          </div>
+        </div>
+        <ScrollTrigger onEnter={() => setCounterOn(true)} onExit={() => setCounterOn(false)}>
           <div className={Classes.div7}>
             <Fade right>
-            <h3>
-                Over
-              </h3>
-             <h1 id='visits'></h1>
+              <h3>Over</h3>
+              <h1 id="visits"></h1>
               <h2>
                 Creative enthusiasts visiting the fest, building a culture and community of digital
                 art

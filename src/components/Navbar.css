@@ -91,7 +91,7 @@ ul {
   top: -3px;
   color: #020202;
   left: 20px;
-  position: absolute;
+  /* position: absolute; */
 }
 
 .nav-links {
