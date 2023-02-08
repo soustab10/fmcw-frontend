@@ -11,7 +11,7 @@ function SponsorSection(props) {
     <div className={classes.sponsor_section}>
       <div className={classes.mssg}>
         <h2>
-          FMC Weekend’22 presents to you the core team members who along with their diligent team of
+          FMC Weekend’23 presents to you the core team members who along with their diligent team of
           sophomores, are making possible the conduction of this grand digital fiesta to enkindle
           the magic of creativity.
         </h2>
