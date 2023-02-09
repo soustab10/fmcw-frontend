@@ -48,7 +48,7 @@ const Sponsors = [
     link: 'https://thebelgianwaffle.co/location/uttar-pradesh/varanasi/'
   },
   {
-    title: 'Animation Partner',
+    title: 'Skill Partner',
     img: "ArenaAnimation.png",
     name: 'News Hamster',
     link: 'https://www.arena-multimedia.com/in/en/locate-a-centre/varanasi'
