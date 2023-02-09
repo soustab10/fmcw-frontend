@@ -69,11 +69,11 @@ function Authentication() {
       {/* <h1>Hello World!</h1> */}
 
       <img src={process.env.REACT_APP_AWS_S3_URI + '/Group_7265.svg'} alt="Auth Animation"/>
-      <div className={Classes.top}>Let's sign you in</div>
+      <div className={Classes.top}></div>
       <div className={Classes.top2}>
-        Register to become a part of India's Largest Digital Art Fest
+        Registration's are Closed
       </div>
-      <div className={Classes.authenticateButton}>
+      {/* <div className={Classes.authenticateButton}>
         <GoogleLogin
           clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}
           // buttonText={`${googleText}`}
@@ -84,7 +84,7 @@ function Authentication() {
           className={Classes.gButton}>
           <p>Sign in with Google</p>
         </GoogleLogin>
-      </div>
+      </div> */}
     </div>
   );
 }
