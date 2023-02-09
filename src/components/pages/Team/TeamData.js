@@ -226,7 +226,7 @@ const data = {
       id: 22,
       img: process.env.REACT_APP_AWS_S3_URI + '/Convenors/Siddharth.jpg',
       position: 'Co-Convenor',
-      name: 'Siddhart Verma'
+      name: 'Siddharth Kumar'
     }
   ],
   genSecData: [
