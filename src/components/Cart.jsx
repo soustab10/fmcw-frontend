@@ -637,9 +637,9 @@ function Cart(props) {
           <div className="checkout_button2">
             {/* <CheckoutButton onClick={handleOpen}>CHECKOUT</CheckoutButton>*/}
             
-              <button className="checkoutBtn" onClick={handleOpen}>
+              {/* <button className="checkoutBtn" onClick={handleOpen}>
                 <p>CHECKOUT</p>
-              </button>
+              </button> */}
           </div>
           {/* <h3>Total Items: ({cartItems.length})</h3> */}
           <div className="cost">
