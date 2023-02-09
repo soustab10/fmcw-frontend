@@ -8,6 +8,7 @@ import leftStar from '../../leftStar.png';
 import rightStar from '../../rightStar.png';
 import Footer from '../../Footer';
 import Classes from './Sponsors1.module.css';
+import { useRef , useEffect } from 'react';
 
 const Heading = styled.div`
   position: relative;
@@ -55,9 +56,14 @@ const Heading = styled.div`
 `;
 
 const Sponsors1 = () => {
+  const ref_container = useRef();
+  useEffect(() => {
+    const scrollDiv = document.getElementById("header").offsetTop;
+    window.scrollTo({top : scrollDiv-200 , behavior : "smooth"});
+  }, [])
   return (
-    <div className="bg-white ">
-      <div className="">
+    <div className="bg-white " id="header" ref_container={useRef}>
+      <div className="" >
         <Heading>
           <Fade right>
             {/* <img src='Group_7167.svg' /> */}
