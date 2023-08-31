@@ -44,10 +44,10 @@ function App() {
   return (
     <>
       <Router>
-        {/* <Navbar /> */}
+        <Navbar />
         <Switch>
-          {/* <Route path="/landing" exact component={Home} /> */}
-          {/* <Route path="/sign-up" component={SignUp} />;
+          <Route path="/landing" exact component={Home} />
+          <Route path="/sign-up" component={SignUp} />;
           <Route path="/events" exact component={events} />;
           <Route path="/events/photography" component={Photography} />;
           <Route path="/events/cinematography" component={Cinematography} />;
@@ -57,18 +57,18 @@ function App() {
           <Route path="/events/animation" component={Animation} />;
           <Route path="/events/allevents" component={AllEvents} />;
           <Route path="/sponsors" component={Sponsors} />
-          <Route path="/FAQ" component={FAQ} /> */}
+          <Route path="/FAQ" component={FAQ} />
           <Route path="/" exact component={landingPage} />
-          {/* <Route path="/authentication" exact component={Authentication} />
-          <Route path="/timeline" component={Glimps} /> */}
-          {/* {authCtx.isLoggedIn && <Route path="/dashboard" exact component={Dashboard} />} */}
-          {/* {sessionStorage.getItem('isNewUser')==="true" && <Route path="/register" exact component={RegisterationForm} />} */}
-          {/* <PrivateRoute path="/register" component={RegisterationForm} />
+          <Route path="/authentication" exact component={Authentication} />
+          <Route path="/timeline" component={Glimps} />
+          {authCtx.isLoggedIn && <Route path="/dashboard" exact component={Dashboard} />}
+          {sessionStorage.getItem('isNewUser')==="true" && <Route path="/register" exact component={RegisterationForm} />}
+          <PrivateRoute path="/register" component={RegisterationForm} />
           <PrivateRoute path="/dashboard" component={DashBoardNew} />
           <Route path="/team" exact component={Team} />
           <Route path="/cart" component={Cart} />
           <Route path="/d" exact component={DashBoard_2} />
-          <Route path="/passes" exact component={Passes} /> */}
+          <Route path="/passes" exact component={Passes} />
           <Route path="*" exact component={Error} />
         </Switch>
       </Router>
